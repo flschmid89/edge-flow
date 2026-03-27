@@ -1,0 +1,16 @@
+FROM registry.fls-engineering.de/flow_engine_wo_ai:0.3.0
+
+# Install Intel OpenCL ICD for Raptor Lake / Xe (Gen 12) via Intel's official apt repo.
+# https://dgpu-docs.intel.com/driver/client/overview.html
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        curl gpg && \
+    curl -fsSL https://repositories.intel.com/gpu/intel-graphics.key \
+        | gpg --dearmor -o /usr/share/keyrings/intel-graphics.gpg && \
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/intel-graphics.gpg] \
+https://repositories.intel.com/gpu/ubuntu jammy/lts/2350 unified" \
+        > /etc/apt/sources.list.d/intel-gpu.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ocl-icd-libopencl1 \
+        intel-opencl-icd \
+    && rm -rf /var/lib/apt/lists/*

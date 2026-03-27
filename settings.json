@@ -1,0 +1,45 @@
+{
+    "CameraType": 0,
+    "LumitraxImages":["LtrxShapeImage1", "LtrxNormalImage"],
+    "exposureTime": 2000,
+    "exposureTimeTrigger": false,
+    "exposureAuto": false,
+    "mtu": 1500,
+    "gain": 5.0,
+    "gainAuto": false,
+    "triggerMode": true,
+    "triggerSource": "Software",
+    "binningHorizontal": 1,
+    "binningVertical": 1,
+    "acquisitionFrameRate": 2,
+    "reverseX": false,
+    "reverseY": false,
+    "sequencer": false,
+    "binning": "4x",
+    "sequences" :[
+        {
+            "setNr":0,
+            "sequencerSetNext":1,
+            "exposureTime_us": 10000,
+            "frameCount": 10, 
+            "horizontalBinningOrDecimation": 1,  
+            "verticalBinningOrDecimation":1
+        },
+        {
+            "setNr":0,
+            "sequencerSetNext":2,
+            "exposureTime_us": 10000,
+            "frameCount": 10, 
+            "horizontalBinningOrDecimation": 1,  
+            "verticalBinningOrDecimation":1
+        },
+        {
+            "setNr":2,
+            "sequencerSetNext":0,
+            "exposureTime_us": 10000,
+            "frameCount": 10, 
+            "horizontalBinningOrDecimation": 1,  
+            "verticalBinningOrDecimation":1
+        }
+    ]
+}

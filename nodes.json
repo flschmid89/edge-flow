@@ -1,0 +1,199 @@
+{
+    "inputs": [
+        {
+            "name": "ns=2;s=Station1.Ou.bLifebeatOuts01",
+            "type": "bool",
+            "special": "lifebeat",
+            "mirrorLifebeat": "ns=2;s=Station1.In.bLifebeats01",
+            "interval": 1000,
+            "log": false
+        },
+        {
+            "name": "ns=2;s=Station1.Ou.usInspectionStepOuts01",
+            "redisKey": "usInspectionStepOuts01",
+            "type": "Byte",
+            "special": "mirror",
+            "mirrorOutput": "ns=2;s=Station1.In.usInspectionSteps01",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station1.Ou.usPartTypes01",
+            "redisKey": "usPartTypes01",
+            "type": "Byte",
+            "special": "mirror",
+            "mirrorOutput": "ns=2;s=Station1.In.usPartTypeIns01",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station1.Ou.strPartIds01",
+            "redisKey": "strPartIds01",
+            "type": "string",
+            "special": [    "mirror", "partid"   ],
+            "mirrorOutput": "ns=2;s=Station1.In.strPartIdIns01",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station1.Ou.bTriggerShots01",
+            "type": "bool",
+            "interval": 1000,
+            "special": "trigger",
+            "station": "Station1",
+            "cams": [
+                "cam1",
+                "cam2"
+            ]
+        },
+        {
+            "name": "ns=2;s=Station2.OuS02.bLifebeatOuts02",
+            "type": "bool",
+            "mirrorLifebeat": "ns=2;s=Station2.InS02.bLifebeats02",
+            "special": "lifebeat",
+            "interval": 1000,
+            "log": false
+        },
+        {
+            "name": "ns=2;s=Station2.OuS02.usInspectionStepOuts02",
+            "redisKey": "usInspectionStepOuts02",
+            "type": "Byte",
+            "special": "mirror",
+            "mirrorOutput": "ns=2;s=Station2.InS02.usInspectionSteps02",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station2.OuS02.usPartTypes02",
+            "type": "Byte",
+            "special": "mirror",
+            "mirrorOutput": "ns=2;s=Station2.InS02.usPartTypeIns02",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station2.OuS02.strPartIds02",
+            "redisKey": "strPartIds02",
+
+            "type": "string",
+            "special": [    "mirror", "partid"   ],
+            "mirrorOutput": "ns=2;s=Station2.InS02.strPartIdIns02",
+            "interval": 1000
+        },
+        {
+            "name": "ns=2;s=Station2.OuS02.bTriggerShots02",
+            "type": "bool",
+            "interval": 1000,
+            "special": "trigger",
+            "station": "Station2",
+            "cams": [     
+                "cam3",          
+                "cam4"
+            ]
+        },
+                {
+            "name": "ns=2;s=Station2.OuS02.testTrigger2",
+            "type": "bool",
+            "interval": 1000,
+            "special": "trigger",
+            "station": "Station2",
+            "cams": [     
+                "cam3",          
+                "cam4"
+            ]
+        }
+    ],
+    "outputs": [
+        {
+            "name": "ns=2;s=Station1.In.bLifebeats01",
+            "type": "bool",
+            "special": "lifebeat"
+        },
+        {
+            "name": "ns=2;s=Station1.In.usInspectionSteps01",
+            "redisKey": "usInspectionSteps01",
+            "type": "Byte"
+        },
+        {
+            "name": "ns=2;s=Station1.In.usPartTypeIns01",
+            "type": "Byte"
+        },
+        {
+            "name": "ns=2;s=Station1.In.strPartIdIns01",
+            "type": "string"
+        },
+        {
+            "name": "ns=2;s=Station1.In.bResultValids01",
+            "type": "bool",
+            "special": "resultValid",
+            "resetOnMeasurement": true,
+            "default": false
+        },
+        {
+            "name": "ns=2;s=Station1.In.usErrorNrs01",
+            "type": "Byte",
+            "special": "errorNr"
+        },
+        {
+            "name": "ns=2;s=Station1.In.Resultss01",
+            "type": "UInt16",
+            "special": "results",
+            "array": 10,
+            "redisKey": [
+                "resultExistence1", "resultExistence2", "resultShortBeads1", "resultShortBeads2", "resultLongBeads1", "resultLongBeads2"
+            ],
+            "resetOnMeasurement": true,
+            "default": 0
+        },
+        {
+            "name": "ns=2;s=Station1.In.usOverallResult01",
+            "type": "UInt16",
+            "special": "overallResult",            
+            "resetOnMeasurement": true,
+            "default": 0
+        },
+        
+
+        {
+            "name": "ns=2;s=Station2.InS02.bLifebeats02",
+            "type": "bool"
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.usInspectionSteps02",
+            "type": "Byte"
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.usPartTypeIns02",
+            "type": "Byte"
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.strPartIdIns02",
+            "type": "string"
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.bResultValids02",
+            "type": "bool",
+            "special": "resultValid",
+            "resetOnMeasurement": true,
+            "default": false
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.usErrorNrs02",
+            "type": "Byte",
+            "special": "errorNr"
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.Resultss02",
+            "type": "UInt16",
+            "special": "results",
+            "resetOnMeasurement": true,
+            "default": 0,
+            "array": 10,
+            "redisKey": [
+                "resultExistence3", "resultExistence4", "resultShortBeads3", "resultShortBeads4", "resultLongBeads3", "resultLongBeads4"
+            ]
+        },
+        {
+            "name": "ns=2;s=Station2.InS02.usOverallResult02",
+            "type": "UInt16",
+            "special": "overallResult",            
+            "resetOnMeasurement": true,
+            "default": 0
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+images/*
+!images/masks/
+!images/masks/*.png
+!images/trained_spec.json
+!images/report.pdf

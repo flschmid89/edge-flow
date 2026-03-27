@@ -1,0 +1,190 @@
+services:
+    camera1:
+            image: registry.fls-engineering.de/cam:3.2.0
+            volumes:
+                - ./settings.json:/settings/settings.json
+            ipc: "service:redis"
+
+
+            environment:
+                - CAMERA_CAMINDEX=1
+                - CAMERA_NAME=cam1
+                - CAMERA_STOREIMAGES=OFF
+                - CAMERA_STOREPATH=/images
+                - CAMERA_REDIS=tcp://redis:6379
+                - CAMERA_SETTINGSFILE=/settings/settings.json
+                - CAMERA_IPCPORT=ipc:///dev/shm/camera1.input
+                - CAMERA_FLIP_RGB=ON
+                - CAMERA_IP=127.0.0.1
+            command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
+            # network_mode: host
+            restart: unless-stopped
+
+    camera2:
+            image: registry.fls-engineering.de/cam:3.2.0
+            volumes:
+                - ./settings.json:/settings/settings.json
+            ipc: "service:redis"
+
+
+            environment:
+                - CAMERA_CAMINDEX=2
+                - CAMERA_NAME=cam2
+                - CAMERA_STOREIMAGES=OFF
+                - CAMERA_STOREPATH=/images
+                - CAMERA_REDIS=tcp://redis:6379
+                - CAMERA_SETTINGSFILE=/settings/settings.json
+                - CAMERA_IPCPORT=ipc:///dev/shm/camera2.input
+                - CAMERA_FLIP_RGB=ON
+                - CAMERA_IP=127.0.0.1
+            command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
+            # network_mode: host
+            restart: unless-stopped
+
+    camera3:
+            image: registry.fls-engineering.de/cam:3.2.0
+            volumes:
+                - ./settings.json:/settings/settings.json
+            ipc: "service:redis"
+
+
+            environment:
+                - CAMERA_CAMINDEX=3
+                - CAMERA_NAME=cam3
+                - CAMERA_STOREIMAGES=OFF
+                - CAMERA_STOREPATH=/images
+                - CAMERA_REDIS=tcp://redis:6379
+                - CAMERA_SETTINGSFILE=/settings/settings.json
+                - CAMERA_IPCPORT=ipc:///dev/shm/camera3.input
+                - CAMERA_FLIP_RGB=ON
+                - CAMERA_IP=127.0.0.1
+            command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
+            # network_mode: host
+            restart: unless-stopped
+    camera4:
+            image: registry.fls-engineering.de/cam:3.2.0
+            volumes:
+                - ./settings.json:/settings/settings.json
+            ipc: "service:redis"
+
+
+            environment:
+                - CAMERA_CAMINDEX=4
+                - CAMERA_NAME=cam4
+                - CAMERA_STOREIMAGES=OFF
+                - CAMERA_STOREPATH=/images
+                - CAMERA_REDIS=tcp://redis:6379
+                - CAMERA_SETTINGSFILE=/settings/settings.json
+                - CAMERA_IPCPORT=ipc:///dev/shm/camera4.input
+                - CAMERA_FLIP_RGB=ON
+                - CAMERA_IP=127.0.0.1
+            command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
+            # network_mode: host
+            restart: unless-stopped
+    opcua-server:
+        image: registry.fls-engineering.de/opcua-server:latest 
+        volumes:
+            - ./nodes.json:/app/nodes.json
+        # working_dir: /development
+        environment:
+            - MEASUREMENT_RESULTS_TIMEOUT=5
+        command: python3 /app/app.py
+        ports: 
+        - "4840:4840"
+        restart: unless-stopped
+        depends_on:
+            - redis
+        networks:
+            default:
+                aliases:
+                    - "opcua"
+
+    flow:
+        image: registry.fls-engineering.de/flow_engine_wo_ai:0.3.0  
+        command: ["python", "-m", "watchfiles", "--filter", "python", "python /app/engine/flow.py", "/app/engine", "/app/flowruntime", "/app/packages"]
+        ports:
+            - "8000:8000"
+            - "5000:5000"
+        environment:
+            - PYTHONPATH=/app
+            - FLOW_FILE=/flows/fuegeanlage-v1.json
+            - STATIC_DIR=/flows/static
+            - FLOW_GLOBAL__redis_unix_socket_path=/dev/shm/redis.sock
+        volumes:
+            - ../flows:/flows
+            - ./images:/output
+            - ./backup:/backup
+            - ./stations:/stations
+            - ../:/app
+        devices:
+            - /dev/dri:/dev/dri   # Intel GPU (OpenCL via DRI render node)
+        group_add:
+            - "993"                # render group GID (grants access to /dev/dri/renderD128)
+        ipc: "service:redis"
+
+        depends_on:
+            - redis
+        restart: unless-stopped
+
+        networks:
+            default:
+
+
+    redis:
+        image: redis/redis-stack:latest
+        volumes:
+            - ./redis-stack.conf:/redis-stack.conf
+        
+        ports:
+            - "6379:6379"
+            - "8004:8001"
+        # env_file:
+        #     - ./.env
+        ipc: shareable
+        shm_size: 256m
+        restart: unless-stopped
+        healthcheck:
+            disable: true
+        networks:
+            default:
+    database:
+        image: mariadb:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: examplepassword
+            MYSQL_DATABASE: exampledb
+            MYSQL_USER: exampleuser
+            MYSQL_PASSWORD: examplepassword
+        ports:
+            - "3306:3306"
+        networks:
+            default:
+
+  # Web database client for inspecting MariaDB contents
+    database-client:
+        image: phpmyadmin:5-apache
+        restart: unless-stopped
+        depends_on:
+            - database
+        environment:
+            PMA_HOST: database
+            PMA_USER: exampleuser
+            PMA_PASSWORD: examplepassword
+            UPLOAD_LIMIT: 64M
+        ports:
+            - "8081:80"
+        networks:
+            default:
+
+    frontend:
+        image: node:24-alpine
+        working_dir: /app
+        command: sh -c "npm install && npx ng serve --host 0.0.0.0 --port 4200 --poll 1000"
+        ports:
+            - "4200:4200"
+        volumes:
+            - ../flow-frontend:/app
+        environment:
+            - NODE_OPTIONS=--max-old-space-size=4096
+        restart: unless-stopped
+        networks:
+            default:

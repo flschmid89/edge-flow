@@ -1,0 +1,150 @@
+{
+    "ranges_file": "ranges_s1_i0_cam4.json",
+    "existence": {
+        "points": []
+    },
+    "checkbead": {
+        "min_thickness": 8,
+        "path_segments": [
+            {
+                "start_point": [
+                    834,
+                    273
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            966,
+                            271
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    1205,
+                    269
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            1343,
+                            266
+                        ]
+                    },
+                    {
+                        "type": "line",
+                        "to": [
+                            1351,
+                            266
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    838,
+                    1170
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            1314,
+                            1172
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    836,
+                    2074
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            1340,
+                            2067
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    2651,
+                    2056
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            3165,
+                            2055
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    2672,
+                    1158
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            3180,
+                            1157
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    2640,
+                    253
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            2805,
+                            253
+                        ]
+                    },
+                    {
+                        "type": "line",
+                        "to": [
+                            2818,
+                            251
+                        ]
+                    }
+                ]
+            },
+            {
+                "start_point": [
+                    3035,
+                    251
+                ],
+                "segments": [
+                    {
+                        "type": "line",
+                        "to": [
+                            3168,
+                            252
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "fullbeadcheck": {
+        "path_segments": [
+           
+        ]
+    }
+}

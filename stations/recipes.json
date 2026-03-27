@@ -1,0 +1,11 @@
+{
+    "inspection": {
+        "s1_i0_cam1": "s1_i0_cam1",
+        "s2_i0_cam1": "s2_i0_cam1",
+        "s1_i0_cam2": "s1_i0_cam2",
+        "s2_i0_cam2": "s2_i0_cam2",
+        "s1_i0_cam3": "s1_i0_cam3",
+        "s1_i0_cam4": "s1_i0_cam4"
+    },
+    "resolution": 0.1
+}
