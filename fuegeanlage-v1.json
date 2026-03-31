@@ -1,0 +1,5874 @@
+{
+  "name": "fuegeanlage",
+  "description": "Stored from dashboard",
+  "version": 1,
+  "created_at": "2026-03-30T18:31:33.304079+00:00",
+  "saved_at": "2026-03-30T18:31:33.304110+00:00",
+  "positions": {
+    "zmq_cam1_socket": {
+      "x": 50,
+      "y": 50
+    },
+    "zmq_cam2_socket": {
+      "x": 300,
+      "y": 50
+    },
+    "zmq_cam3_socket": {
+      "x": 550,
+      "y": 50
+    },
+    "zmq_cam4_socket": {
+      "x": 800,
+      "y": 50
+    },
+    "SocketIOConfig_1769798437097_ixog0aszp": {
+      "x": 50,
+      "y": 230
+    },
+    "redisConfig": {
+      "x": 300,
+      "y": 230
+    },
+    "DashboardConfig_1772696222102_7ttqj27hv": {
+      "x": 550,
+      "y": 230
+    },
+    "zmq_cam1": {
+      "x": 319,
+      "y": 122.79,
+      "path_id": 0
+    },
+    "zmq_cam2": {
+      "x": 319,
+      "y": 226,
+      "path_id": 0
+    },
+    "zmq_cam3": {
+      "x": 319,
+      "y": 326.39,
+      "path_id": 0
+    },
+    "zmq_cam4": {
+      "x": 319,
+      "y": 427.75,
+      "path_id": 0
+    },
+    "Save_1769798302806_vpz9twmrv": {
+      "x": 2176.54,
+      "y": 286.85,
+      "path_id": 0
+    },
+    "redisGetStepOuts01": {
+      "x": 761.55,
+      "y": 185.07,
+      "path_id": 0
+    },
+    "StringTemplate_Part1": {
+      "x": 1384.64,
+      "y": 165.39,
+      "path_id": 0
+    },
+    "redisGetStepOuts02": {
+      "x": 786.5,
+      "y": 416.39,
+      "path_id": 0
+    },
+    "StringTemplate_Part2": {
+      "x": 1384.64,
+      "y": 425.77,
+      "path_id": 0
+    },
+    "Print_1769804602753_014r54aaj": {
+      "x": 2472.84,
+      "y": 280.5,
+      "path_id": 0
+    },
+    "PrintCamStatus": {
+      "x": 824.5,
+      "y": 295.89,
+      "path_id": 0
+    },
+    "store_current_part": {
+      "x": 767.09,
+      "y": 976.31,
+      "path_id": 6
+    },
+    "stringSanitize1": {
+      "x": 347.12,
+      "y": 849.22,
+      "path_id": 6
+    },
+    "stringSanitize2": {
+      "x": 339.8,
+      "y": 974.75,
+      "path_id": 6
+    },
+    "RedisSubscribeGet_1772781716160_dqs42gb9r": {
+      "x": 23.64,
+      "y": 976.31,
+      "path_id": 6
+    },
+    "RedisSubscribeGet_1772781812656_1z29ih138": {
+      "x": 25.38,
+      "y": 848.25,
+      "path_id": 6
+    },
+    "Print_1772781935481_ylw6ofohn": {
+      "x": 779.09,
+      "y": 849.22,
+      "path_id": 6
+    },
+    "Modify_1772782259089_ldrxh7ust": {
+      "x": 1506.74,
+      "y": 295.89,
+      "path_id": 0
+    },
+    "Trigger_1771357339662_okq0tcg1x": {
+      "x": -297.87,
+      "y": -722.18,
+      "path_id": 3
+    },
+    "extracter": {
+      "x": 1068.7,
+      "y": 980.49,
+      "path_id": 2
+    },
+    "set_segments_filename": {
+      "x": 1342.58,
+      "y": 1019.95,
+      "path_id": 2
+    },
+    "export_path_segments": {
+      "x": 2008.28,
+      "y": 1019.95,
+      "path_id": 2
+    },
+    "extract_and_mask": {
+      "x": 154.26,
+      "y": 604.2,
+      "path_id": 7
+    },
+    "measure_blobs": {
+      "x": 434.01,
+      "y": 608.16,
+      "path_id": 7
+    },
+    "filterBlobs": {
+      "x": 714.53,
+      "y": 611.46,
+      "path_id": 7
+    },
+    "checkMissingBead": {
+      "x": 1025.15,
+      "y": 618.07,
+      "path_id": 7
+    },
+    "BlobAnalyzer_1772002936865_q9221559x": {
+      "x": -389.95,
+      "y": 411.07,
+      "path_id": 7
+    },
+    "ForEach_1772003016231_5cg0ejsx5": {
+      "x": -153.88,
+      "y": 411.07,
+      "path_id": 7
+    },
+    "ForEachCollect_1772003023294_re6u7lgqc": {
+      "x": 415.27,
+      "y": 403.87,
+      "path_id": 7
+    },
+    "BlobNearPoint_1772003065783_i2htk8vkh": {
+      "x": 134.41,
+      "y": 396.41,
+      "path_id": 7
+    },
+    "Modify_1772130877491_yrkrt1dmo": {
+      "x": 1725.54,
+      "y": 1019.95,
+      "path_id": 2
+    },
+    "Print_1772220746370_hwo4abuj6": {
+      "x": 257.47,
+      "y": 3.62,
+      "path_id": 3
+    },
+    "sf_1772382189263": {
+      "x": -21.23,
+      "y": -723.75,
+      "path_id": 3
+    },
+    "ListDir_1772393046276_wwgthf0oe": {
+      "x": -109.49000000000004,
+      "y": -59.83000000000009,
+      "path_id": 2
+    },
+    "ForEach_1772393046285_dd7bhrnxc": {
+      "x": 117.67,
+      "y": -47.160000000000046,
+      "path_id": 2
+    },
+    "ImageLoader_1772393046294_krvq81y4q": {
+      "x": 617.76,
+      "y": 202.45999999999998,
+      "path_id": 2
+    },
+    "Replay_1772393046303_w1osp5zxv": {
+      "x": 138.64,
+      "y": 313.75999999999993,
+      "path_id": 2
+    },
+    "RegexExtract_1772393046310_b5czhirgu": {
+      "x": 822.89,
+      "y": 591.05,
+      "path_id": 2
+    },
+    "StringTemplate_1772393101319_g3h9vrrf7": {
+      "x": 1034.65,
+      "y": 276.08,
+      "path_id": 2
+    },
+    "Print_1772435900228_0jbf7bfzt": {
+      "x": 1535.556640625,
+      "y": 464.0987854003906,
+      "path_id": 2
+    },
+    "ForEach_1772536212462_puzygqn70": {
+      "x": 534.58,
+      "y": -678.18,
+      "path_id": 3
+    },
+    "Modify_1772542218897_eyx5vu6cg": {
+      "x": 277.28,
+      "y": -692.68,
+      "path_id": 3
+    },
+    "PathSegmentsMask_1772550288860_ydis4hehj": {
+      "x": -324.36,
+      "y": -186.18,
+      "path_id": 3
+    },
+    "StringTemplate_1772550805905_srcr0pt9x": {
+      "x": 334.43,
+      "y": -194.03,
+      "path_id": 3
+    },
+    "Save_1772550865979_urxj651sj": {
+      "x": 550.92,
+      "y": 19.79,
+      "path_id": 3
+    },
+    "ParallelFork_1772553304042_37my0vbyf": {
+      "x": -1165.87,
+      "y": 541.48,
+      "path_id": 7
+    },
+    "ParallelJoin_1772553306281_9sdo1q4je": {
+      "x": 1635.91,
+      "y": 615.9,
+      "path_id": 7
+    },
+    "ColorBinarize_1772553374908_r80dpdi0l": {
+      "x": -906.98,
+      "y": -316.69,
+      "path_id": 7
+    },
+    "Modify_1772561510184_syznpziow": {
+      "x": 1781.91,
+      "y": -388.45000000000005,
+      "path_id": 3
+    },
+    "Modify_1772562180930_6v6i9hias": {
+      "x": -1057.81,
+      "y": -72.06,
+      "path_id": 7
+    },
+    "Trigger_1772562268252_j5yd7am8u": {
+      "x": -614.65,
+      "y": 10.92,
+      "path_id": 17
+    },
+    "RegexExtract_1772568615338_dl83rc09c": {
+      "x": -1163.71,
+      "y": -205,
+      "path_id": 11
+    },
+    "StringTemplate_1772568654209_acu5dpt0j": {
+      "x": -1310.12,
+      "y": -122.52,
+      "path_id": 7
+    },
+    "LinkInput_1772568771331_zacvacxax": {
+      "x": -1698.42,
+      "y": -5.25,
+      "path_id": 7
+    },
+    "LinkOutput_1772568808228_8bxxq60nr": {
+      "x": 2472.84,
+      "y": 170.18,
+      "path_id": 0
+    },
+    "LinkOutput_1772612018192_plb7ybxyp": {
+      "x": 2155.58,
+      "y": -237.23999999999998,
+      "path_id": 3
+    },
+    "ForEachCollect_1772614155075_l0daamz7o": {
+      "x": 2113.4700000000003,
+      "y": -386.70000000000005,
+      "path_id": 3
+    },
+    "DrawGeometries_1772614693013_qq5i5to0r": {
+      "x": 2636.33,
+      "y": 1081.81,
+      "path_id": 7
+    },
+    "ForEach_1772615150348_d51sl615s": {
+      "x": -1407.88,
+      "y": -190.02,
+      "path_id": 11
+    },
+    "ListDir_1772615203562_r2g0hmugr": {
+      "x": -1647.07,
+      "y": -200.62,
+      "path_id": 11
+    },
+    "ImageLoader_1772615233100_vf32n5kpk": {
+      "x": -235.54,
+      "y": -65.89,
+      "path_id": 11
+    },
+    "Print_1772619387990_rtec3jai9": {
+      "x": -942.72,
+      "y": -191.96,
+      "path_id": 7
+    },
+    "ImageArithmetic_1772638043544_pxcb0j3a3": {
+      "x": 134.41,
+      "y": 784.1,
+      "path_id": 7
+    },
+    "MeasureBlobsAlongPath_1772638047935_li6qp90qe": {
+      "x": 416.77,
+      "y": 784.1,
+      "path_id": 7
+    },
+    "ArrayFilter_1772638051568_arrjwsdv7": {
+      "x": 699.52,
+      "y": 785.82,
+      "path_id": 7
+    },
+    "CompareArray_1772638054399_3jjhpkgff": {
+      "x": 999.24,
+      "y": 784.1,
+      "path_id": 7
+    },
+    "DashboardText_1772696298831_law5pb9ge": {
+      "x": -1032.18,
+      "y": 500.53,
+      "path_id": 8
+    },
+    "Counter_1772696566361_ljj5w05k8": {
+      "x": -1554.1,
+      "y": 477.86,
+      "path_id": 8
+    },
+    "ArrayFilter_1772704928895_riiyw3mn2": {
+      "x": 741.46,
+      "y": 402.8,
+      "path_id": 7
+    },
+    "CompareArray_1772705168149_qhw7wpacz": {
+      "x": 1325.31,
+      "y": 402.22,
+      "path_id": 7
+    },
+    "DashboardText_1772705572849_6g5smfmy3": {
+      "x": -501.07,
+      "y": 51.09,
+      "path_id": 7
+    },
+    "StringTemplate_1772706704375_8mgaa3g16": {
+      "x": 1996.03,
+      "y": 503.82,
+      "path_id": 7
+    },
+    "StringTemplate_1774560000000_ors20001": {
+      "x": 1986.38,
+      "y": 1018.42,
+      "path_id": 7
+    },
+    "DashboardImage_1772c711714555_kdl9021ms": {
+      "x": 1419.87,
+      "y": 1664.59,
+      "path_id": 7
+    },
+    "PathSegmentsMask_1772726936465_1h9yz1cpc": {
+      "x": -25.090000000000003,
+      "y": -186.18,
+      "path_id": 3
+    },
+    "StringTemplate_1772736063974_9i5uygng1": {
+      "x": 1991.5900000000001,
+      "y": 652.84,
+      "path_id": 7
+    },
+    "StringTemplate_1772736236671_zu09iq9s2": {
+      "x": 1991.5900000000001,
+      "y": 784.1,
+      "path_id": 7
+    },
+    "StringTemplate_1772736250513_clraqurj0": {
+      "x": 1991.5900000000001,
+      "y": 912.2,
+      "path_id": 7
+    },
+    "CompareArray_1772740113582_22yi8a7ve": {
+      "x": -400.78,
+      "y": 777.79,
+      "path_id": 7
+    },
+    "IfElse_1772740186627_0sf3chpt5": {
+      "x": -137.13,
+      "y": 766.82,
+      "path_id": 7
+    },
+    "CompareArray_1772740517393_act2iqrfj": {
+      "x": -400.78,
+      "y": 615.9,
+      "path_id": 7
+    },
+    "IfElse_1772740521595_lcojp28ig": {
+      "x": -142.83,
+      "y": 555.91,
+      "path_id": 7
+    },
+    "RedisSet_1772788929428_wccedz7ss": {
+      "x": 2723.61,
+      "y": 785.35,
+      "path_id": 7
+    },
+    "StringTemplate_1772789104012_wb6luxf46": {
+      "x": 2261.25,
+      "y": 652.84,
+      "path_id": 7
+    },
+    "StringTemplate_1772789187333_7nmja8k2l": {
+      "x": 2261.25,
+      "y": 784.1,
+      "path_id": 7
+    },
+    "StringTemplate_1772789210141_f3ti9eaq8": {
+      "x": 2261.25,
+      "y": 912.2,
+      "path_id": 7
+    },
+    "Print_1772789428574_mbp04wgi2": {
+      "x": 2706.01,
+      "y": 560.41,
+      "path_id": 7
+    },
+    "LinkInput_1772870870957_ziyxzoce0": {
+      "x": -1701.01,
+      "y": 232.56,
+      "path_id": 8
+    },
+    "LinkOutput_1772870934904_kcqg6tglw": {
+      "x": 3000.98,
+      "y": 1122.55,
+      "path_id": 7
+    },
+    "Print_1772871455727_syerh7ghs": {
+      "x": -1187.1,
+      "y": 342.79,
+      "path_id": 8
+    },
+    "LinkOutput_1772883711949_qqa18wcn3": {
+      "x": 26.41,
+      "y": -74.46,
+      "path_id": 11
+    },
+    "DashboardTriggerButton_1772889991988_6eypiwbm8": {
+      "x": -1880.86,
+      "y": -361.86,
+      "path_id": 11
+    },
+    "DashboardList_1772890562784_f2grloirq": {
+      "x": -435.71,
+      "y": 278.96,
+      "path_id": 11
+    },
+    "ForEachCollect_1772891343929_naikhejo5": {
+      "x": -802.7,
+      "y": 71.35,
+      "path_id": 11
+    },
+    "Print_1772891965459_6jmvgykkc": {
+      "x": -536.23,
+      "y": 492.17,
+      "path_id": 11
+    },
+    "FifoPush_1772894533804_kodagfz42": {
+      "x": -807.65,
+      "y": -55.74,
+      "path_id": 11
+    },
+    "DashboardFifoNavigator_1772894554075_6srhlmxg1": {
+      "x": -544.3,
+      "y": -59.38,
+      "path_id": 11
+    },
+    "DashboardText_1772895118254_qvuhfvsjz": {
+      "x": -801.22,
+      "y": -60.23,
+      "path_id": 8
+    },
+    "DashboardLED_1772895180078_rbml71rix": {
+      "x": -832.22,
+      "y": 48.45,
+      "path_id": 8
+    },
+    "DashboardLabel_1772895787267_tkdnw79lj": {
+      "x": -809.8,
+      "y": -176.26,
+      "path_id": 8
+    },
+    "DashboardImage_1772895888958_m4zsca5z0": {
+      "x": -807.72,
+      "y": 169.27,
+      "path_id": 8
+    },
+    "DashboardImage_1772895924666_ax7mgz56o": {
+      "x": -816.34,
+      "y": 290.28,
+      "path_id": 8
+    },
+    "DrawBlobMeasurements_1772897118485_bdp9zuslt": {
+      "x": 1986.65,
+      "y": 1112.22,
+      "path_id": 7
+    },
+    "Trigger_1772898285661_42c5hg89i": {
+      "x": -1891.42,
+      "y": -223.2,
+      "path_id": 11
+    },
+    "DrawBlobMeasurements_1772898985305_mupmyjfdo": {
+      "x": 2232.34,
+      "y": 1343.65,
+      "path_id": 7
+    },
+    "ArrayFilter_1772899628857_188d2k3ih": {
+      "x": 995.6,
+      "y": 392.89,
+      "path_id": 7
+    },
+    "Counter_1772903093358_ytfsue26x": {
+      "x": 2470.94,
+      "y": 385.44,
+      "path_id": 0
+    },
+    "DashboardText_1772903117860_flbtcbec0": {
+      "x": 2726.93,
+      "y": 383.93,
+      "path_id": 0
+    },
+    "Switch_1772904384632_r7hp099p1": {
+      "x": -1238.67,
+      "y": 125.41,
+      "path_id": 8
+    },
+    "DashboardImage_1772904888196_5dlxdxbrj": {
+      "x": -496.96,
+      "y": 169.27,
+      "path_id": 8
+    },
+    "DashboardImage_1772904893277_lqmc8noaj": {
+      "x": -496.96,
+      "y": 289.83,
+      "path_id": 8
+    },
+    "Modify_1772905308473_1gu8tdb3e": {
+      "x": 1112.01,
+      "y": 185.07,
+      "path_id": 0
+    },
+    "Modify_1772905450622_7kzy8js32": {
+      "x": 1112.01,
+      "y": 335.77,
+      "path_id": 0
+    },
+    "DashboardText_1772910201237_dyzorztrz": {
+      "x": -490.46,
+      "y": -60.23,
+      "path_id": 8
+    },
+    "ColorMap_1772967631089_0zyy3n8vw": {
+      "x": 1997.5299999999997,
+      "y": 362.22,
+      "path_id": 7
+    },
+    "ImageArithmetic_1772967756183_qka84m25h": {
+      "x": 2256.25,
+      "y": 362.22,
+      "path_id": 7
+    },
+    "StringTemplate_1772967856647_mvbt3ja4n": {
+      "x": 2542.74,
+      "y": 362.22,
+      "path_id": 7
+    },
+    "ImageSave_1772967913184_unmm0c560": {
+      "x": 2769.6,
+      "y": 362.22,
+      "path_id": 7
+    },
+    "PdfExport_1772972191991_qq160nhdy": {
+      "x": 3642.13,
+      "y": 339.55,
+      "path_id": 7
+    },
+    "PdfImage_1772972196268_ti6djmoqe": {
+      "x": 3367.64,
+      "y": 370.91,
+      "path_id": 7
+    },
+    "PdfText_1772972965935_620z31wj5": {
+      "x": 3057.72,
+      "y": 371.13,
+      "path_id": 7
+    },
+    "Switch_1772974593766_icjiqlw0r": {
+      "x": 253.18,
+      "y": -361.92,
+      "path_id": 5
+    },
+    "Modify_1772974656302_8d7g59jtv": {
+      "x": 1410.05,
+      "y": -601.25,
+      "path_id": 5
+    },
+    "LinkInput_1772974690511_g8fj5m8tw": {
+      "x": -168.24,
+      "y": -432.8,
+      "path_id": 5
+    },
+    "LinkOutput_1772974726472_zaukw11do": {
+      "x": -537.19,
+      "y": -105.3,
+      "path_id": 7
+    },
+    "Print_1772975156794_d8ldgxd63": {
+      "x": 301.06,
+      "y": -598,
+      "path_id": 5
+    },
+    "PseudoColor_1772988159467_p8xvkhbvq": {
+      "x": 1396.47,
+      "y": -487.69,
+      "path_id": 5
+    },
+    "Modify_1772995719994_g8mxn9ezi": {
+      "x": 779.25,
+      "y": 726.27,
+      "path_id": 6
+    },
+    "Modify_1772995787140_ss00kosp7": {
+      "x": 769.88,
+      "y": 1095.05,
+      "path_id": 6
+    },
+    "Modify_1772995857113_rf3gnaeve": {
+      "x": 3255.02,
+      "y": 692.5,
+      "path_id": 7
+    },
+    "Modify_1772995937126_bzvbsubyx": {
+      "x": 3222.58,
+      "y": 859.44,
+      "path_id": 7
+    },
+    "StringTemplate_1772996022948_n19u19dzo": {
+      "x": -867.41,
+      "y": -215.1,
+      "path_id": 11
+    },
+    "Switch_1772996184991_z4g0bss7h": {
+      "x": 2997.32,
+      "y": 790.47,
+      "path_id": 7
+    },
+    "CompareArray_1772996253554_ulwtkt1jx": {
+      "x": 3532.3,
+      "y": 716.52,
+      "path_id": 7
+    },
+    "CompareArray_1772996443221_uxv72uid1": {
+      "x": 4076.33,
+      "y": 709.91,
+      "path_id": 7
+    },
+    "IfElse_1772996581839_abnnx33p2": {
+      "x": 3810.35,
+      "y": 658.99,
+      "path_id": 7
+    },
+    "Print_1772996662164_shwy8g7q9": {
+      "x": 4404.55,
+      "y": 811.57,
+      "path_id": 7
+    },
+    "LinkOutput_1773000016100_eyjbrcb7v": {
+      "x": 4345.5,
+      "y": 480.05,
+      "path_id": 7
+    },
+    "LinkInput_1773000060490_9fkes38ea": {
+      "x": -1461.06,
+      "y": 722.82,
+      "path_id": 8
+    },
+    "Modify_1773000737248_ccqdz6qjr": {
+      "x": -1083.13,
+      "y": 109.07,
+      "path_id": 11
+    },
+    "DashboardTriggerButton_1773001032330_jfcziy4v5": {
+      "x": 1669.67,
+      "y": -703.87,
+      "path_id": 5
+    },
+    "ImageSave_1773001047704_uo15vfs59": {
+      "x": 1984.29,
+      "y": -710.61,
+      "path_id": 5
+    },
+    "CompareObject_1773002884471_dxpyavakl": {
+      "x": -389.04,
+      "y": -497.6,
+      "path_id": 3
+    },
+    "IfElse_1773002937602_6u2huwr82": {
+      "x": -31.77,
+      "y": -493.39,
+      "path_id": 3
+    },
+    "ImageLoader_1773002974803_4i3r42dd5": {
+      "x": 340.79,
+      "y": -359.95,
+      "path_id": 3
+    },
+    "StringTemplate_1773003047106_ofl63zhah": {
+      "x": 67.1,
+      "y": -347.64,
+      "path_id": 3
+    },
+    "DashboardLabel_1773005188278_5xogdsvvl": {
+      "x": -500.18,
+      "y": -180.72,
+      "path_id": 8
+    },
+    "Modify_1773072059173_1osa3j6qk": {
+      "x": 1180.4,
+      "y": -316.41,
+      "path_id": 5
+    },
+    "DashboardTriggerButton_1773072106712_7m8t9qgu4": {
+      "x": 1671.08,
+      "y": -566.28,
+      "path_id": 5
+    },
+    "ImageSave_1773072109144_fclg1fubx": {
+      "x": 2006.21,
+      "y": -582.73,
+      "path_id": 5
+    },
+    "sf_1773072242623": {
+      "x": 871.34,
+      "y": -517.27,
+      "path_id": 5
+    },
+    "SubFlow_1773072366068_26u1gngrd": {
+      "x": 880.59,
+      "y": -307.74,
+      "path_id": 5
+    },
+    "SubFlow_1773072375795_08r76lioe": {
+      "x": 879.31,
+      "y": -203.62,
+      "path_id": 5
+    },
+    "SubFlow_1773072384557_c7w950ovw": {
+      "x": 879.78,
+      "y": -412.2,
+      "path_id": 5
+    },
+    "Modify_1773072436140_4yxgk7zzq": {
+      "x": 1447.04,
+      "y": -386.86,
+      "path_id": 5
+    },
+    "Modify_1773072456851_fds5ea4vy": {
+      "x": 1179.58,
+      "y": -196.01,
+      "path_id": 5
+    },
+    "DashboardTriggerButton_1773072500067_wxcqxuw51": {
+      "x": 1666.86,
+      "y": -420.84,
+      "path_id": 5
+    },
+    "DashboardTriggerButton_1773072504451_2ptggn8yi": {
+      "x": 1686.68,
+      "y": -252.7,
+      "path_id": 5
+    },
+    "ImageSave_1773072575050_5t4u3i2ue": {
+      "x": 2011.91,
+      "y": -436.78,
+      "path_id": 5
+    },
+    "ImageSave_1773072611138_hi2topyul": {
+      "x": 2046.86,
+      "y": -272.67,
+      "path_id": 5
+    },
+    "DashboardImage_1773080147818_jtw8mkx74": {
+      "x": 1525.01,
+      "y": -159.55,
+      "path_id": 5
+    },
+    "MorphologyEx_1773081667484_pcdkunwwx": {
+      "x": 1161.32,
+      "y": -430.15,
+      "path_id": 5
+    },
+    "MorphologyEx_1773083518337_2wfvpfv4t": {
+      "x": 1143.25,
+      "y": -578.87,
+      "path_id": 5
+    },
+    "PathPerpendiculars_1773127712583_6ibu4u28w": {
+      "x": 1416.94,
+      "y": -304.04999999999995,
+      "path_id": 3
+    },
+    "ForEach_1773128605627_y9o8pz2n2": {
+      "x": 1216.53,
+      "y": -182.48999999999998,
+      "path_id": 3
+    },
+    "ForEachCollect_1773128607225_5n7hphz20": {
+      "x": 1553.47,
+      "y": -134.3,
+      "path_id": 3
+    },
+    "MeasureLineWidth_1773129947600_znlwqq0v5": {
+      "x": 136.01,
+      "y": 915.08,
+      "path_id": 7
+    },
+    "Print_1773130127614_4w9hr3b5e": {
+      "x": 1437.33,
+      "y": 1374.86,
+      "path_id": 7
+    },
+    "ExtractMeasurementStats_1773130707133_zismz77lv": {
+      "x": 439.63,
+      "y": 1005.72,
+      "path_id": 7
+    },
+    "SortArray_1773139543115_pcg7b92mk": {
+      "x": -506.58,
+      "y": 75.7,
+      "path_id": 11
+    },
+    "ForEach_1773139635611_6nk4qtt78": {
+      "x": 49.3093376159668,
+      "y": 149.00790405273438,
+      "path_id": 11
+    },
+    "DashboardTable_1773141138649_jmr8sppme": {
+      "x": 909.65,
+      "y": 1188.97,
+      "path_id": 7
+    },
+    "ArrayFilter_1773151826241_j3ev3miw9": {
+      "x": -197.79,
+      "y": 259.77,
+      "path_id": 11
+    },
+    "ValidateBeadMeasurements_1773214404845_ncgyttisq": {
+      "x": 1069.84,
+      "y": 1013.98,
+      "path_id": 7
+    },
+    "DrawGeometries_1773216206426_e29tbga6l": {
+      "x": 1095.27,
+      "y": 1637.84,
+      "path_id": 7
+    },
+    "MeasurementsToGraph_1773257429099_dux6vkw01": {
+      "x": 1030.65,
+      "y": 1497.26,
+      "path_id": 7
+    },
+    "RetinexFilter_1773385940583_4qappl6o2": {
+      "x": -1185.63,
+      "y": -352.71,
+      "path_id": 7
+    },
+    "DashboardHSVRange_1774107830620_ydp6xemp1": {
+      "x": 117.04,
+      "y": 1047.11,
+      "path_id": 7
+    },
+    "Trigger_1774107863776_qj5cqgagn": {
+      "x": -992.1069946289062,
+      "y": 75.48676300048828,
+      "path_id": 7
+    },
+    "LearnColorRanges_1774108625103_9ftd0ogz1": {
+      "x": -316.7,
+      "y": 1039.46,
+      "path_id": 7
+    },
+    "ColorHistogram_1774119979498_atyk1jngf": {
+      "x": -122.17584991455078,
+      "y": 1191.2275390625,
+      "path_id": 7
+    },
+    "DashboardHistogram_1774119981501_1qfltoecf": {
+      "x": 159.74,
+      "y": 1241.78,
+      "path_id": 7
+    },
+    "BuildMeasurementSpec_1774220000001_bms0001": {
+      "x": -356.58,
+      "y": 1452.12,
+      "path_id": 7
+    },
+    "TrainMeasurementSpec_1774220000002_tms0002": {
+      "x": -95.61,
+      "y": 1598.58,
+      "path_id": 7
+    },
+    "MatchMeasurementsToSpec_1774220000003_mms0003": {
+      "x": 583.63,
+      "y": 1880.09,
+      "path_id": 7
+    },
+    "DashboardWidgetGroup_1774220200000_dwg0001": {
+      "x": 302.09,
+      "y": 8573.19,
+      "path_id": 19
+    },
+    "DashboardSpecEditor_1774220200000_se0001": {
+      "x": 1035.16,
+      "y": 1808.56,
+      "path_id": 7
+    },
+    "ExportData_1774220200001_se0002": {
+      "x": 1716.78,
+      "y": 1789.72,
+      "path_id": 7
+    },
+    "SpecToGraph_1774220000004_stg0004": {
+      "x": 1046.44,
+      "y": 1923.72,
+      "path_id": 7
+    },
+    "Modify_1774249528505_0cepz248a": {
+      "x": 509.04,
+      "y": 1447.05,
+      "path_id": 7
+    },
+    "DashboardTriggerButton_1774249596996_fnqlgjrxh": {
+      "x": -2092.52,
+      "y": 167.8,
+      "path_id": 11
+    },
+    "ExportData_1774249631639_9le3sccky": {
+      "x": -1618.4,
+      "y": 183.53,
+      "path_id": 11
+    },
+    "ValidateWithSpec_1774274611125_5nvd9ijos": {
+      "x": 645.7,
+      "y": 1730.86,
+      "path_id": 7
+    },
+    "ValidateWithSpec_1774290724371_8v7gf8v93": {
+      "x": 765.1,
+      "y": 917.55,
+      "path_id": 7
+    },
+    "MeasurementsToGraph_1774290802793_5t7orcwo4": {
+      "x": 1006.96,
+      "y": 1329.62,
+      "path_id": 7
+    },
+    "DashboardGraph_1774290806644_sm4gc4nle": {
+      "x": 1364,
+      "y": 1228.78,
+      "path_id": 7
+    },
+    "MorphologyEx_1774291186114_cyq0s2mbn": {
+      "x": -406.15,
+      "y": -414.27,
+      "path_id": 7
+    },
+    "ShapeFilter_bead": {
+      "x": -183.33,
+      "y": -434.91,
+      "path_id": 7
+    },
+    "DashboardSpecViewer_1774298183355_xa387fkqs": {
+      "x": -819.59,
+      "y": 403.16,
+      "path_id": 8
+    },
+    "DashboardSpecViewer_1774298301678_4he152dsx": {
+      "x": -808.42,
+      "y": 499.39,
+      "path_id": 8
+    },
+    "DashboardManualAnnotation_1774298361292_71d45f35d": {
+      "x": -816.7,
+      "y": 597.8,
+      "path_id": 8
+    },
+    "DashboardSpecViewer_1774298447638_g0th4ku3z": {
+      "x": -496.99,
+      "y": 391.25,
+      "path_id": 8
+    },
+    "DashboardSpecViewer_1774298451791_t5vo5gwku": {
+      "x": -491.59,
+      "y": 491.81,
+      "path_id": 8
+    },
+    "DashboardManualAnnotation_1774298457007_g6sihos6p": {
+      "x": -495.55,
+      "y": 606.08,
+      "path_id": 8
+    },
+    "DashboardLED_1774298568554_nqhclx8cr": {
+      "x": -498.27,
+      "y": 67.92,
+      "path_id": 8
+    },
+    "StringTemplate_1774348573735_rpswt1r89": {
+      "x": 568.64,
+      "y": -227.57,
+      "path_id": 3
+    },
+    "ImportData_1774348644717_4w255y5aa": {
+      "x": 889.9,
+      "y": -213.77,
+      "path_id": 3
+    },
+    "Modify_SaveRangesToGlobal": {
+      "x": 1053.64,
+      "y": -431.65,
+      "path_id": 3
+    },
+    "RegexExtract_cam_from_input": {
+      "x": 1786.76,
+      "y": 312,
+      "path_id": 0
+    },
+    "Print_1774511569277_llcvk116y": {
+      "x": 601.69,
+      "y": 1287.5,
+      "path_id": 7
+    },
+    "DrawGeometries_1774523881821_xgz676c7h": {
+      "x": 1880.34,
+      "y": 1302.22,
+      "path_id": 7
+    },
+    "Print_1774528878746_6h63uth7d": {
+      "x": -793.14,
+      "y": 769.72,
+      "path_id": 8
+    },
+    "MorphologyEx_1774701870146_jjjrqjnvd": {
+      "x": 70.87,
+      "y": -461.61,
+      "path_id": 7
+    },
+    "ImageArithmetic_1774729430095_fla8yzn4v": {
+      "x": -639.45,
+      "y": -336.42,
+      "path_id": 7
+    },
+    "StringTemplate_1774798212301_81xvd5uf0": {
+      "x": 1392.89,
+      "y": 1792.78,
+      "path_id": 7
+    },
+    "Modify_1774798290597_iqwzr654g": {
+      "x": 1692.83,
+      "y": 1659.62,
+      "path_id": 7
+    },
+    "Print_1774798747662_dt1lur6kw": {
+      "x": 1768.24755859375,
+      "y": 1920.8048095703125,
+      "path_id": 7
+    },
+    "DashboardSpecEditor_1774894671405_uchid5z0m": {
+      "x": 847.61,
+      "y": 2091.75,
+      "path_id": 7
+    },
+    "Print_1774895464836_ysi94gd6t": {
+      "x": 244.92124938964844,
+      "y": 2109.536376953125,
+      "path_id": 7
+    }
+  },
+  "globals": {
+    "image_stream_quality": {
+      "type": "num",
+      "value": 70
+    },
+    "px_per_mm": {
+      "type": "num",
+      "value": 3.41
+    },
+    "inspections": {
+      "type": "json",
+      "value": [
+        {
+          "name": "inspection1",
+          "id": 0,
+          "description": "Description of inspection 1"
+        },
+        {
+          "name": "inspection2",
+          "id": 1,
+          "description": "Description of inspection 2"
+        },
+        {
+          "name": "inspection3",
+          "id": 2,
+          "description": "Description of inspection 3"
+        }
+      ]
+    },
+    "path_index": {
+      "type": "num",
+      "value": 9
+    },
+    "resolution": {
+      "type": "num",
+      "value": 0.2
+    },
+    "image_width": {
+      "type": "num",
+      "value": 4024
+    },
+    "image_height": {
+      "type": "num",
+      "value": 3032
+    },
+    "ftp_host": {
+      "type": "str",
+      "value": "0.0.0.0"
+    },
+    "ftp_port": {
+      "type": "num",
+      "value": 2222
+    },
+    "ftp_username": {
+      "type": "str",
+      "value": "foo"
+    },
+    "ftp_password": {
+      "type": "str",
+      "value": "pass"
+    },
+    "redis_host": {
+      "type": "str",
+      "value": "0.0.0.0"
+    },
+    "redis_port": {
+      "type": "num",
+      "value": 6379
+    },
+    "redis_db": {
+      "type": "num",
+      "value": 0
+    },
+    "redis_unix_socket_path": {
+      "type": "str",
+      "value": "/dev/shm/redis.sock"
+    },
+    "file_age": {
+      "type": "num",
+      "value": 60
+    },
+    "filename_recipes": {
+      "type": "str",
+      "value": "/stations/recipes.json"
+    },
+    "recipes_directory": {
+      "type": "str",
+      "value": "/stations/"
+    }
+  },
+  "startup_resources": [
+    {
+      "key": "background_image",
+      "filename": "/stations/background.png",
+      "type": "image",
+      "mode": "color"
+    },
+    {
+      "key": "station_config",
+      "filename": "/stations/config.json",
+      "type": "json"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "zmq_cam1",
+      "type": "ZmqStart",
+      "props": {
+        "conn_name": "zmq_cam1_socket",
+        "inputname": "cam1",
+        "msgpack": false,
+        "config_node": "zmq_cam1_socket"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "zmq_cam2",
+      "type": "ZmqStart",
+      "props": {
+        "conn_name": "zmq_cam2_socket",
+        "inputname": "cam2",
+        "msgpack": false,
+        "config_node": "zmq_cam2_socket"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "zmq_cam3",
+      "type": "ZmqStart",
+      "props": {
+        "conn_name": "zmq_cam3_socket",
+        "inputname": "cam3",
+        "msgpack": false,
+        "config_node": "zmq_cam3_socket"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "zmq_cam4",
+      "type": "ZmqStart",
+      "props": {
+        "conn_name": "zmq_cam4_socket",
+        "inputname": "cam4",
+        "msgpack": false,
+        "config_node": "zmq_cam4_socket"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "Save_1769798302806_vpz9twmrv",
+      "type": "ImageSave",
+      "props": {
+        "overwrite": false,
+        "source": {
+          "scope": "msg",
+          "var": "payload"
+        }
+      },
+      "is_end_node": false,
+      "label": "Save"
+    },
+    {
+      "id": "redisGetStepOuts01",
+      "type": "RedisGet",
+      "props": {
+        "param": "step",
+        "topic": "usInspectionStepOuts01",
+        "parse_json": false,
+        "conn_name": "redisConfig"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "StringTemplate_Part1",
+      "type": "StringTemplate",
+      "props": {
+        "template": "/output/{{_start_timestamp | date:'YYYY/MM/DD'}}/{{vars.part_name1}}_{{input}}_step{{step}}_frame{{meta.dataformat.meta.sequencerFrame}}.png",
+        "default": "test",
+        "output": "filename"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "redisGetStepOuts02",
+      "type": "RedisGet",
+      "props": {
+        "param": "step",
+        "topic": "usInspectionStepOuts02",
+        "parse_json": false,
+        "conn_name": "redisConfig"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "StringTemplate_Part2",
+      "type": "StringTemplate",
+      "props": {
+        "template": "/output/{{_start_timestamp | date:'YYYY/MM/DD'}}/{{vars.part_name2}}_{{input}}_step{{step}}_frame{{meta.dataformat.meta.sequencerFrame}}.png",
+        "default": "test",
+        "output": "filename"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Print_1769804602753_014r54aaj",
+      "type": "Print",
+      "props": {},
+      "is_end_node": true,
+      "label": "Print"
+    },
+    {
+      "id": "PrintCamStatus",
+      "type": "Print",
+      "props": {},
+      "is_end_node": true,
+      "label": "Print"
+    },
+    {
+      "id": "store_current_part",
+      "type": "VariableStore",
+      "props": {
+        "stores": [
+          {
+            "var": "part_name1",
+            "scope": "flow",
+            "value_field": "part_name1"
+          },
+          {
+            "var": "part_name2",
+            "scope": "flow",
+            "value_field": "part_name2"
+          }
+        ]
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "stringSanitize1",
+      "type": "StringSanitize",
+      "props": {
+        "source": {
+          "scope": "msg",
+          "var": "payload"
+        },
+        "output": "part_name1"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "stringSanitize2",
+      "type": "StringSanitize",
+      "props": {
+        "source": {
+          "scope": "msg",
+          "var": "payload"
+        },
+        "output": "part_name2"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "RedisSubscribeGet_1772781716160_dqs42gb9r",
+      "type": "RedisSubscribeGet",
+      "props": {
+        "conn_name": "redisConfig",
+        "key": "strPartIds02"
+      },
+      "is_end_node": false,
+      "label": "EingangPartIdStation2"
+    },
+    {
+      "id": "RedisSubscribeGet_1772781812656_1z29ih138",
+      "type": "RedisSubscribeGet",
+      "props": {
+        "conn_name": "redisConfig",
+        "key": "strPartIds01"
+      },
+      "is_end_node": false,
+      "label": "EingangPartIdStation1"
+    },
+    {
+      "id": "Print_1772781935481_ylw6ofohn",
+      "type": "Print",
+      "props": {},
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "Modify_1772782259089_ldrxh7ust",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "local",
+            "value": {},
+            "field": "extract"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "meta.json.camIndex",
+            "field": "extract.cam"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "step",
+            "field": "extract.step"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "meta.dataformat.meta.sequencerFrame",
+            "field": "extract.frame"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "Trigger_1771357339662_okq0tcg1x",
+      "type": "Trigger",
+      "props": {
+        "payload": {},
+        "initial_delay": 5
+      },
+      "is_end_node": false,
+      "label": "Trigger"
+    },
+    {
+      "id": "extracter",
+      "type": "ExtractBreadCenterline",
+      "props": {
+        "scale": 0.25,
+        "min_path_length": 10,
+        "source_field": "payload",
+        "output_field": "path_segments",
+        "epsilon": 0.3,
+        "select": "all"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "set_segments_filename",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "field": "filename",
+            "action": "set",
+            "value": "/home/fls/python_node/path_segments.json"
+          }
+        ]
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "export_path_segments",
+      "type": "ExportData",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "segments_filename"
+        },
+        "source": {
+          "scope": "msg",
+          "var": "path_segments"
+        }
+      },
+      "is_end_node": false,
+      "label": "SavePathSegments"
+    },
+    {
+      "id": "extract_and_mask",
+      "type": "ImageArithmetic",
+      "props": {
+        "operation": "subtract",
+        "source_a": "data.mask",
+        "source_b": "binary",
+        "output_field": "mask_short"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "measure_blobs",
+      "type": "MeasureBlobsAlongPath",
+      "props": {
+        "mask_field": "mask_short",
+        "path_segments_field": "path_segments",
+        "path_segments": {
+          "scope": "msg",
+          "var": "data.checkbead.path_segments"
+        },
+        "min_area": 100,
+        "max_perp_distance": 150,
+        "output_field": "blob_measurements_short",
+        "draw": true,
+        "draw_field": "overlay",
+        "skip_end": 10,
+        "skip_start": 10
+      },
+      "is_end_node": true
+    },
+    {
+      "id": "filterBlobs",
+      "type": "ArrayFilter",
+      "props": {
+        "input_field": "blob_measurements_short",
+        "output_field": "blob_measurements_short",
+        "logic": "and",
+        "pass_empty": true,
+        "filters": [
+          {
+            "field": "length",
+            "op": ">=",
+            "value": 40
+          },
+          {
+            "field": "max_width",
+            "op": ">",
+            "value": 5
+          },
+          {
+            "field": "area",
+            "op": ">",
+            "value": 100
+          }
+        ]
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "checkMissingBead",
+      "type": "CompareArray",
+      "props": {
+        "left_param": "blob_measurements_short",
+        "right_value": 0,
+        "operator": "length_gt",
+        "output": "resultShortBeads"
+      },
+      "is_end_node": false
+    },
+    {
+      "id": "BlobAnalyzer_1772002936865_q9221559x",
+      "type": "BlobAnalyzer",
+      "props": {
+        "input_field": "binary"
+      },
+      "is_end_node": false,
+      "label": "BlobAnalyzer"
+    },
+    {
+      "id": "ForEach_1772003016231_5cg0ejsx5",
+      "type": "ForEach",
+      "props": {
+        "item_field": "point",
+        "input_array": {
+          "scope": "msg",
+          "var": "data.existence.points"
+        }
+      },
+      "is_end_node": false,
+      "label": "ForEach"
+    },
+    {
+      "id": "ForEachCollect_1772003023294_re6u7lgqc",
+      "type": "ForEachCollect",
+      "props": {
+        "item_field": null,
+        "collects": {
+          "klebungenvorhanden": [
+            "filtered_blobs[0].area",
+            "near_point_match",
+            "point"
+          ]
+        },
+        "output_field": null
+      },
+      "is_end_node": false,
+      "label": "ForEachCollect"
+    },
+    {
+      "id": "BlobNearPoint_1772003065783_i2htk8vkh",
+      "type": "BlobNearPoint",
+      "props": {
+        "point": {
+          "scope": "msg",
+          "var": "point"
+        }
+      },
+      "is_end_node": false,
+      "label": "BlobNearPoint"
+    },
+    {
+      "id": "Modify_1772130877491_yrkrt1dmo",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "field": "path_segments",
+            "action": "set",
+            "source": "msg",
+            "value": "data.checkbead.path_segments"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "Print_1772220746370_hwo4abuj6",
+      "type": "Print",
+      "props": {
+        "fields": null
+      },
+      "is_end_node": false,
+      "label": "PrintTest"
+    },
+    {
+      "id": "sf_1772382189263",
+      "type": "SubFlow",
+      "props": {
+        "subflow": "subflow_1772382189263",
+        "context_overrides": {}
+      },
+      "is_end_node": false,
+      "label": "RecipesLoader"
+    },
+    {
+      "id": "ListDir_1772393046276_wwgthf0oe",
+      "type": "ListDir",
+      "props": {
+        "path": "/home/fls/python_node/station_images/new",
+        "pattern": "**/*.png",
+        "output_field": "image_files",
+        "absolute": true,
+        "recursive": true,
+        "enhanced": true,
+        "extensions": "*.png"
+      },
+      "is_end_node": false,
+      "label": "ListDir"
+    },
+    {
+      "id": "ForEach_1772393046285_dd7bhrnxc",
+      "type": "ForEach",
+      "props": {
+        "index_field": "file_index",
+        "input_array": {
+          "scope": "msg",
+          "var": "image_files"
+        },
+        "item_field": null
+      },
+      "is_end_node": false,
+      "label": "ForEach"
+    },
+    {
+      "id": "ImageLoader_1772393046294_krvq81y4q",
+      "type": "ImageLoader",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "path"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageLoader"
+    },
+    {
+      "id": "Replay_1772393046303_w1osp5zxv",
+      "type": "Replay",
+      "props": {
+        "max_buffers": 10
+      },
+      "is_end_node": false,
+      "label": "replay"
+    },
+    {
+      "id": "RegexExtract_1772393046310_b5czhirgu",
+      "type": "RegexExtract",
+      "props": {
+        "flags": "",
+        "pattern": "(?P<part_name>.+)_cam(?P<cam>\\d+)_step(?P<step>\\d+)_frame(?P<frame>\\d+)",
+        "source": {
+          "scope": "msg",
+          "var": "path"
+        },
+        "output": "extract"
+      },
+      "is_end_node": false,
+      "label": "RegexExtract"
+    },
+    {
+      "id": "StringTemplate_1772393101319_g3h9vrrf7",
+      "type": "StringTemplate",
+      "props": {
+        "output": "segments_filename",
+        "template": "output/s{{extract.step}}_i{{extract.frame}}_cam{{extract.cam}}.json"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Print_1772435900228_0jbf7bfzt",
+      "type": "Print",
+      "props": {},
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "ForEach_1772536212462_puzygqn70",
+      "type": "ForEach",
+      "props": {
+        "input_array": {
+          "scope": "global",
+          "var": "recipes"
+        },
+        "item_field": "recipe"
+      },
+      "is_end_node": false,
+      "label": "LoadAllRecipes"
+    },
+    {
+      "id": "Modify_1772542218897_eyx5vu6cg",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "inspections",
+            "field": "recipes"
+          },
+          {
+            "action": "set",
+            "source": "local",
+            "value": true,
+            "field": "loaded"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "PathSegmentsMask_1772550288860_ydis4hehj",
+      "type": "PathSegmentsMask",
+      "props": {
+        "height": {
+          "scope": "global",
+          "var": "image_height"
+        },
+        "path_segments": {
+          "scope": "msg",
+          "var": "recipe.checkbead.path_segments"
+        },
+        "width": {
+          "scope": "global",
+          "var": "image_width"
+        },
+        "init_once": false,
+        "thickness": {
+          "scope": "msg",
+          "var": "recipe.checkbead.min_thickness"
+        }
+      },
+      "is_end_node": false,
+      "label": "PathSegmentsMask"
+    },
+    {
+      "id": "StringTemplate_1772550805905_srcr0pt9x",
+      "type": "StringTemplate",
+      "props": {
+        "output": "filename",
+        "template": "/output/masks/{{key}}_mask.png"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Save_1772550865979_urxj651sj",
+      "type": "ImageSave",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "filename"
+        },
+        "source": {
+          "scope": "msg",
+          "var": "mask"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "ParallelFork_1772553304042_37my0vbyf",
+      "type": "ParallelFork",
+      "props": {
+        "branches": 3
+      },
+      "is_end_node": false,
+      "label": "ParallelFork"
+    },
+    {
+      "id": "ParallelJoin_1772553306281_9sdo1q4je",
+      "type": "ParallelJoin",
+      "props": {
+        "merge_strategy": "merge"
+      },
+      "is_end_node": false,
+      "label": "ParallelJoin"
+    },
+    {
+      "id": "ColorBinarize_1772553374908_r80dpdi0l",
+      "type": "ColorBinarize",
+      "props": {
+        "space": "hsv",
+        "ranges": {
+          "bead": [
+            [
+              60,
+              110,
+              75
+            ],
+            [
+              97,
+              255,
+              190
+            ]
+          ],
+          "dark_blue": [
+            [
+              80,
+              150,
+              40
+            ],
+            [
+              105,
+              255,
+              150
+            ]
+          ],
+          "dark_green": [
+            [
+              55,
+              150,
+              25
+            ],
+            [
+              75,
+              255,
+              100
+            ]
+          ],
+          "reflections": [
+            [
+              0,
+              0,
+              140
+            ],
+            [
+              100,
+              200,
+              255
+            ]
+          ]
+        },
+        "output_field": "binary_org"
+      },
+      "is_end_node": false,
+      "label": "ColorBinarize"
+    },
+    {
+      "id": "Modify_1772561510184_syznpziow",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "mask",
+            "field": "recipes[msg.key].mask"
+          },
+          {
+            "action": "set",
+            "source": "local",
+            "value": true,
+            "field": "loaded"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "linescollected",
+            "field": "recipes[msg.key].lines"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "Modify_1772562180930_6v6i9hias",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "var",
+            "value": "recipes[msg.inspection]",
+            "field": "data",
+            "scope": "global"
+          },
+          {
+            "action": "set",
+            "source": "var",
+            "value": "recipes[msg.inspection].mask",
+            "field": "mask",
+            "scope": "global"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "Trigger_1772562268252_j5yd7am8u",
+      "type": "Trigger",
+      "props": {
+        "auto_start": true,
+        "payload": {}
+      },
+      "is_end_node": false,
+      "label": "Trigger"
+    },
+    {
+      "id": "RegexExtract_1772568615338_dl83rc09c",
+      "type": "RegexExtract",
+      "props": {
+        "flags": "",
+        "pattern": "(?P<part_name>.+)_cam(?P<cam>\\d+)_step(?P<step>\\d+)_frame(?P<frame>\\d+)",
+        "source": {
+          "scope": "msg",
+          "var": "filename"
+        }
+      },
+      "is_end_node": false,
+      "label": "InspektionAusBildname"
+    },
+    {
+      "id": "StringTemplate_1772568654209_acu5dpt0j",
+      "type": "StringTemplate",
+      "props": {
+        "template": "s{{extract.step}}_i{{extract.frame}}_cam{{extract.cam}}",
+        "output": "inspection"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "LinkInput_1772568771331_zacvacxax",
+      "type": "LinkInput",
+      "props": {
+        "channel": "link0"
+      },
+      "is_end_node": false,
+      "label": "LinkInput"
+    },
+    {
+      "id": "LinkOutput_1772568808228_8bxxq60nr",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "link0"
+      },
+      "is_end_node": false,
+      "label": "LinkOutput"
+    },
+    {
+      "id": "LinkOutput_1772612018192_plb7ybxyp",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "offlineeval"
+      },
+      "is_end_node": false,
+      "label": "LinkOutput"
+    },
+    {
+      "id": "ForEachCollect_1772614155075_l0daamz7o",
+      "type": "ForEachCollect",
+      "props": {},
+      "is_end_node": false,
+      "label": "ForEachCollect"
+    },
+    {
+      "id": "DrawGeometries_1772614693013_qq5i5to0r",
+      "type": "DrawGeometries",
+      "props": {
+        "points": {
+          "scope": "msg",
+          "var": "nio_kleckse.*.point"
+        },
+        "point_radius": 40,
+        "path_segments": null,
+        "path_width": 15,
+        "point_color": [
+          255,
+          0,
+          0
+        ]
+      },
+      "is_end_node": false,
+      "label": "DrawGeometries"
+    },
+    {
+      "id": "ForEach_1772615150348_d51sl615s",
+      "type": "ForEach",
+      "props": {
+        "index_field": "file_index",
+        "input_array": {
+          "scope": "msg",
+          "var": "image_files"
+        },
+        "item_field": null
+      },
+      "is_end_node": false,
+      "label": "ForEach"
+    },
+    {
+      "id": "ListDir_1772615203562_r2g0hmugr",
+      "type": "ListDir",
+      "props": {
+        "path": "/output/03",
+        "pattern": "**/*.png",
+        "output_field": "image_files",
+        "absolute": true,
+        "recursive": true,
+        "enhanced": true,
+        "extensions": "*.png"
+      },
+      "is_end_node": false,
+      "label": "ListDir"
+    },
+    {
+      "id": "ImageLoader_1772615233100_vf32n5kpk",
+      "type": "ImageLoader",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "path"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageLoader"
+    },
+    {
+      "id": "Print_1772619387990_rtec3jai9",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "inspection"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "ImageArithmetic_1772638043544_pxcb0j3a3",
+      "type": "ImageArithmetic",
+      "props": {
+        "operation": "subtract",
+        "source_a": "data.mask",
+        "source_b": "binary",
+        "output_field": "mask_long"
+      },
+      "is_end_node": false,
+      "label": "extract_and_mask"
+    },
+    {
+      "id": "MeasureBlobsAlongPath_1772638047935_li6qp90qe",
+      "type": "MeasureBlobsAlongPath",
+      "props": {
+        "mask_field": "mask_long",
+        "path_segments_field": "path_segments",
+        "path_segments": {
+          "scope": "msg",
+          "var": "data.fullbeadcheck.path_segments"
+        },
+        "min_area": 100,
+        "max_perp_distance": 150,
+        "output_field": "blob_measurements",
+        "draw": true,
+        "draw_field": "overlay",
+        "skip_end": 10,
+        "skip_start": 10
+      },
+      "is_end_node": false,
+      "label": "measure_blobs"
+    },
+    {
+      "id": "ArrayFilter_1772638051568_arrjwsdv7",
+      "type": "ArrayFilter",
+      "props": {
+        "input_field": "blob_measurements",
+        "output_field": "blob_measurements",
+        "logic": "and",
+        "pass_empty": true,
+        "filters": [
+          {
+            "field": "length",
+            "op": ">=",
+            "value": 40
+          },
+          {
+            "field": "max_width",
+            "op": ">",
+            "value": 5
+          },
+          {
+            "field": "area",
+            "op": ">",
+            "value": 100
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "filterBlobs"
+    },
+    {
+      "id": "CompareArray_1772638054399_3jjhpkgff",
+      "type": "CompareArray",
+      "props": {
+        "left_param": "blob_measurements",
+        "right_value": 0,
+        "operator": "length_gt",
+        "output": "resultLongBeads"
+      },
+      "is_end_node": false,
+      "label": "checkMissingBead"
+    },
+    {
+      "id": "DashboardText_1772696298831_law5pb9ge",
+      "type": "DashboardText",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 1,
+        "value_field": "counter",
+        "label": "Z\u00e4hler Auswertungen",
+        "grid_row": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardText"
+    },
+    {
+      "id": "Counter_1772696566361_ljj5w05k8",
+      "type": "Counter",
+      "props": {
+        "param": "counter",
+        "step": 1,
+        "start": 0
+      },
+      "is_end_node": false,
+      "label": "Counter"
+    },
+    {
+      "id": "ArrayFilter_1772704928895_riiyw3mn2",
+      "type": "ArrayFilter",
+      "props": {
+        "filters": [
+          {
+            "field": "near_point_match",
+            "op": "==",
+            "value": true
+          }
+        ],
+        "input_field": "klebungenvorhanden",
+        "output_field": "io_kleckse",
+        "pass_empty": true
+      },
+      "is_end_node": false,
+      "label": "FilterIOKleckse"
+    },
+    {
+      "id": "CompareArray_1772705168149_qhw7wpacz",
+      "type": "CompareArray",
+      "props": {
+        "left_param": "nio_kleckse",
+        "operator": "is_empty",
+        "output": "resultExistence"
+      },
+      "is_end_node": false,
+      "label": "CompareArray"
+    },
+    {
+      "id": "DashboardText_1772705572849_6g5smfmy3",
+      "type": "DashboardText",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 3,
+        "label": "Auswertung",
+        "value_field": "inspection",
+        "grid_row": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardText"
+    },
+    {
+      "id": "StringTemplate_1772706704375_8mgaa3g16",
+      "type": "StringTemplate",
+      "props": {
+        "template": "Punkte: {{resultExistence ? \"OK\" : \"NOK\"}} Kurze N\u00e4hte: {{resultShortBeads ? \"OK\": \"NOK\"}}Dichtnaht: {{resultLongBeads ? \"OK\": \"NOK\"}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "StringTemplate_1774560000000_ors20001",
+      "type": "StringTemplate",
+      "props": {
+        "output": "overallResultStation2",
+        "template": "{{(resultExistence && resultShortBeads && resultLongBeads) ? \"1\" : \"\"}}"
+      },
+      "is_end_node": false,
+      "label": "ComputeOverallResultStation2"
+    },
+    {
+      "id": "DashboardImage_1772c711714555_kdl9021ms",
+      "type": "DashboardImage",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 3,
+        "grid_height": 3,
+        "jpeg_quality": 25,
+        "grid_col": 1,
+        "grid_width": 4,
+        "extra_fields": "path_segments,points,measurements",
+        "hover_marker_size": 18,
+        "linked_graph": [
+          "DashboardSpecEditor_1774220200000_se0001",
+          "DashboardGraph_1774220000005_dsg0005"
+        ],
+        "label": "AnalyseBild"
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "PathSegmentsMask_1772726936465_1h9yz1cpc",
+      "type": "PathSegmentsMask",
+      "props": {
+        "height": {
+          "scope": "global",
+          "var": "image_height"
+        },
+        "path_segments": {
+          "scope": "msg",
+          "var": "recipe.fullbeadcheck.path_segments"
+        },
+        "width": {
+          "scope": "global",
+          "var": "image_width"
+        },
+        "init_once": false,
+        "draw_on_field": {
+          "scope": "msg",
+          "var": "mask"
+        },
+        "thickness": 40
+      },
+      "is_end_node": false,
+      "label": "PathSegmentsMask"
+    },
+    {
+      "id": "StringTemplate_1772736063974_9i5uygng1",
+      "type": "StringTemplate",
+      "props": {
+        "default": "resultExistenceCam0",
+        "output": "topic",
+        "template": "resultExistence{{msg.extract.cam}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "StringTemplate_1772736236671_zu09iq9s2",
+      "type": "StringTemplate",
+      "props": {
+        "default": "resultShortBeadsCam0",
+        "output": "topic",
+        "template": "resultShortBeads{{msg.extract.cam}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "StringTemplate_1772736250513_clraqurj0",
+      "type": "StringTemplate",
+      "props": {
+        "default": "resultLongBeadsCam0",
+        "output": "topic",
+        "template": "resultLongBeads{{msg.extract.cam}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "CompareArray_1772740113582_22yi8a7ve",
+      "type": "CompareArray",
+      "props": {
+        "left_param": "data.fullbeadcheck.path_segments",
+        "operator": "is_not_empty",
+        "output": "hasbeadstoinspect"
+      },
+      "is_end_node": false,
+      "label": "CompareArray"
+    },
+    {
+      "id": "IfElse_1772740186627_0sf3chpt5",
+      "type": "IfElse",
+      "props": {
+        "param": "hasbeadstoinspect"
+      },
+      "is_end_node": false,
+      "label": "IfElse"
+    },
+    {
+      "id": "CompareArray_1772740517393_act2iqrfj",
+      "type": "CompareArray",
+      "props": {
+        "left_param": "data.checkbead.path_segments",
+        "operator": "is_not_empty",
+        "output": "hasbeadstoinspect"
+      },
+      "is_end_node": false,
+      "label": "CompareArray"
+    },
+    {
+      "id": "IfElse_1772740521595_lcojp28ig",
+      "type": "IfElse",
+      "props": {
+        "param": "hasbeadstoinspect"
+      },
+      "is_end_node": false,
+      "label": "IfElse"
+    },
+    {
+      "id": "RedisSet_1772788929428_wccedz7ss",
+      "type": "RedisSet",
+      "props": {
+        "param": "result",
+        "topic": {
+          "scope": "msg",
+          "var": "topic"
+        },
+        "conn_name": "redisConfig"
+      },
+      "is_end_node": false,
+      "label": "RedisSet"
+    },
+    {
+      "id": "StringTemplate_1772789104012_wb6luxf46",
+      "type": "StringTemplate",
+      "props": {
+        "default": "4",
+        "output": "result",
+        "template": "{{resultExistence ? \"1\": \"2\"}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "StringTemplate_1772789187333_7nmja8k2l",
+      "type": "StringTemplate",
+      "props": {
+        "default": "4",
+        "output": "result",
+        "template": "{{resultShortBeads? \"1\": \"2\"}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "StringTemplate_1772789210141_f3ti9eaq8",
+      "type": "StringTemplate",
+      "props": {
+        "default": "4",
+        "output": "result",
+        "template": "{{resultLongBeads? \"1\": \"2\"}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Print_1772789428574_mbp04wgi2",
+      "type": "Print",
+      "props": {},
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "LinkInput_1772870870957_ziyxzoce0",
+      "type": "LinkInput",
+      "props": {
+        "channel": "inspectionFinished"
+      },
+      "is_end_node": false,
+      "label": "LinkInput"
+    },
+    {
+      "id": "LinkOutput_1772870934904_kcqg6tglw",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "inspectionFinished"
+      },
+      "is_end_node": false,
+      "label": "LinkOutput"
+    },
+    {
+      "id": "Print_1772871455727_syerh7ghs",
+      "type": "Print",
+      "props": {
+        "fields": null
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "LinkOutput_1772883711949_qqa18wcn3",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "link0"
+      },
+      "is_end_node": false,
+      "label": "LinkOutput"
+    },
+    {
+      "id": "DashboardTriggerButton_1772889991988_6eypiwbm8",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Start Offline",
+        "tab": "Validierung",
+        "grid_row": 1,
+        "grid_col": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "DashboardList_1772890562784_f2grloirq",
+      "type": "DashboardList",
+      "props": {
+        "label": "Files",
+        "tab": "Validierung",
+        "value_field": "items",
+        "grid_col": 1,
+        "grid_height": 2,
+        "grid_row": 2,
+        "grid_width": 2
+      },
+      "is_end_node": false,
+      "label": "DashboardList"
+    },
+    {
+      "id": "ForEachCollect_1772891343929_naikhejo5",
+      "type": "ForEachCollect",
+      "props": {
+        "item_field": ""
+      },
+      "is_end_node": false,
+      "label": "ForEachCollect"
+    },
+    {
+      "id": "Print_1772891965459_6jmvgykkc",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "extract"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "FifoPush_1772894533804_kodagfz42",
+      "type": "FifoPush",
+      "props": {},
+      "is_end_node": false,
+      "label": "FifoPush"
+    },
+    {
+      "id": "DashboardFifoNavigator_1772894554075_6srhlmxg1",
+      "type": "DashboardFifoNavigator",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 1,
+        "tab": "Main",
+        "initial_playing": false,
+        "play_interval_ms": 1000,
+        "grid_row": 2,
+        "display_field": "filename",
+        "grid_width": 4,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardFifoNavigator"
+    },
+    {
+      "id": "DashboardText_1772895118254_qvuhfvsjz",
+      "type": "DashboardText",
+      "props": {
+        "grid_row": 1,
+        "grid_width": 3,
+        "label": "Bauteilname",
+        "tab": "Station1",
+        "value_field": "partid",
+        "grid_col": 3,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardText"
+    },
+    {
+      "id": "DashboardLED_1772895180078_rbml71rix",
+      "type": "DashboardLED",
+      "props": {
+        "grid_col": 6,
+        "grid_row": 1,
+        "label": "Ergebnis",
+        "tab": "Station1",
+        "color_off": "#FF0000",
+        "color_on": "#00FF00",
+        "value_field": "overallResultStation1",
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardLED"
+    },
+    {
+      "id": "DashboardLabel_1772895787267_tkdnw79lj",
+      "type": "DashboardLabel",
+      "props": {
+        "align": "center",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_width": 2,
+        "size": "h1",
+        "tab": "Station1",
+        "text": "Station1",
+        "grid_row": 1,
+        "grid_col": 1,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardLabel"
+    },
+    {
+      "id": "DashboardImage_1772895888958_m4zsca5z0",
+      "type": "DashboardImage",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 3,
+        "label": "Kamera1",
+        "tab": "Station1",
+        "rotation": 0,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 4
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "DashboardImage_1772895924666_ax7mgz56o",
+      "type": "DashboardImage",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 3,
+        "label": "Kamera2",
+        "tab": "Station1",
+        "grid_col": 7,
+        "rotation": 0,
+        "grid_width": 6,
+        "grid_height": 4
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "DrawBlobMeasurements_1772897118485_bdp9zuslt",
+      "type": "DrawBlobMeasurements",
+      "props": {
+        "mask_field": "mask_long",
+        "image_field": "overlay",
+        "draw_field": "payload",
+        "draw_thickness": 20,
+        "font_size": 6,
+        "draw_text": false,
+        "draw_color": [
+          0,
+          0,
+          255
+        ]
+      },
+      "is_end_node": false,
+      "label": "DrawBlobMeasurements"
+    },
+    {
+      "id": "Trigger_1772898285661_42c5hg89i",
+      "type": "Trigger",
+      "props": {
+        "initial_delay": 1,
+        "payload": {}
+      },
+      "is_end_node": false,
+      "label": "Trigger"
+    },
+    {
+      "id": "DrawBlobMeasurements_1772898985305_mupmyjfdo",
+      "type": "DrawBlobMeasurements",
+      "props": {
+        "mask_field": "mask_short",
+        "image_field": "payload",
+        "draw_field": "payload",
+        "draw_thickness": 20,
+        "font_size": 6,
+        "draw_text": false,
+        "measurements_field": "blob_measurements_short",
+        "draw_color": [
+          0,
+          0,
+          255
+        ]
+      },
+      "is_end_node": false,
+      "label": "DrawBlobMeasurements"
+    },
+    {
+      "id": "ArrayFilter_1772899628857_188d2k3ih",
+      "type": "ArrayFilter",
+      "props": {
+        "filters": [
+          {
+            "field": "near_point_match",
+            "op": "==",
+            "value": false
+          }
+        ],
+        "input_field": "klebungenvorhanden",
+        "output_field": "nio_kleckse",
+        "pass_empty": true
+      },
+      "is_end_node": false,
+      "label": "FilterNIOKleckse"
+    },
+    {
+      "id": "Counter_1772903093358_ytfsue26x",
+      "type": "Counter",
+      "props": {},
+      "is_end_node": false,
+      "label": "Counter"
+    },
+    {
+      "id": "DashboardText_1772903117860_flbtcbec0",
+      "type": "DashboardText",
+      "props": {
+        "grid_col": 5,
+        "label": "Bildz\u00e4hler",
+        "value_field": "count",
+        "grid_row": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardText"
+    },
+    {
+      "id": "Switch_1772904384632_r7hp099p1",
+      "type": "Switch",
+      "props": {
+        "map": [
+          "cam1",
+          "cam2",
+          "cam3",
+          "cam4"
+        ],
+        "field": "input"
+      },
+      "is_end_node": false,
+      "label": "Switch"
+    },
+    {
+      "id": "DashboardImage_1772904888196_5dlxdxbrj",
+      "type": "DashboardImage",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 3,
+        "label": "Kamera3",
+        "tab": "Station2",
+        "rotation": 0,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 4
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "DashboardImage_1772904893277_lqmc8noaj",
+      "type": "DashboardImage",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 3,
+        "label": "Kamera4",
+        "tab": "Station2",
+        "grid_col": 7,
+        "grid_width": 6,
+        "grid_height": 4
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "Modify_1772905308473_1gu8tdb3e",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "var",
+            "value": "part_name1",
+            "field": "partid",
+            "scope": "flow"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "Modify_1772905450622_7kzy8js32",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "var",
+            "value": "part_name2",
+            "field": "partid",
+            "scope": "flow"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "DashboardText_1772910201237_dyzorztrz",
+      "type": "DashboardText",
+      "props": {
+        "grid_row": 1,
+        "grid_width": 3,
+        "label": "Bauteilname",
+        "tab": "Station2",
+        "value_field": "partid",
+        "grid_col": 3,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardText"
+    },
+    {
+      "id": "ColorMap_1772967631089_0zyy3n8vw",
+      "type": "ColorMap",
+      "props": {
+        "default_color": [
+          0,
+          0,
+          0
+        ],
+        "source_field": "mask",
+        "output_field": "mask_orange",
+        "mappings": [
+          {
+            "from": 255,
+            "to": [
+              100,
+              100,
+              255
+            ]
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "ColorMap"
+    },
+    {
+      "id": "ImageArithmetic_1772967756183_qka84m25h",
+      "type": "ImageArithmetic",
+      "props": {
+        "source_b": "mask_orange",
+        "operation": "blend"
+      },
+      "is_end_node": false,
+      "label": "ImageArithmetic"
+    },
+    {
+      "id": "StringTemplate_1772967856647_mvbt3ja4n",
+      "type": "StringTemplate",
+      "props": {
+        "template": "/output/suchbereiche/{{_start_timestamp | date:'YYYY/MM/DD'}}/{{vars.part_name1}}_{{input}}_step{{step}}_frame{{meta.dataformat.meta.sequencerFrame}}.png",
+        "default": "test",
+        "output": "filename"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "ImageSave_1772967913184_unmm0c560",
+      "type": "ImageSave",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "filename"
+        },
+        "source": {
+          "scope": "msg",
+          "var": "payload"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "PdfExport_1772972191991_qq160nhdy",
+      "type": "PdfExport",
+      "props": {
+        "output_path": "/output/report.pdf"
+      },
+      "is_end_node": false,
+      "label": "PdfExport"
+    },
+    {
+      "id": "PdfImage_1772972196268_ti6djmoqe",
+      "type": "PdfImage",
+      "props": {
+        "image_field": "payload"
+      },
+      "is_end_node": false,
+      "label": "PdfImage"
+    },
+    {
+      "id": "PdfText_1772972965935_620z31wj5",
+      "type": "PdfText",
+      "props": {
+        "alignment": "CENTER",
+        "font_size": 26,
+        "text_field": "filename"
+      },
+      "is_end_node": false,
+      "label": "PdfText"
+    },
+    {
+      "id": "Switch_1772974593766_icjiqlw0r",
+      "type": "Switch",
+      "props": {
+        "map": [
+          "cam1",
+          "cam2",
+          "cam3",
+          "cam4"
+        ],
+        "field": "input"
+      },
+      "is_end_node": false,
+      "label": "Switch"
+    },
+    {
+      "id": "Modify_1772974656302_8d7g59jtv",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "payload",
+            "field": "cam1_accu"
+          }
+        ],
+        "target": "var",
+        "scope": "flow"
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "LinkInput_1772974690511_g8fj5m8tw",
+      "type": "LinkInput",
+      "props": {
+        "channel": "accu"
+      },
+      "is_end_node": false,
+      "label": "LinkInput"
+    },
+    {
+      "id": "LinkOutput_1772974726472_zaukw11do",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "accu"
+      },
+      "is_end_node": false,
+      "label": "LinkOutput"
+    },
+    {
+      "id": "Print_1772975156794_d8ldgxd63",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "input"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "PseudoColor_1772988159467_p8xvkhbvq",
+      "type": "PseudoColor",
+      "props": {
+        "show_legend": true
+      },
+      "is_end_node": false,
+      "label": "PseudoColor"
+    },
+    {
+      "id": "Modify_1772995719994_g8mxn9ezi",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "var",
+            "value": "[]",
+            "field": "resultsStation1",
+            "scope": "global"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "ClearResultsStation1"
+    },
+    {
+      "id": "Modify_1772995787140_ss00kosp7",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "var",
+            "value": "[]",
+            "field": "resultsStation2",
+            "scope": "global"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "ClearResultsStation1"
+    },
+    {
+      "id": "Modify_1772995857113_rf3gnaeve",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "append",
+            "source": "msg",
+            "value": "result",
+            "field": "resultsStation1"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "AddResultStation1"
+    },
+    {
+      "id": "Modify_1772995937126_bzvbsubyx",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "append",
+            "source": "msg",
+            "value": "result",
+            "field": "resultsStation2"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "AddResultStation2"
+    },
+    {
+      "id": "StringTemplate_1772996022948_n19u19dzo",
+      "type": "StringTemplate",
+      "props": {
+        "default": "camX",
+        "output": "input",
+        "template": "cam{{extract.cam}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Switch_1772996184991_z4g0bss7h",
+      "type": "Switch",
+      "props": {
+        "map": [
+          "cam1",
+          "cam2",
+          "cam3",
+          "cam4"
+        ],
+        "field": "input"
+      },
+      "is_end_node": false,
+      "label": "Switch"
+    },
+    {
+      "id": "CompareArray_1772996253554_ulwtkt1jx",
+      "type": "CompareArray",
+      "props": {
+        "left_param": {
+          "scope": "global",
+          "var": "resultsStation1"
+        },
+        "operator": "length_gte",
+        "right_value": 6,
+        "output": "countResultsStation1"
+      },
+      "is_end_node": false,
+      "label": "GetResultsStation1"
+    },
+    {
+      "id": "CompareArray_1772996443221_uxv72uid1",
+      "type": "CompareArray",
+      "props": {
+        "left_param": {
+          "scope": "global",
+          "var": "resultsStation1"
+        },
+        "operator": "length_eq",
+        "right_value": 0,
+        "output": "overallResultStation1",
+        "filter": [
+          {
+            "field": "",
+            "op": "==",
+            "value": "2"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "CalculateOverallResult"
+    },
+    {
+      "id": "IfElse_1772996581839_abnnx33p2",
+      "type": "IfElse",
+      "props": {
+        "param": "countResultsStation1"
+      },
+      "is_end_node": false,
+      "label": "IfElse"
+    },
+    {
+      "id": "Print_1772996662164_shwy8g7q9",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "countResultsStation1",
+          "overallResultStation1"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "LinkOutput_1773000016100_eyjbrcb7v",
+      "type": "LinkOutput",
+      "props": {
+        "channel": "overallResultStation1"
+      },
+      "is_end_node": false,
+      "label": "LinkOutputOverallResultStation1"
+    },
+    {
+      "id": "LinkInput_1773000060490_9fkes38ea",
+      "type": "LinkInput",
+      "props": {
+        "channel": "overallResultStation1"
+      },
+      "is_end_node": false,
+      "label": "LinkInputOverallResultStation1"
+    },
+    {
+      "id": "Modify_1773000737248_ccqdz6qjr",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "extract.part_name",
+            "field": "partid"
+          }
+        ]
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "DashboardTriggerButton_1773001032330_jfcziy4v5",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Save Mask of Cam1",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 3,
+        "tab": "Validierung",
+        "grid_row": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "ImageSave_1773001047704_uo15vfs59",
+      "type": "ImageSave",
+      "props": {
+        "filename": "/output/masks/cam1_mask_accu.png",
+        "source": {
+          "scope": "flow",
+          "var": "cam1_accu"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "CompareObject_1773002884471_dxpyavakl",
+      "type": "CompareObject",
+      "props": {
+        "key": "maskfile",
+        "operator": "has_key",
+        "output": "hasMask",
+        "left_param": {
+          "scope": "msg",
+          "var": "recipe"
+        }
+      },
+      "is_end_node": false,
+      "label": "CheckIfMaskFromFile"
+    },
+    {
+      "id": "IfElse_1773002937602_6u2huwr82",
+      "type": "IfElse",
+      "props": {
+        "param": "hasMask"
+      },
+      "is_end_node": false,
+      "label": "IfElse"
+    },
+    {
+      "id": "ImageLoader_1773002974803_4i3r42dd5",
+      "type": "ImageLoader",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "filename_mask"
+        },
+        "mode": "grayscale",
+        "output_field": "mask"
+      },
+      "is_end_node": false,
+      "label": "ImageLoader"
+    },
+    {
+      "id": "StringTemplate_1773003047106_ofl63zhah",
+      "type": "StringTemplate",
+      "props": {
+        "output": "filename_mask",
+        "template": "{{global.recipes_directory}}/{{recipe.maskfile}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "DashboardLabel_1773005188278_5xogdsvvl",
+      "type": "DashboardLabel",
+      "props": {
+        "align": "center",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_width": 2,
+        "size": "h1",
+        "tab": "Station2",
+        "text": "Station2",
+        "grid_row": 1,
+        "grid_col": 1,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardLabel"
+    },
+    {
+      "id": "Modify_1773072059173_1osa3j6qk",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "payload",
+            "field": "cam3_accu"
+          }
+        ],
+        "target": "var",
+        "scope": "flow"
+      },
+      "is_end_node": false,
+      "label": "Save cam3_accu"
+    },
+    {
+      "id": "DashboardTriggerButton_1773072106712_7m8t9qgu4",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Save Mask of Cam2",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 3,
+        "tab": "Validierung",
+        "grid_row": 2,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "ImageSave_1773072109144_fclg1fubx",
+      "type": "ImageSave",
+      "props": {
+        "filename": "/output/masks/cam2_mask_accu.png",
+        "source": {
+          "scope": "flow",
+          "var": "cam2_accu"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "sf_1773072242623",
+      "type": "SubFlow",
+      "props": {
+        "subflow": "subflow_1773072242623",
+        "context_overrides": {}
+      },
+      "is_end_node": false,
+      "label": "MaskeCam1"
+    },
+    {
+      "id": "SubFlow_1773072366068_26u1gngrd",
+      "type": "SubFlow",
+      "props": {
+        "subflow": "subflow_1773072242623",
+        "context_overrides": {}
+      },
+      "is_end_node": false,
+      "label": "MaskeCam3"
+    },
+    {
+      "id": "SubFlow_1773072375795_08r76lioe",
+      "type": "SubFlow",
+      "props": {
+        "subflow": "subflow_1773072242623",
+        "context_overrides": {}
+      },
+      "is_end_node": false,
+      "label": "MaskeCam4"
+    },
+    {
+      "id": "SubFlow_1773072384557_c7w950ovw",
+      "type": "SubFlow",
+      "props": {
+        "subflow": "subflow_1773072242623",
+        "context_overrides": {}
+      },
+      "is_end_node": false,
+      "label": "MaskeCam2"
+    },
+    {
+      "id": "Modify_1773072436140_4yxgk7zzq",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "payload",
+            "field": "cam2_accu"
+          }
+        ],
+        "target": "var",
+        "scope": "flow"
+      },
+      "is_end_node": false,
+      "label": "Save cam2_accu"
+    },
+    {
+      "id": "Modify_1773072456851_fds5ea4vy",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "payload",
+            "field": "cam4_accu"
+          }
+        ],
+        "target": "var",
+        "scope": "flow"
+      },
+      "is_end_node": false,
+      "label": "Save cam4_accu"
+    },
+    {
+      "id": "DashboardTriggerButton_1773072500067_wxcqxuw51",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Save Mask of Cam3",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 3,
+        "tab": "Validierung",
+        "grid_row": 3,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "DashboardTriggerButton_1773072504451_2ptggn8yi",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Save Mask of Cam4",
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_col": 3,
+        "tab": "Validierung",
+        "grid_row": 4,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "ImageSave_1773072575050_5t4u3i2ue",
+      "type": "ImageSave",
+      "props": {
+        "filename": "/output/masks/cam3_mask_accu.png",
+        "source": {
+          "scope": "flow",
+          "var": "cam3_accu"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "ImageSave_1773072611138_hi2topyul",
+      "type": "ImageSave",
+      "props": {
+        "filename": "/output/masks/cam4_mask_accu.png",
+        "source": {
+          "scope": "flow",
+          "var": "cam4_accu"
+        }
+      },
+      "is_end_node": false,
+      "label": "ImageSave"
+    },
+    {
+      "id": "DashboardImage_1773080147818_jtw8mkx74",
+      "type": "DashboardImage",
+      "props": {
+        "grid_col": 5,
+        "tab": "Validierung",
+        "grid_row": 1,
+        "grid_width": 5,
+        "grid_height": 2
+      },
+      "is_end_node": false,
+      "label": "DashboardImage"
+    },
+    {
+      "id": "MorphologyEx_1773081667484_pcdkunwwx",
+      "type": "MorphologyEx",
+      "props": {
+        "iterations": 2,
+        "size": 7
+      },
+      "is_end_node": false,
+      "label": "MorphologyEx"
+    },
+    {
+      "id": "MorphologyEx_1773083518337_2wfvpfv4t",
+      "type": "MorphologyEx",
+      "props": {
+        "iterations": 1,
+        "size": 3,
+        "operation": "erode"
+      },
+      "is_end_node": false,
+      "label": "MorphologyEx"
+    },
+    {
+      "id": "PathPerpendiculars_1773127712583_6ibu4u28w",
+      "type": "PathPerpendiculars",
+      "props": {
+        "line_length": 60,
+        "path_segments": {
+          "scope": "msg",
+          "var": "path_segments"
+        },
+        "spacing": 30
+      },
+      "is_end_node": false,
+      "label": "PathPerpendiculars"
+    },
+    {
+      "id": "ForEach_1773128605627_y9o8pz2n2",
+      "type": "ForEach",
+      "props": {
+        "input_array": "recipe.fullbeadcheck.path_segments",
+        "item_field": "path_segments"
+      },
+      "is_end_node": false,
+      "label": "ForEach"
+    },
+    {
+      "id": "ForEachCollect_1773128607225_5n7hphz20",
+      "type": "ForEachCollect",
+      "props": {
+        "item_field": "lines",
+        "output_field": "linescollected",
+        "flatten": true
+      },
+      "is_end_node": false,
+      "label": "ForEachCollect"
+    },
+    {
+      "id": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "type": "MeasureLineWidth",
+      "props": {
+        "lines": {
+          "scope": "msg",
+          "var": "data.lines"
+        },
+        "input_field": "binary",
+        "strategy": "longest",
+        "gap_size": 20,
+        "draw": false
+      },
+      "is_end_node": false,
+      "label": "MeasureLineWidth"
+    },
+    {
+      "id": "Print_1773130127614_4w9hr3b5e",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "nok_segments",
+          "bead_validation",
+          "measurements",
+          "graph_data"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "ExtractMeasurementStats_1773130707133_zismz77lv",
+      "type": "ExtractMeasurementStats",
+      "props": {
+        "rolling_n": 5,
+        "n": 10
+      },
+      "is_end_node": false,
+      "label": "ExtractMeasurementStats"
+    },
+    {
+      "id": "SortArray_1773139543115_pcg7b92mk",
+      "type": "SortArray",
+      "props": {
+        "key": "extract.cam",
+        "output_field": "items"
+      },
+      "is_end_node": false,
+      "label": "SortArray"
+    },
+    {
+      "id": "ForEach_1773139635611_6nk4qtt78",
+      "type": "ForEach",
+      "props": {
+        "item_field": "",
+        "preserve_payload": false
+      },
+      "is_end_node": false,
+      "label": "ForEach"
+    },
+    {
+      "id": "DashboardTable_1773141138649_jmr8sppme",
+      "type": "DashboardTable",
+      "props": {
+        "grid_col": 5,
+        "grid_row": 3,
+        "tab": "Validierung",
+        "value_field": "",
+        "columns": [
+          "filename",
+          "avg_width"
+        ],
+        "grid_width": 5,
+        "grid_height": 2
+      },
+      "is_end_node": false,
+      "label": "DashboardTable"
+    },
+    {
+      "id": "ArrayFilter_1773151826241_j3ev3miw9",
+      "type": "ArrayFilter",
+      "props": {
+        "filters": [
+          {
+            "field": "extract.cam",
+            "op": "==",
+            "value": 1
+          },
+          {
+            "field": "extract.step",
+            "op": "==",
+            "value": 2
+          }
+        ],
+        "input_field": "items",
+        "output_field": "items"
+      },
+      "is_end_node": false,
+      "label": "ArrayFilter"
+    },
+    {
+      "id": "ValidateBeadMeasurements_1773214404845_ncgyttisq",
+      "type": "ValidateBeadMeasurements",
+      "props": {
+        "min_width_threshold": 15
+      },
+      "is_end_node": false,
+      "label": "ValidateBeadMeasurements"
+    },
+    {
+      "id": "DrawGeometries_1773216206426_e29tbga6l",
+      "type": "DrawGeometries",
+      "props": {
+        "point_radius": 5,
+        "path_segments": {
+          "scope": "msg",
+          "var": "nok_segments"
+        },
+        "lines_field": "measure_lines",
+        "points": {
+          "scope": "msg",
+          "var": "measure_points"
+        },
+        "path_width": 15,
+        "point_color": [
+          255,
+          0,
+          17
+        ],
+        "line_color": [
+          0,
+          255,
+          0
+        ],
+        "path_color": [
+          0,
+          0,
+          255
+        ],
+        "marker_size": 0
+      },
+      "is_end_node": false,
+      "label": "DrawGeometries"
+    },
+    {
+      "id": "MeasurementsToGraph_1773257429099_dux6vkw01",
+      "type": "MeasurementsToGraph",
+      "props": {
+        "x_scale": 6,
+        "x_unit": "mm",
+        "y_unit": "mm"
+      },
+      "is_end_node": false,
+      "label": "MeasurementsToGraph"
+    },
+    {
+      "id": "RetinexFilter_1773385940583_4qappl6o2",
+      "type": "RetinexFilter",
+      "props": {
+        "mode": "msr",
+        "sigmas": [
+          80,
+          250
+        ],
+        "gain": 128,
+        "offset": 128,
+        "channel_mode": "hsv",
+        "strength": 1,
+        "mask_bright_input": true,
+        "bright_threshold": 140,
+        "sat_correction": 0.5,
+        "use_opencl": true,
+        "downsample_factor": 2
+      },
+      "is_end_node": false,
+      "label": "RetinexFilter"
+    },
+    {
+      "id": "DashboardHSVRange_1774107830620_ydp6xemp1",
+      "type": "DashboardHSVRange",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 1,
+        "grid_col": 7,
+        "grid_width": 3,
+        "grid_height": 2
+      },
+      "is_end_node": false,
+      "label": "DashboardHSVRange"
+    },
+    {
+      "id": "Trigger_1774107863776_qj5cqgagn",
+      "type": "Trigger",
+      "props": {
+        "payload": {
+          "ranges": {
+            "dark_green": [
+              [
+                0,
+                0,
+                75
+              ],
+              [
+                90,
+                118,
+                159
+              ]
+            ]
+          }
+        }
+      },
+      "is_end_node": false,
+      "label": "Trigger"
+    },
+    {
+      "id": "LearnColorRanges_1774108625103_9ftd0ogz1",
+      "type": "LearnColorRanges",
+      "props": {
+        "mask_field": "mask"
+      },
+      "is_end_node": false,
+      "label": "LearnColorRanges"
+    },
+    {
+      "id": "ColorHistogram_1774119979498_atyk1jngf",
+      "type": "ColorHistogram",
+      "props": {},
+      "is_end_node": false,
+      "label": "ColorHistogram"
+    },
+    {
+      "id": "DashboardHistogram_1774119981501_1qfltoecf",
+      "type": "DashboardHistogram",
+      "props": {
+        "grid_row": 3,
+        "grid_col": 8,
+        "grid_width": 4,
+        "grid_height": 2
+      },
+      "is_end_node": false,
+      "label": "DashboardHistogram"
+    },
+    {
+      "id": "BuildMeasurementSpec_1774220000001_bms0001",
+      "type": "BuildMeasurementSpec",
+      "props": {
+        "base_target": 8,
+        "base_margin": 2,
+        "line_offsets": [],
+        "line_margins": [],
+        "spec_field": "spec"
+      },
+      "is_end_node": false,
+      "label": "BuildMeasurementSpec"
+    },
+    {
+      "id": "TrainMeasurementSpec_1774220000002_tms0002",
+      "type": "TrainMeasurementSpec",
+      "props": {
+        "measurements_field": "measurements",
+        "mode": "accumulate",
+        "n_sigma": 3,
+        "min_samples": 3,
+        "sampling_rate": 10,
+        "output_spec_field": "trained_spec",
+        "fit_check_field": "fit_result",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "partition_key_field": "data.key"
+      },
+      "is_end_node": false,
+      "label": "TrainMeasurementSpec"
+    },
+    {
+      "id": "MatchMeasurementsToSpec_1774220000003_mms0003",
+      "type": "MatchMeasurementsToSpec",
+      "props": {
+        "measurements_field": "measurements",
+        "spec_field": "data.ranges",
+        "output_field": "spec_match",
+        "value_key": "max_width",
+        "y_unit": "mm"
+      },
+      "is_end_node": false,
+      "label": "MatchMeasurementsToSpec"
+    },
+    {
+      "id": "DashboardWidgetGroup_1774220200000_dwg0001",
+      "type": "DashboardWidgetGroup",
+      "props": {
+        "widget_id": "group1",
+        "group_tabs": "Cam1,Cam2,Cam3",
+        "columns": 6,
+        "grid_row": 6,
+        "grid_col": 1,
+        "grid_width": 12,
+        "grid_height": 3,
+        "tab": "Main"
+      },
+      "is_end_node": false,
+      "label": "DashboardWidgetGroup"
+    },
+    {
+      "id": "DashboardSpecEditor_1774220200000_se0001",
+      "type": "DashboardSpecEditor",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "label": "Spec Editor",
+        "widget_group": "group1",
+        "inner_tab": "Cam1",
+        "grid_row": 1,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 3,
+        "spec_field": "data.ranges",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005"
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecEditor"
+    },
+    {
+      "id": "ExportData_1774220200001_se0002",
+      "type": "ExportData",
+      "props": {
+        "source": "spec",
+        "filename": {
+          "scope": "msg",
+          "var": "filename_ranges"
+        },
+        "mode": "json"
+      },
+      "is_end_node": true,
+      "label": "SaveSpec"
+    },
+    {
+      "id": "SpecToGraph_1774220000004_stg0004",
+      "type": "SpecToGraph",
+      "props": {
+        "measurements_field": "measurements",
+        "spec_field": "data.ranges",
+        "output_field": "graph_data",
+        "value_key": "max_width",
+        "include_bounds": true,
+        "include_target": true,
+        "y_unit": "mm"
+      },
+      "is_end_node": false,
+      "label": "SpecToGraph"
+    },
+    {
+      "id": "Modify_1774249528505_0cepz248a",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "trained_spec",
+            "field": "trained_spec"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "Modify"
+    },
+    {
+      "id": "DashboardTriggerButton_1774249596996_fnqlgjrxh",
+      "type": "DashboardTriggerButton",
+      "props": {
+        "button_label": "Export Trained Spec",
+        "tab": "Validierung",
+        "grid_row": 4,
+        "grid_col": 1,
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardTriggerButton"
+    },
+    {
+      "id": "ExportData_1774249631639_9le3sccky",
+      "type": "ExportData",
+      "props": {
+        "source": {
+          "scope": "global",
+          "var": "trained_spec"
+        },
+        "filename": "/output/trained_spec.json",
+        "mode": "json"
+      },
+      "is_end_node": false,
+      "label": "ExportData"
+    },
+    {
+      "id": "ValidateWithSpec_1774274611125_5nvd9ijos",
+      "type": "ValidateWithSpec",
+      "props": {
+        "y_unit": "mm",
+        "spec_field": "data.ranges"
+      },
+      "is_end_node": false,
+      "label": "ValidateWithSpec"
+    },
+    {
+      "id": "ValidateWithSpec_1774290724371_8v7gf8v93",
+      "type": "ValidateWithSpec",
+      "props": {
+        "y_unit": "mm",
+        "value_key": "center_dist",
+        "spec_field": "data.ranges"
+      },
+      "is_end_node": false,
+      "label": "ValidateWithSpec"
+    },
+    {
+      "id": "MeasurementsToGraph_1774290802793_5t7orcwo4",
+      "type": "MeasurementsToGraph",
+      "props": {
+        "x_scale": 6,
+        "x_unit": "mm",
+        "y_unit": "mm",
+        "y_field": "center_dist"
+      },
+      "is_end_node": false,
+      "label": "MeasurementsToGraph"
+    },
+    {
+      "id": "DashboardGraph_1774290806644_sm4gc4nle",
+      "type": "DashboardGraph",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "grid_row": 5,
+        "grid_width": 4,
+        "tab": "Validierung",
+        "value_field": "graph_data",
+        "grid_col": 5,
+        "grid_height": 2,
+        "y_unit": "mm",
+        "x_unit": "mm",
+        "label": "Center Position"
+      },
+      "is_end_node": false,
+      "label": "DashboardGraph"
+    },
+    {
+      "id": "MorphologyEx_1774291186114_cyq0s2mbn",
+      "type": "MorphologyEx",
+      "props": {
+        "input_field": "binary",
+        "output_field": "binary",
+        "operation": "close",
+        "size": 3,
+        "iterations": 1,
+        "shape": "rect"
+      },
+      "is_end_node": false,
+      "label": "MorphologyEx"
+    },
+    {
+      "id": "ShapeFilter_bead",
+      "type": "ShapeFilter",
+      "props": {
+        "input_field": "binary",
+        "output_field": "binary",
+        "output_mode": "mask",
+        "min_area": 5000,
+        "max_area": 0,
+        "min_solidity": 0,
+        "max_solidity": 0,
+        "min_circularity": 0,
+        "max_circularity": 0,
+        "min_aspect_ratio": 0,
+        "max_aspect_ratio": 0,
+        "connectivity": 8,
+        "max_extent": 3,
+        "grow_field": "payload",
+        "grow_saturation_factor": 0,
+        "grow_saturation_min": 100,
+        "grow_value_min": 200,
+        "max_coverage_pct": 0
+      },
+      "is_end_node": false,
+      "label": "ShapeFilter (bead)"
+    },
+    {
+      "id": "DashboardSpecViewer_1774298183355_xa387fkqs",
+      "type": "DashboardSpecViewer",
+      "props": {
+        "tab": "Station1",
+        "grid_row": 2,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 1,
+        "spec_field": "data.ranges",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005"
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecViewer"
+    },
+    {
+      "id": "DashboardSpecViewer_1774298301678_4he152dsx",
+      "type": "DashboardSpecViewer",
+      "props": {
+        "tab": "Station1",
+        "grid_row": 2,
+        "grid_col": 7,
+        "grid_width": 6,
+        "grid_height": 1,
+        "spec_field": "data.ranges",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005"
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecViewer"
+    },
+    {
+      "id": "DashboardManualAnnotation_1774298361292_71d45f35d",
+      "type": "DashboardManualAnnotation",
+      "props": {
+        "tab": "Station1",
+        "grid_row": 1,
+        "grid_col": 8,
+        "grid_width": 3,
+        "grid_height": 1,
+        "part_id_field": "partid"
+      },
+      "is_end_node": false,
+      "label": "DashboardManualAnnotation"
+    },
+    {
+      "id": "DashboardSpecViewer_1774298447638_g0th4ku3z",
+      "type": "DashboardSpecViewer",
+      "props": {
+        "tab": "Station2",
+        "grid_row": 2,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 1,
+        "spec_field": "data.ranges",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005"
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecViewer"
+    },
+    {
+      "id": "DashboardSpecViewer_1774298451791_t5vo5gwku",
+      "type": "DashboardSpecViewer",
+      "props": {
+        "tab": "Station2",
+        "grid_row": 2,
+        "grid_col": 7,
+        "grid_width": 6,
+        "grid_height": 1,
+        "spec_field": "data.ranges",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005"
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecViewer"
+    },
+    {
+      "id": "DashboardManualAnnotation_1774298457007_g6sihos6p",
+      "type": "DashboardManualAnnotation",
+      "props": {
+        "tab": "Station2",
+        "grid_row": 1,
+        "grid_col": 8,
+        "grid_width": 3,
+        "grid_height": 1,
+        "part_id_field": "partid"
+      },
+      "is_end_node": false,
+      "label": "DashboardManualAnnotation"
+    },
+    {
+      "id": "DashboardLED_1774298568554_nqhclx8cr",
+      "type": "DashboardLED",
+      "props": {
+        "grid_col": 6,
+        "grid_row": 1,
+        "label": "Ergebnis",
+        "tab": "Station2",
+        "color_off": "#FF0000",
+        "color_on": "#00FF00",
+        "value_field": "overallResultStation2",
+        "grid_width": 2,
+        "grid_height": 1
+      },
+      "is_end_node": false,
+      "label": "DashboardLED"
+    },
+    {
+      "id": "StringTemplate_1774348573735_rpswt1r89",
+      "type": "StringTemplate",
+      "props": {
+        "output": "globalFilenameRanges",
+        "template": "{{global.recipes_directory}}/{{recipe.ranges_file}}"
+      },
+      "is_end_node": false,
+      "label": "GlobalFileNameRanges"
+    },
+    {
+      "id": "ImportData_1774348644717_4w255y5aa",
+      "type": "ImportData",
+      "props": {
+        "filename": {
+          "scope": "msg",
+          "var": "globalFilenameRanges"
+        },
+        "mode": "json",
+        "target_field": "recipe.ranges"
+      },
+      "is_end_node": false,
+      "label": "ImportData"
+    },
+    {
+      "id": "Modify_SaveRangesToGlobal",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "recipe.ranges",
+            "field": "recipes[msg.key].ranges"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "mask",
+            "field": "recipes[msg.key].mask"
+          },
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "key",
+            "field": "recipes[msg.key].key"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "Save ranges to global"
+    },
+    {
+      "id": "RegexExtract_cam_from_input",
+      "type": "RegexExtract",
+      "props": {
+        "source": "input",
+        "pattern": "cam(?P<cam>\\d+)",
+        "group": "cam",
+        "output": "extract.cam"
+      },
+      "is_end_node": false,
+      "label": "Extract cam# from input"
+    },
+    {
+      "id": "Print_1774511569277_llcvk116y",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "data"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "DrawGeometries_1774523881821_xgz676c7h",
+      "type": "DrawGeometries",
+      "props": {
+        "point_radius": 5,
+        "path_segments": {
+          "scope": "msg",
+          "var": "nok_segments"
+        },
+        "lines_field": "measure_lines",
+        "points": {
+          "scope": "msg",
+          "var": "measure_points"
+        },
+        "path_width": 15,
+        "point_color": [
+          255,
+          0,
+          17
+        ],
+        "line_color": [
+          0,
+          255,
+          0
+        ],
+        "path_color": [
+          0,
+          0,
+          255
+        ],
+        "marker_size": 0
+      },
+      "is_end_node": false,
+      "label": "DrawGeometries"
+    },
+    {
+      "id": "Print_1774528878746_6h63uth7d",
+      "type": "Print",
+      "props": {},
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "MorphologyEx_1774701870146_jjjrqjnvd",
+      "type": "MorphologyEx",
+      "props": {
+        "input_field": "binary",
+        "operation": "dilate",
+        "output_field": "binary",
+        "size": 5
+      },
+      "is_end_node": false,
+      "label": "MorphologyEx"
+    },
+    {
+      "id": "ImageArithmetic_1774729430095_fla8yzn4v",
+      "type": "ImageArithmetic",
+      "props": {
+        "operation": "and",
+        "output_field": "binary",
+        "source_a": "binary_org",
+        "source_b": "data.mask"
+      },
+      "is_end_node": false,
+      "label": "ImageArithmetic"
+    },
+    {
+      "id": "StringTemplate_1774798212301_81xvd5uf0",
+      "type": "StringTemplate",
+      "props": {
+        "output": "filename_ranges",
+        "template": "{{global.recipes_directory}}/{{data.ranges_file}}"
+      },
+      "is_end_node": false,
+      "label": "StringTemplate"
+    },
+    {
+      "id": "Modify_1774798290597_iqwzr654g",
+      "type": "Modify",
+      "props": {
+        "operations": [
+          {
+            "action": "set",
+            "source": "msg",
+            "value": "data.ranges",
+            "field": "recipes[msg.data.key].ranges"
+          }
+        ],
+        "scope": "global",
+        "target": "var"
+      },
+      "is_end_node": false,
+      "label": "Save ranges to global"
+    },
+    {
+      "id": "Print_1774798747662_dt1lur6kw",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "data"
+        ]
+      },
+      "is_end_node": false,
+      "label": "Print"
+    },
+    {
+      "id": "DashboardSpecEditor_1774894671405_uchid5z0m",
+      "type": "DashboardSpecEditor",
+      "props": {
+        "dashboard_config": "DashboardConfig_1772696222102_7ttqj27hv",
+        "label": "Verlauf",
+        "widget_group": "group1",
+        "inner_tab": "Cam2",
+        "grid_row": 1,
+        "grid_col": 1,
+        "grid_width": 6,
+        "grid_height": 3,
+        "spec_field": "trained_spec",
+        "measurements_field": "measurements",
+        "value_key": "max_width",
+        "y_unit": "mm",
+        "legend_position": "none",
+        "linked_graph": "DashboardGraph_1774220000005_dsg0005",
+        "sampling_rate": 1,
+        "partition_key_filter": ""
+      },
+      "is_end_node": false,
+      "label": "DashboardSpecEditor"
+    },
+    {
+      "id": "Print_1774895464836_ysi94gd6t",
+      "type": "Print",
+      "props": {
+        "fields": [
+          "trained_spec",
+          "measurements"
+        ]
+      },
+      "label": "Print"
+    },
+    {
+      "id": "zmq_cam1_socket",
+      "type": "ZmqConfig",
+      "props": {
+        "endpoint": "ipc:///dev/shm/camera1.input",
+        "bind": true,
+        "socket_type": "REP",
+        "inputname": "cam1",
+        "msgpack": false,
+        "name": "zmq_cam1_socket"
+      }
+    },
+    {
+      "id": "zmq_cam2_socket",
+      "type": "ZmqConfig",
+      "props": {
+        "endpoint": "ipc:///dev/shm/camera2.input",
+        "bind": true,
+        "socket_type": "REP",
+        "inputname": "cam2",
+        "msgpack": false,
+        "name": "zmq_cam2_socket"
+      }
+    },
+    {
+      "id": "zmq_cam3_socket",
+      "type": "ZmqConfig",
+      "props": {
+        "endpoint": "ipc:///dev/shm/camera3.input",
+        "bind": true,
+        "socket_type": "REP",
+        "inputname": "cam3",
+        "msgpack": false,
+        "name": "zmq_cam3_socket"
+      }
+    },
+    {
+      "id": "zmq_cam4_socket",
+      "type": "ZmqConfig",
+      "props": {
+        "endpoint": "ipc:///dev/shm/camera4.input",
+        "bind": true,
+        "socket_type": "REP",
+        "inputname": "cam4",
+        "msgpack": false,
+        "name": "zmq_cam4_socket"
+      }
+    },
+    {
+      "id": "SocketIOConfig_1769798437097_ixog0aszp",
+      "type": "SocketIOConfig",
+      "props": {},
+      "label": "SocketIOConfig"
+    },
+    {
+      "id": "redisConfig",
+      "type": "RedisConfig",
+      "props": {
+        "host": {
+          "scope": "global",
+          "var": "redis_host"
+        },
+        "port": {
+          "scope": "global",
+          "var": "redis_port"
+        },
+        "db": {
+          "scope": "global",
+          "var": "redis_db"
+        },
+        "unix_socket_path": {
+          "scope": "global",
+          "var": "redis_unix_socket_path"
+        }
+      }
+    },
+    {
+      "id": "DashboardConfig_1772696222102_7ttqj27hv",
+      "type": "DashboardConfig",
+      "props": {
+        "server_name": "SocketIOConfig_1769798437097_ixog0aszp"
+      },
+      "label": "DashboardConfig"
+    }
+  ],
+  "connections": [
+    {
+      "from": "zmq_cam1",
+      "to": "redisGetStepOuts01"
+    },
+    {
+      "from": "zmq_cam2",
+      "to": "redisGetStepOuts01"
+    },
+    {
+      "from": "zmq_cam3",
+      "to": "redisGetStepOuts02"
+    },
+    {
+      "from": "zmq_cam4",
+      "to": "redisGetStepOuts02"
+    },
+    {
+      "from": "Save_1769798302806_vpz9twmrv",
+      "to": "Print_1769804602753_014r54aaj"
+    },
+    {
+      "from": "stringSanitize1",
+      "to": "store_current_part"
+    },
+    {
+      "from": "stringSanitize2",
+      "to": "store_current_part"
+    },
+    {
+      "from": "zmq_cam4",
+      "to": "PrintCamStatus",
+      "from_slot": "meta"
+    },
+    {
+      "from": "zmq_cam3",
+      "to": "PrintCamStatus",
+      "from_slot": "meta"
+    },
+    {
+      "from": "zmq_cam2",
+      "to": "PrintCamStatus",
+      "from_slot": "meta"
+    },
+    {
+      "from": "zmq_cam1",
+      "to": "PrintCamStatus",
+      "from_slot": "meta"
+    },
+    {
+      "from": "RedisSubscribeGet_1772781716160_dqs42gb9r",
+      "to": "stringSanitize2"
+    },
+    {
+      "from": "RedisSubscribeGet_1772781812656_1z29ih138",
+      "to": "stringSanitize1"
+    },
+    {
+      "from": "stringSanitize1",
+      "to": "Print_1772781935481_ylw6ofohn"
+    },
+    {
+      "from": "stringSanitize2",
+      "to": "Print_1772781935481_ylw6ofohn"
+    },
+    {
+      "from": "StringTemplate_Part1",
+      "to": "Modify_1772782259089_ldrxh7ust"
+    },
+    {
+      "from": "StringTemplate_Part2",
+      "to": "Modify_1772782259089_ldrxh7ust"
+    },
+    {
+      "from": "Modify_1772782259089_ldrxh7ust",
+      "to": "RegexExtract_cam_from_input"
+    },
+    {
+      "from": "Trigger_1771357339662_okq0tcg1x",
+      "to": "sf_1772382189263"
+    },
+    {
+      "from": "extracter",
+      "to": "set_segments_filename"
+    },
+    {
+      "from": "set_segments_filename",
+      "to": "Modify_1772130877491_yrkrt1dmo"
+    },
+    {
+      "from": "extract_and_mask",
+      "to": "measure_blobs"
+    },
+    {
+      "from": "measure_blobs",
+      "to": "filterBlobs"
+    },
+    {
+      "from": "filterBlobs",
+      "to": "checkMissingBead"
+    },
+    {
+      "from": "BlobAnalyzer_1772002936865_q9221559x",
+      "to": "ForEach_1772003016231_5cg0ejsx5"
+    },
+    {
+      "from": "ForEach_1772003016231_5cg0ejsx5",
+      "to": "BlobNearPoint_1772003065783_i2htk8vkh"
+    },
+    {
+      "from": "BlobNearPoint_1772003065783_i2htk8vkh",
+      "to": "ForEachCollect_1772003023294_re6u7lgqc"
+    },
+    {
+      "from": "Modify_1772130877491_yrkrt1dmo",
+      "to": "export_path_segments"
+    },
+    {
+      "from": "ListDir_1772393046276_wwgthf0oe",
+      "to": "ForEach_1772393046285_dd7bhrnxc"
+    },
+    {
+      "from": "ForEach_1772393046285_dd7bhrnxc",
+      "to": "Replay_1772393046303_w1osp5zxv"
+    },
+    {
+      "from": "ImageLoader_1772393046294_krvq81y4q",
+      "to": "RegexExtract_1772393046310_b5czhirgu"
+    },
+    {
+      "from": "Replay_1772393046303_w1osp5zxv",
+      "to": "ImageLoader_1772393046294_krvq81y4q"
+    },
+    {
+      "from": "RegexExtract_1772393046310_b5czhirgu",
+      "to": "StringTemplate_1772393101319_g3h9vrrf7"
+    },
+    {
+      "from": "RegexExtract_1772393046310_b5czhirgu",
+      "to": "Print_1772435900228_0jbf7bfzt"
+    },
+    {
+      "from": "Trigger_1772393046316_x8yebolix",
+      "to": "ListDir_1772393046276_wwgthf0oe"
+    },
+    {
+      "from": "StringTemplate_1772393101319_g3h9vrrf7",
+      "to": "extracter"
+    },
+    {
+      "from": "Trigger_1772537960926_hdlbechxx",
+      "to": "Modify_1772537934764_21miwub1l"
+    },
+    {
+      "from": "sf_1772382189263",
+      "to": "Modify_1772542218897_eyx5vu6cg",
+      "from_slot": "out1"
+    },
+    {
+      "from": "StringTemplate_1772550805905_srcr0pt9x",
+      "to": "Save_1772550865979_urxj651sj"
+    },
+    {
+      "from": "ParallelFork_1772553304042_37my0vbyf",
+      "to": "BlobAnalyzer_1772002936865_q9221559x",
+      "from_slot": "out0"
+    },
+    {
+      "from": "checkMissingBead",
+      "to": "ParallelJoin_1772553306281_9sdo1q4je"
+    },
+    {
+      "from": "StringTemplate_1772568654209_acu5dpt0j",
+      "to": "Modify_1772562180930_6v6i9hias"
+    },
+    {
+      "from": "Modify_1772542218897_eyx5vu6cg",
+      "to": "ForEach_1772536212462_puzygqn70"
+    },
+    {
+      "from": "Modify_1772561510184_syznpziow",
+      "to": "ForEachCollect_1772614155075_l0daamz7o"
+    },
+    {
+      "from": "ForEachCollect_1772614155075_l0daamz7o",
+      "to": "LinkOutput_1772612018192_plb7ybxyp"
+    },
+    {
+      "from": "ListDir_1772615203562_r2g0hmugr",
+      "to": "ForEach_1772615150348_d51sl615s"
+    },
+    {
+      "from": "ImageArithmetic_1772638043544_pxcb0j3a3",
+      "to": "MeasureBlobsAlongPath_1772638047935_li6qp90qe"
+    },
+    {
+      "from": "MeasureBlobsAlongPath_1772638047935_li6qp90qe",
+      "to": "ArrayFilter_1772638051568_arrjwsdv7"
+    },
+    {
+      "from": "ArrayFilter_1772638051568_arrjwsdv7",
+      "to": "CompareArray_1772638054399_3jjhpkgff"
+    },
+    {
+      "from": "Counter_1772696566361_ljj5w05k8",
+      "to": "DashboardText_1772696298831_law5pb9ge"
+    },
+    {
+      "from": "ForEachCollect_1772003023294_re6u7lgqc",
+      "to": "ArrayFilter_1772704928895_riiyw3mn2"
+    },
+    {
+      "from": "CompareArray_1772705168149_qhw7wpacz",
+      "to": "ParallelJoin_1772553306281_9sdo1q4je"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "StringTemplate_1772706704375_8mgaa3g16"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "StringTemplate_1774560000000_ors20001"
+    },
+    {
+      "from": "Modify_1772562180930_6v6i9hias",
+      "to": "DashboardText_1772705572849_6g5smfmy3"
+    },
+    {
+      "from": "PathSegmentsMask_1772550288860_ydis4hehj",
+      "to": "PathSegmentsMask_1772726936465_1h9yz1cpc"
+    },
+    {
+      "from": "PathSegmentsMask_1772726936465_1h9yz1cpc",
+      "to": "StringTemplate_1772550805905_srcr0pt9x"
+    },
+    {
+      "from": "StringTemplate_1774560000000_ors20001",
+      "to": "DashboardLED_1774298568554_nqhclx8cr"
+    },
+    {
+      "from": "PathSegmentsMask_1772726936465_1h9yz1cpc",
+      "to": "Print_1772220746370_hwo4abuj6"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "StringTemplate_1772736063974_9i5uygng1"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "StringTemplate_1772736236671_zu09iq9s2"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "StringTemplate_1772736250513_clraqurj0"
+    },
+    {
+      "from": "CompareArray_1772740113582_22yi8a7ve",
+      "to": "IfElse_1772740186627_0sf3chpt5"
+    },
+    {
+      "from": "ParallelFork_1772553304042_37my0vbyf",
+      "to": "CompareArray_1772740113582_22yi8a7ve",
+      "from_slot": "out2"
+    },
+    {
+      "from": "IfElse_1772740186627_0sf3chpt5",
+      "to": "ImageArithmetic_1772638043544_pxcb0j3a3",
+      "from_slot": "if"
+    },
+    {
+      "from": "IfElse_1772740186627_0sf3chpt5",
+      "to": "ParallelJoin_1772553306281_9sdo1q4je",
+      "from_slot": "else"
+    },
+    {
+      "from": "IfElse_1772740521595_lcojp28ig",
+      "to": "extract_and_mask",
+      "from_slot": "if"
+    },
+    {
+      "from": "CompareArray_1772740517393_act2iqrfj",
+      "to": "IfElse_1772740521595_lcojp28ig"
+    },
+    {
+      "from": "ParallelFork_1772553304042_37my0vbyf",
+      "to": "CompareArray_1772740517393_act2iqrfj",
+      "from_slot": "out1"
+    },
+    {
+      "from": "IfElse_1772740521595_lcojp28ig",
+      "to": "ParallelJoin_1772553306281_9sdo1q4je",
+      "from_slot": "else"
+    },
+    {
+      "from": "Save_1769798302806_vpz9twmrv",
+      "to": "LinkOutput_1772568808228_8bxxq60nr"
+    },
+    {
+      "from": "StringTemplate_1772736063974_9i5uygng1",
+      "to": "StringTemplate_1772789104012_wb6luxf46"
+    },
+    {
+      "from": "StringTemplate_1772736236671_zu09iq9s2",
+      "to": "StringTemplate_1772789187333_7nmja8k2l"
+    },
+    {
+      "from": "StringTemplate_1772736250513_clraqurj0",
+      "to": "StringTemplate_1772789210141_f3ti9eaq8"
+    },
+    {
+      "from": "StringTemplate_1772789104012_wb6luxf46",
+      "to": "RedisSet_1772788929428_wccedz7ss"
+    },
+    {
+      "from": "StringTemplate_1772789187333_7nmja8k2l",
+      "to": "RedisSet_1772788929428_wccedz7ss"
+    },
+    {
+      "from": "StringTemplate_1772789210141_f3ti9eaq8",
+      "to": "RedisSet_1772788929428_wccedz7ss"
+    },
+    {
+      "from": "StringTemplate_1772706704375_8mgaa3g16",
+      "to": "Print_1772789428574_mbp04wgi2"
+    },
+    {
+      "from": "StringTemplate_1772568654209_acu5dpt0j",
+      "to": "Print_1772619387990_rtec3jai9"
+    },
+    {
+      "from": "ForEach_1772003016231_5cg0ejsx5",
+      "to": "ForEachCollect_1772003023294_re6u7lgqc",
+      "from_slot": "empty"
+    },
+    {
+      "from": "LinkInput_1772870870957_ziyxzoce0",
+      "to": "Counter_1772696566361_ljj5w05k8"
+    },
+    {
+      "from": "Counter_1772696566361_ljj5w05k8",
+      "to": "Print_1772871455727_syerh7ghs"
+    },
+    {
+      "from": "DashboardTriggerButton_1772889991988_6eypiwbm8",
+      "to": "ListDir_1772615203562_r2g0hmugr"
+    },
+    {
+      "from": "ImageLoader_1772615233100_vf32n5kpk",
+      "to": "LinkOutput_1772883711949_qqa18wcn3"
+    },
+    {
+      "from": "FifoPush_1772894533804_kodagfz42",
+      "to": "DashboardFifoNavigator_1772894554075_6srhlmxg1"
+    },
+    {
+      "from": "DashboardFifoNavigator_1772894554075_6srhlmxg1",
+      "to": "ImageLoader_1772615233100_vf32n5kpk"
+    },
+    {
+      "from": "Trigger_1772898285661_42c5hg89i",
+      "to": "ListDir_1772615203562_r2g0hmugr"
+    },
+    {
+      "from": "DrawBlobMeasurements_1772897118485_bdp9zuslt",
+      "to": "DrawBlobMeasurements_1772898985305_mupmyjfdo"
+    },
+    {
+      "from": "ArrayFilter_1772899628857_188d2k3ih",
+      "to": "CompareArray_1772705168149_qhw7wpacz"
+    },
+    {
+      "from": "ArrayFilter_1772704928895_riiyw3mn2",
+      "to": "ArrayFilter_1772899628857_188d2k3ih"
+    },
+    {
+      "from": "DrawBlobMeasurements_1772898985305_mupmyjfdo",
+      "to": "DrawGeometries_1772614693013_qq5i5to0r"
+    },
+    {
+      "from": "Save_1769798302806_vpz9twmrv",
+      "to": "Counter_1772903093358_ytfsue26x"
+    },
+    {
+      "from": "Counter_1772903093358_ytfsue26x",
+      "to": "DashboardText_1772903117860_flbtcbec0"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardImage_1772895888958_m4zsca5z0",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardImage_1772895924666_ax7mgz56o",
+      "from_slot": "cam2"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardImage_1772904888196_5dlxdxbrj",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardImage_1772904893277_lqmc8noaj",
+      "from_slot": "cam4"
+    },
+    {
+      "from": "LinkInput_1772870870957_ziyxzoce0",
+      "to": "Switch_1772904384632_r7hp099p1"
+    },
+    {
+      "from": "DrawGeometries_1772614693013_qq5i5to0r",
+      "to": "LinkOutput_1772870934904_kcqg6tglw"
+    },
+    {
+      "from": "redisGetStepOuts01",
+      "to": "Modify_1772905308473_1gu8tdb3e"
+    },
+    {
+      "from": "Modify_1772905308473_1gu8tdb3e",
+      "to": "StringTemplate_Part1"
+    },
+    {
+      "from": "Modify_1772905450622_7kzy8js32",
+      "to": "StringTemplate_Part2"
+    },
+    {
+      "from": "redisGetStepOuts02",
+      "to": "Modify_1772905450622_7kzy8js32"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardText_1772895118254_qvuhfvsjz",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardText_1772910201237_dyzorztrz",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "ColorMap_1772967631089_0zyy3n8vw",
+      "to": "ImageArithmetic_1772967756183_qka84m25h"
+    },
+    {
+      "from": "ImageArithmetic_1772967756183_qka84m25h",
+      "to": "StringTemplate_1772967856647_mvbt3ja4n"
+    },
+    {
+      "from": "StringTemplate_1772967856647_mvbt3ja4n",
+      "to": "ImageSave_1772967913184_unmm0c560"
+    },
+    {
+      "from": "PdfImage_1772972196268_ti6djmoqe",
+      "to": "PdfExport_1772972191991_qq160nhdy"
+    },
+    {
+      "from": "ImageSave_1772967913184_unmm0c560",
+      "to": "PdfText_1772972965935_620z31wj5"
+    },
+    {
+      "from": "PdfText_1772972965935_620z31wj5",
+      "to": "PdfImage_1772972196268_ti6djmoqe"
+    },
+    {
+      "from": "Modify_1772562180930_6v6i9hias",
+      "to": "LinkOutput_1772974726472_zaukw11do"
+    },
+    {
+      "from": "LinkInput_1772974690511_g8fj5m8tw",
+      "to": "Print_1772975156794_d8ldgxd63"
+    },
+    {
+      "from": "ForEach_1772615150348_d51sl615s",
+      "to": "RegexExtract_1772568615338_dl83rc09c"
+    },
+    {
+      "from": "stringSanitize1",
+      "to": "Modify_1772995719994_g8mxn9ezi"
+    },
+    {
+      "from": "stringSanitize2",
+      "to": "Modify_1772995787140_ss00kosp7"
+    },
+    {
+      "from": "RegexExtract_1772568615338_dl83rc09c",
+      "to": "StringTemplate_1772996022948_n19u19dzo"
+    },
+    {
+      "from": "RedisSet_1772788929428_wccedz7ss",
+      "to": "Switch_1772996184991_z4g0bss7h"
+    },
+    {
+      "from": "Switch_1772996184991_z4g0bss7h",
+      "to": "Modify_1772995857113_rf3gnaeve",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "Switch_1772996184991_z4g0bss7h",
+      "to": "Modify_1772995857113_rf3gnaeve",
+      "from_slot": "cam2"
+    },
+    {
+      "from": "Switch_1772996184991_z4g0bss7h",
+      "to": "Modify_1772995937126_bzvbsubyx",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "Switch_1772996184991_z4g0bss7h",
+      "to": "Modify_1772995937126_bzvbsubyx",
+      "from_slot": "cam4"
+    },
+    {
+      "from": "Modify_1772995857113_rf3gnaeve",
+      "to": "CompareArray_1772996253554_ulwtkt1jx"
+    },
+    {
+      "from": "CompareArray_1772996253554_ulwtkt1jx",
+      "to": "IfElse_1772996581839_abnnx33p2"
+    },
+    {
+      "from": "IfElse_1772996581839_abnnx33p2",
+      "to": "CompareArray_1772996443221_uxv72uid1",
+      "from_slot": "if"
+    },
+    {
+      "from": "CompareArray_1772996253554_ulwtkt1jx",
+      "to": "Print_1772996662164_shwy8g7q9"
+    },
+    {
+      "from": "CompareArray_1772996443221_uxv72uid1",
+      "to": "Print_1772996662164_shwy8g7q9"
+    },
+    {
+      "from": "CompareArray_1772996443221_uxv72uid1",
+      "to": "LinkOutput_1773000016100_eyjbrcb7v"
+    },
+    {
+      "from": "LinkInput_1773000060490_9fkes38ea",
+      "to": "DashboardLED_1772895180078_rbml71rix"
+    },
+    {
+      "from": "StringTemplate_1772996022948_n19u19dzo",
+      "to": "Modify_1773000737248_ccqdz6qjr"
+    },
+    {
+      "from": "Modify_1773000737248_ccqdz6qjr",
+      "to": "ForEachCollect_1772891343929_naikhejo5"
+    },
+    {
+      "from": "DashboardTriggerButton_1773001032330_jfcziy4v5",
+      "to": "ImageSave_1773001047704_uo15vfs59"
+    },
+    {
+      "from": "IfElse_1773002937602_6u2huwr82",
+      "to": "PathSegmentsMask_1772550288860_ydis4hehj",
+      "from_slot": "else"
+    },
+    {
+      "from": "ImageLoader_1773002974803_4i3r42dd5",
+      "to": "StringTemplate_1772550805905_srcr0pt9x"
+    },
+    {
+      "from": "StringTemplate_1773003047106_ofl63zhah",
+      "to": "ImageLoader_1773002974803_4i3r42dd5"
+    },
+    {
+      "from": "ForEach_1772536212462_puzygqn70",
+      "to": "CompareObject_1773002884471_dxpyavakl"
+    },
+    {
+      "from": "IfElse_1773002937602_6u2huwr82",
+      "to": "StringTemplate_1773003047106_ofl63zhah",
+      "from_slot": "if"
+    },
+    {
+      "from": "DashboardTriggerButton_1773072106712_7m8t9qgu4",
+      "to": "ImageSave_1773072109144_fclg1fubx"
+    },
+    {
+      "from": "Switch_1772974593766_icjiqlw0r",
+      "to": "sf_1773072242623",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "sf_1773072242623",
+      "to": "PseudoColor_1772988159467_p8xvkhbvq",
+      "from_slot": "out2"
+    },
+    {
+      "from": "Switch_1772974593766_icjiqlw0r",
+      "to": "SubFlow_1773072366068_26u1gngrd",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "Switch_1772974593766_icjiqlw0r",
+      "to": "SubFlow_1773072384557_c7w950ovw",
+      "from_slot": "cam2"
+    },
+    {
+      "from": "Switch_1772974593766_icjiqlw0r",
+      "to": "SubFlow_1773072375795_08r76lioe",
+      "from_slot": "cam4"
+    },
+    {
+      "from": "SubFlow_1773072366068_26u1gngrd",
+      "to": "Modify_1773072059173_1osa3j6qk",
+      "from_slot": "out1"
+    },
+    {
+      "from": "SubFlow_1773072375795_08r76lioe",
+      "to": "Modify_1773072456851_fds5ea4vy",
+      "from_slot": "out1"
+    },
+    {
+      "from": "DashboardTriggerButton_1773072500067_wxcqxuw51",
+      "to": "ImageSave_1773072575050_5t4u3i2ue"
+    },
+    {
+      "from": "DashboardTriggerButton_1773072504451_2ptggn8yi",
+      "to": "ImageSave_1773072611138_hi2topyul"
+    },
+    {
+      "from": "SubFlow_1773072384557_c7w950ovw",
+      "to": "MorphologyEx_1773081667484_pcdkunwwx",
+      "from_slot": "out1"
+    },
+    {
+      "from": "MorphologyEx_1773081667484_pcdkunwwx",
+      "to": "Modify_1773072436140_4yxgk7zzq"
+    },
+    {
+      "from": "sf_1773072242623",
+      "to": "MorphologyEx_1773083518337_2wfvpfv4t",
+      "from_slot": "out1"
+    },
+    {
+      "from": "MorphologyEx_1773083518337_2wfvpfv4t",
+      "to": "Modify_1772974656302_8d7g59jtv"
+    },
+    {
+      "from": "Modify_1772974656302_8d7g59jtv",
+      "to": "DashboardImage_1773080147818_jtw8mkx74"
+    },
+    {
+      "from": "ForEach_1773128605627_y9o8pz2n2",
+      "to": "PathPerpendiculars_1773127712583_6ibu4u28w"
+    },
+    {
+      "from": "PathPerpendiculars_1773127712583_6ibu4u28w",
+      "to": "ForEachCollect_1773128607225_5n7hphz20"
+    },
+    {
+      "from": "ForEach_1773128605627_y9o8pz2n2",
+      "to": "ForEachCollect_1773128607225_5n7hphz20",
+      "from_slot": "empty"
+    },
+    {
+      "from": "ForEachCollect_1773128607225_5n7hphz20",
+      "to": "Modify_1772561510184_syznpziow"
+    },
+    {
+      "from": "IfElse_1772740186627_0sf3chpt5",
+      "to": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "from_slot": "if"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "ExtractMeasurementStats_1773130707133_zismz77lv"
+    },
+    {
+      "from": "ForEachCollect_1772891343929_naikhejo5",
+      "to": "SortArray_1773139543115_pcg7b92mk"
+    },
+    {
+      "from": "ForEach_1773139635611_6nk4qtt78",
+      "to": "FifoPush_1772894533804_kodagfz42"
+    },
+    {
+      "from": "ExtractMeasurementStats_1773130707133_zismz77lv",
+      "to": "DashboardTable_1773141138649_jmr8sppme"
+    },
+    {
+      "from": "ArrayFilter_1773151826241_j3ev3miw9",
+      "to": "ForEach_1773139635611_6nk4qtt78"
+    },
+    {
+      "from": "Modify_1773000737248_ccqdz6qjr",
+      "to": "Print_1772891965459_6jmvgykkc"
+    },
+    {
+      "from": "MeasurementsToGraph_1773257429099_dux6vkw01",
+      "to": "Print_1773130127614_4w9hr3b5e"
+    },
+    {
+      "from": "RetinexFilter_1773385940583_4qappl6o2",
+      "to": "ColorBinarize_1772553374908_r80dpdi0l"
+    },
+    {
+      "from": "Trigger_1774107863776_qj5cqgagn",
+      "to": "DashboardHSVRange_1774107830620_ydp6xemp1"
+    },
+    {
+      "from": "IfElse_1772740186627_0sf3chpt5",
+      "to": "LearnColorRanges_1774108625103_9ftd0ogz1",
+      "from_slot": "if"
+    },
+    {
+      "from": "LearnColorRanges_1774108625103_9ftd0ogz1",
+      "to": "DashboardHSVRange_1774107830620_ydp6xemp1"
+    },
+    {
+      "from": "ColorHistogram_1774119979498_atyk1jngf",
+      "to": "DashboardHistogram_1774119981501_1qfltoecf"
+    },
+    {
+      "from": "LearnColorRanges_1774108625103_9ftd0ogz1",
+      "to": "ColorHistogram_1774119979498_atyk1jngf"
+    },
+    {
+      "from": "MatchMeasurementsToSpec_1774220000003_mms0003",
+      "to": "SpecToGraph_1774220000004_stg0004"
+    },
+    {
+      "from": "MatchMeasurementsToSpec_1774220000003_mms0003",
+      "to": "DashboardSpecEditor_1774220200000_se0001"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "TrainMeasurementSpec_1774220000002_tms0002"
+    },
+    {
+      "from": "TrainMeasurementSpec_1774220000002_tms0002",
+      "to": "Modify_1774249528505_0cepz248a"
+    },
+    {
+      "from": "Modify_1774249528505_0cepz248a",
+      "to": "ExportData_1774249631639_9le3sccky"
+    },
+    {
+      "from": "DashboardTriggerButton_1774249596996_fnqlgjrxh",
+      "to": "ExportData_1774249631639_9le3sccky"
+    },
+    {
+      "from": "DrawGeometries_1773216206426_e29tbga6l",
+      "to": "DashboardImage_1772c711714555_kdl9021ms"
+    },
+    {
+      "from": "ValidateWithSpec_1774274611125_5nvd9ijos",
+      "to": "DrawGeometries_1773216206426_e29tbga6l"
+    },
+    {
+      "from": "ValidateWithSpec_1774274611125_5nvd9ijos",
+      "to": "MeasurementsToGraph_1773257429099_dux6vkw01"
+    },
+    {
+      "from": "MeasurementsToGraph_1774290802793_5t7orcwo4",
+      "to": "DashboardGraph_1774290806644_sm4gc4nle"
+    },
+    {
+      "from": "ValidateWithSpec_1774290724371_8v7gf8v93",
+      "to": "MeasurementsToGraph_1774290802793_5t7orcwo4"
+    },
+    {
+      "from": "MorphologyEx_1774291186114_cyq0s2mbn",
+      "to": "ShapeFilter_bead"
+    },
+    {
+      "from": "StringTemplate_1774348573735_rpswt1r89",
+      "to": "ImportData_1774348644717_4w255y5aa"
+    },
+    {
+      "from": "ImportData_1774348644717_4w255y5aa",
+      "to": "Modify_SaveRangesToGlobal"
+    },
+    {
+      "from": "Modify_SaveRangesToGlobal",
+      "to": "ForEach_1773128605627_y9o8pz2n2"
+    },
+    {
+      "from": "StringTemplate_1772550805905_srcr0pt9x",
+      "to": "StringTemplate_1774348573735_rpswt1r89"
+    },
+    {
+      "from": "RegexExtract_cam_from_input",
+      "to": "Save_1769798302806_vpz9twmrv"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "ValidateWithSpec_1774290724371_8v7gf8v93"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "ValidateWithSpec_1774274611125_5nvd9ijos"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "MatchMeasurementsToSpec_1774220000003_mms0003"
+    },
+    {
+      "from": "MeasureLineWidth_1773129947600_znlwqq0v5",
+      "to": "Print_1774511569277_llcvk116y"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardSpecViewer_1774298183355_xa387fkqs",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardSpecViewer_1774298301678_4he152dsx",
+      "from_slot": "cam2"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardSpecViewer_1774298447638_g0th4ku3z",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardSpecViewer_1774298451791_t5vo5gwku",
+      "from_slot": "cam4"
+    },
+    {
+      "from": "DrawGeometries_1773216206426_e29tbga6l",
+      "to": "DashboardImage_1772c711714555_kdl9021ms"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardManualAnnotation_1774298361292_71d45f35d",
+      "from_slot": "cam1"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardManualAnnotation_1774298361292_71d45f35d",
+      "from_slot": "cam2"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardManualAnnotation_1774298457007_g6sihos6p",
+      "from_slot": "cam3"
+    },
+    {
+      "from": "Switch_1772904384632_r7hp099p1",
+      "to": "DashboardManualAnnotation_1774298457007_g6sihos6p",
+      "from_slot": "cam4"
+    },
+    {
+      "from": "DrawGeometries_1774523881821_xgz676c7h",
+      "to": "DrawBlobMeasurements_1772898985305_mupmyjfdo"
+    },
+    {
+      "from": "ParallelJoin_1772553306281_9sdo1q4je",
+      "to": "DrawGeometries_1774523881821_xgz676c7h"
+    },
+    {
+      "from": "ValidateWithSpec_1774290724371_8v7gf8v93",
+      "to": "ParallelJoin_1772553306281_9sdo1q4je"
+    },
+    {
+      "from": "LinkInput_1773000060490_9fkes38ea",
+      "to": "DashboardManualAnnotation_1774298361292_71d45f35d"
+    },
+    {
+      "from": "LinkInput_1773000060490_9fkes38ea",
+      "to": "DashboardManualAnnotation_1774298457007_g6sihos6p"
+    },
+    {
+      "from": "LinkInput_1773000060490_9fkes38ea",
+      "to": "Print_1774528878746_6h63uth7d"
+    },
+    {
+      "from": "ShapeFilter_bead",
+      "to": "MorphologyEx_1774701870146_jjjrqjnvd"
+    },
+    {
+      "from": "ColorBinarize_1772553374908_r80dpdi0l",
+      "to": "ImageArithmetic_1774729430095_fla8yzn4v"
+    },
+    {
+      "from": "ImageArithmetic_1774729430095_fla8yzn4v",
+      "to": "MorphologyEx_1774291186114_cyq0s2mbn"
+    },
+    {
+      "from": "CompareObject_1773002884471_dxpyavakl",
+      "to": "PathSegmentsMask_1772550288860_ydis4hehj"
+    },
+    {
+      "from": "Modify_1772562180930_6v6i9hias",
+      "to": "RetinexFilter_1773385940583_4qappl6o2"
+    },
+    {
+      "from": "MorphologyEx_1774701870146_jjjrqjnvd",
+      "to": "ParallelFork_1772553304042_37my0vbyf"
+    },
+    {
+      "from": "LinkInput_1772568771331_zacvacxax",
+      "to": "StringTemplate_1772568654209_acu5dpt0j"
+    },
+    {
+      "from": "SortArray_1773139543115_pcg7b92mk",
+      "to": "ForEach_1773139635611_6nk4qtt78"
+    },
+    {
+      "from": "StringTemplate_1774798212301_81xvd5uf0",
+      "to": "ExportData_1774220200001_se0002"
+    },
+    {
+      "from": "StringTemplate_1774798212301_81xvd5uf0",
+      "to": "Print_1774798747662_dt1lur6kw"
+    },
+    {
+      "from": "StringTemplate_1774798212301_81xvd5uf0",
+      "to": "Modify_1774798290597_iqwzr654g"
+    },
+    {
+      "from": "DashboardSpecEditor_1774220200000_se0001",
+      "to": "StringTemplate_1774798212301_81xvd5uf0",
+      "from_slot": "save"
+    },
+    {
+      "from": "TrainMeasurementSpec_1774220000002_tms0002",
+      "to": "DashboardSpecEditor_1774894671405_uchid5z0m"
+    },
+    {
+      "from": "TrainMeasurementSpec_1774220000002_tms0002",
+      "to": "Print_1774895464836_ysi94gd6t"
+    }
+  ],
+  "start": "zmq_cam1",
+  "subflows": {
+    "subflow_1772382189263": {
+      "name": "subflow_1772382189263",
+      "label": "RecipesLoader",
+      "description": "Recipes loader starts at overall json and loads then the related inspections",
+      "start": "ImportData_1772134326908_tmiu3u6yr",
+      "inputs": {
+        "in": {
+          "type": "payload",
+          "description": ""
+        }
+      },
+      "outputs": {
+        "out1": {
+          "type": "payload",
+          "description": ""
+        }
+      },
+      "nodes": [
+        {
+          "id": "ImportData_1772134326908_tmiu3u6yr",
+          "type": "ImportData",
+          "next": [
+            "ForEach_1772134379204_r85k98jh3",
+            "Print_1772135001044_sw2koqrl5"
+          ],
+          "props": {
+            "encoding": "utf-8",
+            "filename": {
+              "scope": "global",
+              "var": "filename_recipes"
+            },
+            "mode": "json"
+          },
+          "is_end_node": false,
+          "default_props": {
+            "filename": "",
+            "target_field": "data",
+            "mode": "auto",
+            "encoding": "utf-8"
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Read a file from disk and inject its contents into the message.\n\nProps:\n  - ``filename``     : path of the file to read. Can be a literal string, a flow\n                       variable, or overridden by ``msg['filename']`` / ``msg['path']``.\n  - ``target_field`` : message field to write the loaded data into (default: ``\"data\"``).\n  - ``mode``         : deserialization format:\n                       ``\"auto\"`` (default) \u2014 infer from extension:\n                         ``.json`` \u2192 JSON, ``.bin``/``.dat``/``.npy``/``.raw`` \u2192 binary,\n                         anything else \u2192 text.\n                       ``\"json\"``   \u2014 parse as JSON, result is a dict/list/scalar.\n                       ``\"text\"``   \u2014 read as plain text string.\n                       ``\"binary\"`` \u2014 read raw bytes; ``.npy`` files are loaded with\n                                      ``numpy.load``.\n  - ``encoding``     : text/JSON file encoding (default: ``\"utf-8\"``).\n\nOutput:\n  Forwards the message with ``msg[target_field]`` set to the loaded data and\n  ``msg['filename']`` set to the path that was read.",
+          "label": "ListDir"
+        },
+        {
+          "id": "ForEach_1772134379204_r85k98jh3",
+          "type": "ForEach",
+          "next": "StringTemplate_1772136951344_ekm4bo4nd",
+          "props": {
+            "array_field": {
+              "scope": "msg",
+              "var": "data.inspection"
+            },
+            "input_array": {
+              "scope": "msg",
+              "var": "data.inspection"
+            }
+          },
+          "is_end_node": false,
+          "default_props": {
+            "input_array": "items",
+            "item_field": "item",
+            "key_field": "key",
+            "index_field": "index",
+            "preserve_payload": true,
+            "wait_on_buffer_full": true
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Iterate over an array or dict and emit each element as a separate message.\n\nProps:\n  - `input_array`: field name in msg containing the array or dict (default: 'items')\n  - `item_field`: field name to store current item/value in output msg (default: 'item').\n                  If empty string (\"\") and preserve_payload=True, reveals object fields \n                  directly into msg (only works if item is a dict)\n  - `key_field`: field name to store the dict key in output msg (default: 'key').\n                 Only used when iterating over a dict; ignored for lists/tuples.\n  - `index_field`: field name to store the 0-based numeric position (default: 'index')\n  - `preserve_payload`: if True, keeps original msg and adds item/index fields; \n                        if False, replaces entire msg with item (default: True)\n  - `wait_on_buffer_full`: if True, wait for buffer space instead of raising error (default: True)\n\nEmits one message per element on the 'out' slot sequentially.\n\nDict iteration:\n  - Iterates over dict.items(); each message gets key_field=key and item_field=value.\n  - index_field holds the numeric 0-based position (not the key).\n  - If item_field is empty string and the value is a dict, its fields are merged into msg.\n\nList/tuple iteration:\n  - Same as before; key_field is not set.\n  - item_field empty string: reveals dict item fields directly into msg.\n\nNote: Schema validation is skipped since field names are dynamic (configurable via props).\nThe node expects an array or dict at msg[input_array] and produces msg[item_field] and msg[index_field].",
+          "label": "ForEach"
+        },
+        {
+          "id": "ImportData_1772134809634_z4hyqfkfh",
+          "type": "ImportData",
+          "next": "ForEachCollect_1772134819859_62tlga5gl",
+          "props": {
+            "filename": {
+              "scope": "msg",
+              "var": "filename"
+            }
+          },
+          "is_end_node": false,
+          "default_props": {
+            "filename": "",
+            "target_field": "data",
+            "mode": "auto",
+            "encoding": "utf-8"
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Read a file from disk and inject its contents into the message.\n\nProps:\n  - ``filename``     : path of the file to read. Can be a literal string, a flow\n                       variable, or overridden by ``msg['filename']`` / ``msg['path']``.\n  - ``target_field`` : message field to write the loaded data into (default: ``\"data\"``).\n  - ``mode``         : deserialization format:\n                       ``\"auto\"`` (default) \u2014 infer from extension:\n                         ``.json`` \u2192 JSON, ``.bin``/``.dat``/``.npy``/``.raw`` \u2192 binary,\n                         anything else \u2192 text.\n                       ``\"json\"``   \u2014 parse as JSON, result is a dict/list/scalar.\n                       ``\"text\"``   \u2014 read as plain text string.\n                       ``\"binary\"`` \u2014 read raw bytes; ``.npy`` files are loaded with\n                                      ``numpy.load``.\n  - ``encoding``     : text/JSON file encoding (default: ``\"utf-8\"``).\n\nOutput:\n  Forwards the message with ``msg[target_field]`` set to the loaded data and\n  ``msg['filename']`` set to the path that was read.",
+          "label": "ImportData"
+        },
+        {
+          "id": "ForEachCollect_1772134819859_62tlga5gl",
+          "type": "ForEachCollect",
+          "next": [
+            "DictGet_1772139248479_8s25zfvha",
+            "Modify_1772217941542_dfwdeot9e"
+          ],
+          "props": {
+            "collects": {
+              "inspections": {
+                "key": "item",
+                "values": [
+                  "data"
+                ]
+              }
+            }
+          },
+          "is_end_node": false,
+          "default_props": {
+            "item_field": "item",
+            "index_field": "_foreach_index",
+            "output_field": "items",
+            "collects": null,
+            "preserve_first": true,
+            "sort": true
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Counterpart to ForEach: collect all per-item messages back into one message.\n\nForEach stamps each emitted message with three hidden fields:\n  - ``_foreach_id``    \u2013 unique UUID for this array-processing run\n  - ``_foreach_index`` \u2013 0-based position of the item inside the original array\n  - ``_foreach_total`` \u2013 total number of items emitted for this run\n\nForEachCollect buffers messages keyed by ``_foreach_id``.  When all\n``_foreach_total`` items have arrived it reassembles them and emits a\nsingle message whose array field contains every item (optionally sorted\nback to the original order).\n\nProps:\n  - ``item_field`` (str): field in each buffered message that holds the\n    processed item.  If ``\"\"`` the entire message dict (minus the hidden\n    ``_foreach_*`` keys) is collected as the item.  Default: ``\"item\"``.\n  - ``index_field`` (str): override the index key to use for ordering;\n    normally you should leave this as ``\"_foreach_index\"``.  Default:\n    ``\"_foreach_index\"``.\n  - ``output_field`` (str): message field to write the collected array\n    into.  Default: ``\"items\"``.\n  - ``collects`` (dict): multi-field collection mapping.  Each key is an\n    output field name; its value is a list of source item-field names to\n    read from each buffered message.\n\n    - One source field  \u2192 output is a flat list of values: ``[v, v, ...]``\n    - Multiple fields   \u2192 output is a list of dicts: ``[{f1: v, f2: v}, ...]``\n\n    When ``collects`` is set it takes precedence over ``item_field`` /\n    ``output_field``.\n\n    Example::\n\n        {\n          \"collects\": {\n            \"positions\":    [\"position\"],\n            \"measurements\": [\"length\", \"max_width\", \"area\"]\n          }\n        }\n\n  - ``preserve_first`` (bool): if True, the metadata of the *first*\n    (index-0) upstream message is used as the base for the output\n    message (minus the per-item payload).  If False only the\n    ``output_field`` is carried.  Default: True.\n  - ``sort`` (bool): sort collected items by their ``_foreach_index``\n    before writing.  Default: True.\n\nOutput slots:\n  - ``out``   \u2013 emitted when all items have been collected.\n  - ``empty`` \u2013 emitted instead when the original array was empty\n    (``_foreach_total == 0``).\n\nExample \u2013 double every length in blob_measurements::\n\n    ForEach (input_array=blob_measurements, item_field=blob)\n      \u2192 ModifyMessage (blob.length *= 2)\n    ForEachCollect (item_field=blob, output_field=blob_measurements)",
+          "label": "ForEachCollect"
+        },
+        {
+          "id": "StringTemplate_1772136951344_ekm4bo4nd",
+          "type": "StringTemplate",
+          "next": "ImportData_1772134809634_z4hyqfkfh",
+          "props": {
+            "output": "filename",
+            "template": "{{global.recipes_directory}}/{{item}}.json"
+          },
+          "is_end_node": false,
+          "default_props": {
+            "template": "",
+            "output": "result",
+            "default": ""
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [
+              "result"
+            ],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Render a Mustache-like template into a string and write it to a msg field.\n\nProps:\n    - `template`: template string (uses `{{key}}` or `{{nested.key}}` to interpolate from msg)\n    - `output`: dot-path in msg where to write the rendered string (default: 'result')\n    - `default`: value to substitute when a key is missing (default: '')\n    - simple ternary: `{{flag ? \"OK\" : \"NOK\"}}` (flag read from msg/params)\n\n    Example:\n            props.template = \"Tile {{x}},{{y}} area={{area}}\"\n            msg = {'x': 10, 'y': 20, 'area': 123}\n            -> msg['result'] = \"Tile 10,20 area=123\"\n    \n    Warnings:\n            - Logs warning when interpolation keys are missing from message\n            - Increments node warning_count for monitoring in dashboard\n\n    Filters / Pipes:\n            - You can apply simple filters using a pipe (`|`) inside the moustache\n                expression, similar to Angular pipes. Filters are applied left-to-right.\n            - Example: `{{ timestamp | date:'YYYY/MM/DD' }}` will format a unix\n                timestamp or ISO datetime into `2026/02/01` (when timestamp corresponds).\n            - The `date` filter accepts a format string using tokens: `YYYY, YY, MM,\n                DD, hh/HH, mm, ss` which are mapped to `strftime` equivalents.\n            - Supported inputs: numeric unix timestamps (seconds or milliseconds),\n                ISO formatted datetime strings, or Python `datetime` objects.",
+          "label": "StringTemplate"
+        }
+      ],
+      "connections": [
+        {
+          "from": "ImportData_1772134326908_tmiu3u6yr",
+          "from_slot": "out",
+          "to": "ForEach_1772134379204_r85k98jh3",
+          "to_slot": "in"
+        },
+        {
+          "from": "ForEach_1772134379204_r85k98jh3",
+          "from_slot": "out",
+          "to": "StringTemplate_1772136951344_ekm4bo4nd",
+          "to_slot": "in"
+        },
+        {
+          "from": "ImportData_1772134809634_z4hyqfkfh",
+          "from_slot": "out",
+          "to": "ForEachCollect_1772134819859_62tlga5gl",
+          "to_slot": "in"
+        },
+        {
+          "from": "StringTemplate_1772136951344_ekm4bo4nd",
+          "from_slot": "out",
+          "to": "ImportData_1772134809634_z4hyqfkfh",
+          "to_slot": "in"
+        },
+        {
+          "from": "in",
+          "from_slot": "out",
+          "to": "ImportData_1772134326908_tmiu3u6yr",
+          "to_slot": "in"
+        },
+        {
+          "from": "ForEachCollect_1772134819859_62tlga5gl",
+          "from_slot": "out",
+          "to": "out1",
+          "to_slot": "in"
+        }
+      ],
+      "positions": {
+        "ImportData_1772134326908_tmiu3u6yr": {
+          "x": 212.77,
+          "y": -74.27
+        },
+        "ForEach_1772134379204_r85k98jh3": {
+          "x": 302.81,
+          "y": 116.26999999999998
+        },
+        "ImportData_1772134809634_z4hyqfkfh": {
+          "x": 738.07,
+          "y": 116.26999999999998
+        },
+        "ForEachCollect_1772134819859_62tlga5gl": {
+          "x": 1054.68,
+          "y": 87.17
+        },
+        "StringTemplate_1772136951344_ekm4bo4nd": {
+          "x": 525.77,
+          "y": 15.730000000000004
+        },
+        "in": {
+          "x": -40.23,
+          "y": -47.43
+        },
+        "out1": {
+          "x": 1469.0,
+          "y": -55.0
+        }
+      }
+    },
+    "subflow_1773072242623": {
+      "name": "subflow_1773072242623",
+      "label": "Maskengenerierung",
+      "description": "Akkumuliert Masken und verwendet dann einen statitischen Wert f\u00fcr die Maske",
+      "start": "ImageAccumulate_1772974615087_x9s5a4sqr",
+      "inputs": {
+        "in": {
+          "type": "payload",
+          "description": ""
+        }
+      },
+      "outputs": {
+        "out1": {
+          "type": "payload",
+          "description": ""
+        },
+        "out2": {
+          "type": "payload",
+          "description": ""
+        }
+      },
+      "nodes": [
+        {
+          "id": "ImageAccumulate_1772974615087_x9s5a4sqr",
+          "type": "ImageAccumulate",
+          "next": "MathFormula_1772987798170_mjrlvq7l2",
+          "props": {
+            "source": {
+              "scope": "msg",
+              "var": "binary"
+            }
+          },
+          "is_end_node": false,
+          "default_props": {
+            "source": "payload",
+            "output_field": "payload",
+            "count_field": "acc_count",
+            "reset_field": null,
+            "emit_every": 1
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Accumulate binary images across messages by counting 255-pixels per position.\n\nEach arriving image contributes +1 to pixels that are 255 (or > 0).\nThe internal accumulator is a uint16 array so up to 65535 images can be stacked.\nThe output image is the raw count (uint16) stored in ``output_field``.\n\nUse a ``Threshold`` node downstream to binarize the count image.\n\nProps:\n  - ``source``      : message field containing the binary input image (default: ``\"payload\"``).\n  - ``output_field``: message field to write the accumulated count image to (default: ``\"payload\"``).\n  - ``count_field`` : message field to write the number of accumulated frames to (default: ``\"acc_count\"``).\n  - ``reset_field`` : optional message field name; if the field is truthy the accumulator is reset\n                      *before* adding the current frame (default: ``None`` \u2013 never resets).\n  - ``emit_every``  : emit a message every N accumulated images (default: 1).\n                      Use e.g. ``10`` to only emit after every 10th image.\n\nOutputs ``out`` with the count image and ``acc_count`` filled in.",
+          "label": "ImageAccumulate"
+        },
+        {
+          "id": "MathFormula_1772987798170_mjrlvq7l2",
+          "type": "MathFormula",
+          "next": [
+            "PseudoColor_1772988159467_p8xvkhbvq",
+            "ImageArithmetic_1773001358408_u2iig2sax"
+          ],
+          "props": {
+            "formula": "3 if acc_count< 3 else 1/10 * acc_count",
+            "output": "threshold"
+          },
+          "is_end_node": false,
+          "default_props": {
+            "formula": "",
+            "output": "result",
+            "default": null,
+            "variables": {}
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [
+              "result"
+            ],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Evaluate a mathematical formula and write the result into a message field.\n\nVariables in the formula are resolved from the message and from flow/global\nvariables using the same scoping conventions as StringTemplate:\n\n  - ``field``         \u2013 reads ``msg['field']`` (plain identifier)\n  - ``msg.field``     \u2013 explicit msg field (supports dot-paths: ``msg.data.value``)\n  - ``flow.name``     \u2013 flow-scoped variable\n  - ``vars.name``     \u2013 alias for ``flow.name``\n  - ``subflow.name``  \u2013 alias for ``flow.name``\n  - ``global.name``   \u2013 global-scoped variable\n\nMath functions available in formulas\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n``abs``, ``round``, ``min``, ``max``, ``sum``, ``pow``,\n``sqrt``, ``cbrt``, ``exp``, ``log``, ``log2``, ``log10``,\n``floor``, ``ceil``, ``trunc``,\n``sin``, ``cos``, ``tan``, ``asin``, ``acos``, ``atan``, ``atan2``,\n``degrees``, ``radians``, ``hypot``,\n``isnan``, ``isinf``, ``isfinite``\n\nConstants: ``pi``, ``e``, ``inf``, ``nan``\n\nProps\n~~~~~\n- ``formula``   : expression string, e.g. ``\"(temperature - 32) * 5 / 9\"`` or\n                  ``\"sqrt(a**2 + b**2)\"`` or ``\"flow.offset + msg.value * 2\"``\n- ``output``    : dot-path in msg to write the result (default: ``\"result\"``)\n- ``default``   : value written when the formula raises an error (default: ``null``)\n- ``variables`` : optional dict of named constants / variable bindings that\n                  override anything from msg, e.g.\n                  ``{\"factor\": 1.8, \"offset\": {\"scope\": \"flow\", \"var\": \"my_offset\"}}``\n                  Variable-ref dicts with ``scope`` + ``var`` keys are resolved\n                  automatically.\n\nExamples\n~~~~~~~~\nConvert Fahrenheit \u2192 Celsius::\n\n    formula:  \"(temperature - 32) * 5 / 9\"\n    output:   \"celsius\"\n\nPythagorean hypotenuse::\n\n    formula:  \"sqrt(dx**2 + dy**2)\"\n    output:   \"distance\"\n\nMix msg field and flow variable::\n\n    formula:  \"flow.base_price * quantity * (1 - discount / 100)\"\n    output:   \"total\"",
+          "label": "MathFormula"
+        },
+        {
+          "id": "ImageArithmetic_1773001358408_u2iig2sax",
+          "type": "ImageArithmetic",
+          "next": "Threshold_1772986627738_pvd2ajy0c",
+          "props": {
+            "operation": "and",
+            "source_a": "binary"
+          },
+          "is_end_node": false,
+          "default_props": {
+            "operation": "subtract",
+            "source_a": "payload",
+            "source_b": "mask",
+            "scalar": null,
+            "alpha": 0.5,
+            "beta": 0.5,
+            "normalize": false,
+            "output_field": "payload"
+          },
+          "schema": {
+            "expects": {},
+            "produces": {},
+            "mutates": [],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Pixel-wise arithmetic and bitwise operations between two images.\n\nProps:\n  - ``operation``    : one of ``add``, ``subtract``, ``absdiff``, ``and``, ``or``,\n                       ``xor``, ``not``, ``blend``.\n  - ``source_a``     : message field for the first image (default: ``\"payload\"``).\n  - ``source_b``     : message field for the second image (default: ``\"mask\"``).\n                       Ignored for the ``not`` operation.\n                       If the two images have different sizes, ``source_b`` is resized\n                       to match ``source_a``.\n                       If the two images have different channel counts, ``source_b`` is\n                       converted to match ``source_a``.\n  - ``scalar``       : integer 0-255.  When set, ``add`` / ``subtract`` use this constant\n                       value instead of ``source_b``.\n  - ``alpha``        : weight for ``source_a`` in ``blend`` mode (default: ``0.5``).\n  - ``beta``         : weight for ``source_b`` in ``blend`` mode (default: ``0.5``).\n  - ``normalize``    : if ``True``, normalize the result image to the full 0-255 range.\n  - ``output_field`` : message field to write the result to (default: ``\"payload\"``).\n\nOperations:\n  - ``add``      \u2192 ``cv2.add(a, b)`` (saturating)\n  - ``subtract`` \u2192 ``cv2.subtract(a, b)`` (saturating)\n  - ``absdiff``  \u2192 ``cv2.absdiff(a, b)``\n  - ``and``      \u2192 ``cv2.bitwise_and(a, b)``\n  - ``or``       \u2192 ``cv2.bitwise_or(a, b)``\n  - ``xor``      \u2192 ``cv2.bitwise_xor(a, b)``\n  - ``not``      \u2192 ``cv2.bitwise_not(a)``  (single-operand)\n  - ``blend``    \u2192 ``cv2.addWeighted(a, alpha, b, beta, 0)``",
+          "label": "ImageArithmetic"
+        },
+        {
+          "id": "Threshold_1772986627738_pvd2ajy0c",
+          "type": "Threshold",
+          "next": "Modify_1772974656302_8d7g59jtv",
+          "props": {
+            "threshold": {
+              "scope": "msg",
+              "var": "threshold"
+            }
+          },
+          "is_end_node": false,
+          "default_props": {
+            "threshold": 128,
+            "polarity": "higher",
+            "source": "payload",
+            "output_field": "payload",
+            "type": "binary"
+          },
+          "schema": {
+            "expects": {
+              "payload": {
+                "type": "image"
+              }
+            },
+            "produces": {
+              "payload": {
+                "type": "image"
+              }
+            },
+            "mutates": [
+              "payload"
+            ],
+            "preserves": [
+              "*"
+            ]
+          },
+          "description": "Threshold an image (or count image from ImageAccumulate) to produce a binary result.\n\nSupports uint8 and uint16 inputs (e.g. count images from ``ImageAccumulate``).\n\nProps:\n  - ``threshold``   : threshold value (default: 128; for uint16 count images use the count, e.g. 3).\n  - ``polarity``    : ``'higher'`` \u2192 pixels *above* threshold become 255 (default);\n                      ``'lower'``  \u2192 pixels *below* threshold become 255.\n  - ``source``      : input message field (default: ``\"payload\"``).\n  - ``output_field``: output message field (default: ``\"payload\"``).\n  - ``type``        : OpenCV threshold type string (default: ``\"binary\"``):\n                      ``binary``, ``binary_inv``, ``trunc``, ``tozero``, ``tozero_inv``.\n                      When ``polarity`` is ``'lower'`` and type is ``'binary'``, ``binary_inv``\n                      is used automatically.\n\nOutput image is always uint8 (0 / 255 for binary types).",
+          "label": "Threshold"
+        }
+      ],
+      "connections": [
+        {
+          "from": "ImageAccumulate_1772974615087_x9s5a4sqr",
+          "from_slot": "out",
+          "to": "MathFormula_1772987798170_mjrlvq7l2",
+          "to_slot": "in"
+        },
+        {
+          "from": "MathFormula_1772987798170_mjrlvq7l2",
+          "from_slot": "out",
+          "to": "ImageArithmetic_1773001358408_u2iig2sax",
+          "to_slot": "in"
+        },
+        {
+          "from": "ImageArithmetic_1773001358408_u2iig2sax",
+          "from_slot": "out",
+          "to": "Threshold_1772986627738_pvd2ajy0c",
+          "to_slot": "in"
+        },
+        {
+          "from": "in",
+          "from_slot": "out",
+          "to": "ImageAccumulate_1772974615087_x9s5a4sqr",
+          "to_slot": "in"
+        },
+        {
+          "from": "Threshold_1772986627738_pvd2ajy0c",
+          "from_slot": "out",
+          "to": "out1",
+          "to_slot": "in"
+        },
+        {
+          "from": "MathFormula_1772987798170_mjrlvq7l2",
+          "from_slot": "out",
+          "to": "out2",
+          "to_slot": "in"
+        }
+      ],
+      "positions": {
+        "ImageAccumulate_1772974615087_x9s5a4sqr": {
+          "x": 220.0,
+          "y": -222.81
+        },
+        "MathFormula_1772987798170_mjrlvq7l2": {
+          "x": 533.48,
+          "y": -206.4
+        },
+        "ImageArithmetic_1773001358408_u2iig2sax": {
+          "x": 806.45,
+          "y": -132.81
+        },
+        "Threshold_1772986627738_pvd2ajy0c": {
+          "x": 1199.67,
+          "y": -90.59
+        },
+        "out2": {
+          "x": 956.6,
+          "y": -352.5
+        },
+        "in": {
+          "x": -240.67,
+          "y": -222.81
+        },
+        "out1": {
+          "x": 1791.81,
+          "y": -145.95
+        }
+      }
+    }
+  },
+  "path_tabs": {
+    "Main Flow": 0,
+    "Main": 1,
+    "Path 2": 2,
+    "Startup": 3,
+    "Path 4": 4,
+    "Maskengenerierung": 5,
+    "OPC": 6,
+    "Auswertung": 7,
+    "VisuStation1": 8,
+    "Path 9": 9,
+    "Dashboard": 10,
+    "OfflineAuswertung": 11,
+    "Path 12": 12,
+    "Path 13": 13,
+    "Path 14": 14,
+    "Path 15": 15,
+    "Path 16": 16,
+    "Path 17": 17,
+    "Path 18": 18,
+    "Path 19": 19,
+    "Path 20": 20,
+    "Path 21": 21,
+    "Path 22": 22,
+    "Path 23": 23,
+    "Path 24": 24
+  },
+  "tab_order": [
+    "Main Flow",
+    "Path 2",
+    "Main",
+    "Startup",
+    "Path 4",
+    "OPC",
+    "Auswertung",
+    "Maskengenerierung",
+    "VisuStation1",
+    "OfflineAuswertung",
+    "Path 9",
+    "Dashboard",
+    "Path 12",
+    "Path 13",
+    "Path 14",
+    "Path 15",
+    "Path 16",
+    "Path 17",
+    "Path 18",
+    "Path 19",
+    "Path 20",
+    "Path 21",
+    "Path 22",
+    "Path 23",
+    "Path 24",
+    "Config"
+  ]
+}

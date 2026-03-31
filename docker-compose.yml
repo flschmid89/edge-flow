@@ -99,6 +99,27 @@ services:
                 aliases:
                     - "opcua"
 
+    mcp-server:
+        image: registry.fls-engineering.de/flow_engine_wo_ai:0.3.0
+        command: >
+            sh -c "pip install 'mcp[cli]' -q &&
+                   python /app/mcp_flow_server.py --transport sse --host 0.0.0.0 --port 8002"
+        ports:
+            - "8002:8002"
+        environment:
+            - PYTHONPATH=/app
+            - FLOWS_DIR=/flows
+            - FLOW_API_URL=http://flow:8000/api/flow/status
+            - DASHBOARD_API_URL=http://flow:8000/api/ui
+        volumes:
+            - ../flows:/flows
+            - ../:/app
+        depends_on:
+            - flow
+        restart: unless-stopped
+        networks:
+            default:
+
     flow:
         image: registry.fls-engineering.de/flow_engine_wo_ai:0.3.0  
         command: ["python", "-m", "watchfiles", "--filter", "python", "python /app/engine/flow.py", "/app/engine", "/app/flowruntime", "/app/packages"]
