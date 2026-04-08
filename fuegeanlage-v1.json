@@ -5345,7 +5345,7 @@
       "to": "Print_1774895464836_ysi94gd6t"
     }
   ],
-  "start": "zmq_cam1",
+
   "subflows": {
     "subflow_1772382189263": {
       "name": "subflow_1772382189263",

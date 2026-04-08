@@ -1,6 +1,7 @@
 {
   "_maskfile": "cam2_2_mask_accu.png",
   "ranges_file": "ranges_s2_i0_cam2.json",
+  "pos_ranges_file": "pos_ranges_s2_i0_cam2.json",
   "existence": {
     "points": [
       

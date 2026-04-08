@@ -1,5 +1,6 @@
 {
     "ranges_file": "ranges_s1_i0_cam3.json",
+    "pos_ranges_file": "pos_ranges_s1_i0_cam3.json",
     "existence": {
         "points": []
     },

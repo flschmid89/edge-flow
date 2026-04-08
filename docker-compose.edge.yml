@@ -129,7 +129,7 @@ services:
             - "5555:5555"
         environment:
             - PYTHONPATH=/app
-            # - FLOW_FILE=/flows/fuegeanlage-v2.json
+            - FLOW_FILE=/flows/fuegeanlage-v1.json
             - STATIC_DIR=/flows/static
             - FLOW_GLOBAL__redis_unix_socket_path=/dev/shm/redis.sock
         volumes:
