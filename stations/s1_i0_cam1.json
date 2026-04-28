@@ -1,8 +1,7 @@
 {
-    "maskfile": "cam1_mask_accu.png",
-    "ranges_file": "ranges_s1_i0_cam1.json" ,  
-    "pos_ranges_file": "pos_ranges_s1_i0_cam1.json" ,  
-
+   "ranges_file": "ranges_s1_i0_cam1.json",
+    "pos_ranges_file": "pos_ranges_s1_i0_cam1.json",
+    "bead_ranges_file": "bead_ranges_s1_i0_cam1.json",
     "existence": {
         "points": [
             [
@@ -36,636 +35,177 @@
             [
                 2969,
                 2311
-            ],
-            [
-                10,
-                10
             ]
         ]
     },
     "checkbead": {
-        "min_thickness": 8,
+        "min_thickness": 35,
         "path_segments": [
-            {
-                "start_point": [
-                    619,
-                    126
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            739,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            888,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1037,
-                            122
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1108,
-                            122
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1115,
-                            119
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    632,
-                    574
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            813,
-                            576
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1048,
-                            576
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1150,
-                            577
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    615,
-                    1025
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            701,
-                            1024
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            788,
-                            1024
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            879,
-                            1026
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            975,
-                            1026
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1080,
-                            1025
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1104,
-                            1022
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    619,
-                    1470
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            670,
-                            1474
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            736,
-                            1473
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            825,
-                            1473
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            865,
-                            1473
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            924,
-                            1473
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            977,
-                            1477
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1034,
-                            1477
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1105,
-                            1477
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1137,
-                            1477
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1154,
-                            1477
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    617,
-                    1924
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            669,
-                            1923
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            763,
-                            1925
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            850,
-                            1925
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            923,
-                            1925
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            976,
-                            1924
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1054,
-                            1923
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1086,
-                            1921
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1107,
-                            1921
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            1124,
-                            1921
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    2918,
-                    125
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            3007,
-                            121
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3074,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3157,
-                            124
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3235,
-                            122
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3319,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3392,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3457,
-                            125
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3469,
-                            125
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    2941,
-                    576
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            3043,
-                            574
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3168,
-                            576
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3215,
-                            576
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3281,
-                            574
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3400,
-                            579
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3440,
-                            577
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3457,
-                            576
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    2916,
-                    1030
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            2987,
-                            1032
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3074,
-                            1030
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3157,
-                            1029
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3248,
-                            1029
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3311,
-                            1030
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3377,
-                            1030
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3395,
-                            1029
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3411,
-                            1032
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3439,
-                            1030
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3458,
-                            1030
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3472,
-                            1030
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    2939,
-                    1482
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            3006,
-                            1481
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3074,
-                            1478
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3158,
-                            1484
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3217,
-                            1481
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3260,
-                            1481
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3324,
-                            1484
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3396,
-                            1481
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3423,
-                            1481
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3447,
-                            1481
-                        ]
-                    }
-                ]
-            },
-            {
-                "start_point": [
-                    2908,
-                    1934
-                ],
-                "segments": [
-                    {
-                        "type": "line",
-                        "to": [
-                            2967,
-                            1930
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3036,
-                            1931
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3135,
-                            1931
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3238,
-                            1931
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3285,
-                            1931
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3353,
-                            1933
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3407,
-                            1933
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3451,
-                            1929
-                        ]
-                    },
-                    {
-                        "type": "line",
-                        "to": [
-                            3468,
-                            1932
-                        ]
-                    }
-                ]
-            }
-        ]
+    {
+      "start_point": [
+        3448,
+        1480
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            2966,
+            1482
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        3472,
+        1928
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            2916,
+            1932
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        624,
+        1472
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            1152,
+            1476
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        2920,
+        100
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            2920,
+            124
+          ]
+        },
+        {
+          "type": "line",
+          "to": [
+            3480,
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        631,
+        575
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            1140,
+            572
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        1104,
+        1021
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            630,
+            1022
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        2916,
+        1000
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            2920,
+            1028
+          ]
+        },
+        {
+          "type": "line",
+          "to": [
+            3476,
+            1028
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        2940,
+        580
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            3460,
+            572
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        1116,
+        121
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            609,
+            122
+          ]
+        }
+      ]
+    },
+    {
+      "start_point": [
+        1128,
+        1920
+      ],
+      "segments": [
+        {
+          "type": "line",
+          "to": [
+            624,
+            1920
+          ]
+        }
+      ]
+    }
+  ]
     },
     "fullbeadcheck": {
         "path_segments": []

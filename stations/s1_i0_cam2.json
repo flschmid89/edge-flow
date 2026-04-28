@@ -1,36 +1,37 @@
 {
   "ranges_file": "ranges_s1_i0_cam2.json",
   "pos_ranges_file": "pos_ranges_s1_i0_cam2.json",
+  "bead_ranges_file": "bead_ranges_s1_i0_cam2.json",
   "existence": {
-  "points": [
-    [
-      2024,
-      463
-    ],
-    [
-      2019,
-      663
-    ],
-    [
-      2005,
-      1374
-    ],
-    [
-      2012,
-      1567
-    ],
-    [
-      2002,
-      2273
-    ],
-    [
-      2000,
-      2465
+    "points": [
+      [
+        2024,
+        463
+      ],
+      [
+        2019,
+        663
+      ],
+      [
+        2005,
+        1374
+      ],
+      [
+        2012,
+        1567
+      ],
+      [
+        2002,
+        2273
+      ],
+      [
+        2000,
+        2465
+      ]
     ]
-  ]
-},
-      "checkbead": {
-        "min_thickness": 8,
+  },
+  "checkbead": {
+    "min_thickness": 35,
     "path_segments": [
       {
         "start_point": [
@@ -411,8 +412,6 @@
     ]
   },
   "fullbeadcheck": {
-    "path_segments": [
-      
-    ]
+    "path_segments": []
   }
 }

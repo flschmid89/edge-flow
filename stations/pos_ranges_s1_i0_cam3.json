@@ -1,103 +1,27 @@
 {
+  "base_target": 0,
+  "base_margin": 5,
   "lines": [
-    [
-      {
-        "index": 20,
-        "target": 10.2587,
-        "min": 2.6952,
-        "max": 17.9008,
-        "target_offset": -9.264737,
-        "margin": 7.602784931533714,
-        "mean": 17.666667,
-        "stddev": 0.471405,
-        "sample_count": 3,
-        "value_min": 17,
-        "value_max": 18
-      },
-      {
-        "index": 32,
-        "target": 11.4119,
-        "min": 7.2031,
-        "max": 19.0061,
-        "margin": 5.9015020559497025
-      },
-      {
-        "index": 61,
-        "target": 11.4119,
-        "min": 7.1244,
-        "max": 19.0061,
-        "target_offset": 1.735263,
-        "margin": 5.9408671244159885,
-        "mean": 28.666667,
-        "stddev": 6.236096,
-        "sample_count": 3,
-        "value_min": 22,
-        "value_max": 37
-      },
-      {
-        "index": 65,
-        "target": 16.9402,
-        "min": 10.9252,
-        "max": 22.9552,
-        "target_offset": 17.401929,
-        "margin": 6.015022548079751,
-        "mean": 44.333333,
-        "stddev": 0.471405,
-        "sample_count": 3,
-        "value_min": 44,
-        "value_max": 45
-      },
-      {
-        "index": 98,
-        "target": 14.8754,
-        "min": 6.6746,
-        "max": 23.0763,
-        "margin": 8.200826790678894
-      },
-      {
-        "index": 115,
-        "target": 15.2411,
-        "min": 6.9523,
-        "max": 23.53,
-        "margin": 8.288832719963086
-      },
-      {
-        "index": 135,
-        "target": 10.6777,
-        "min": 2.2691,
-        "max": 19.0862,
-        "target_offset": 32.401929,
-        "margin": 8.40855,
-        "mean": 59.333333,
-        "stddev": 1.699673,
-        "sample_count": 3,
-        "value_min": 57,
-        "value_max": 61
-      }
-    ],
-    [
-      {
-        "index": 25,
-        "target": 4.6815,
-        "min": 2.9123,
-        "max": 8.4309,
-        "target_offset": -2.931404,
-        "margin": 2.7592954843944772,
-        "mean": 24,
-        "stddev": 7.788881,
-        "sample_count": 3,
-        "value_min": 13,
-        "value_max": 30
-      }
-    ]
-  ],
-  "base_target": [
-    12.973843,
-    4.6815
-  ],
-  "base_margin": [
-    8.40855,
-    2.759295
+    {
+      "index": 13,
+      "target": -0.0908,
+      "min": -4.0908,
+      "max": 3.9092,
+      "target_offset": 0,
+      "margin": 5,
+      "mean": 0,
+      "stddev": 0.471405,
+      "sample_count": 3,
+      "value_min": -4,
+      "value_max": 4
+    },
+    {
+      "index": 137,
+      "target": -0.3722,
+      "min": -5.3722,
+      "max": 4.6278,
+      "margin": 5
+    }
   ],
   "sample_count": 3,
   "is_training": true,

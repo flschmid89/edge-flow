@@ -1,0 +1,22 @@
+{
+  "base_target": 0.0,
+  "base_margin": 5.0,
+  "lines": [
+    {
+      "index": 300,
+      "target": 5.0,
+      "min": 4.0,
+      "max": 13.0,
+      "target_offset": 0,
+      "margin": 5.0,
+      "mean": 6.0,
+      "stddev": 0.471405,
+      "sample_count": 3,
+      "value_min": 5,
+      "value_max": 9
+    }
+  ],
+  "sample_count": 3,
+  "is_training": true,
+  "frozen": false
+}
