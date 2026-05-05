@@ -1,6 +1,7 @@
 {
   "base_target": 26.931404,
   "base_margin": 55.154329,
+  "test": "s2_i0_cam1",
   "lines": [
     {
       "index": 2,

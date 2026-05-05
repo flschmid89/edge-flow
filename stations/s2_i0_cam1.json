@@ -3,6 +3,12 @@
   "pos_ranges_file": "pos_ranges_s2_i0_cam1.json",
   "bead_ranges_file": "bead_ranges_s2_i0_cam1.json",
   "ref_pos_image_filename": "ref_pos_image_s2_i0_cam1.png",
+  "template_box": {
+          "x": 2041,
+          "y": 1858,
+          "w": 175,
+          "h": 195
+        },
   "existence": {
     "points": []
   },

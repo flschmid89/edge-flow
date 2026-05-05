@@ -1,6 +1,6 @@
 services:
     camera1:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:3.5.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
@@ -21,7 +21,7 @@ services:
             restart: unless-stopped
 
     camera2:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:3.5.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
@@ -42,7 +42,7 @@ services:
             restart: unless-stopped
 
     camera3:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:3.5.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
@@ -62,7 +62,7 @@ services:
             # network_mode: host
             restart: unless-stopped
     camera4:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:3.5.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
