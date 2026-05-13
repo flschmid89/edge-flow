@@ -2,7 +2,57 @@
     "ranges_file": "ranges_s1_i0_cam4.json",
     "pos_ranges_file": "pos_ranges_s1_i0_cam4.json",
     "bead_ranges_file": "bead_ranges_s1_i0_cam4.json",
-    "existence": {
+    "colorranges": {
+          "bead": [
+            [
+              60,
+              110,
+              40
+            ],
+            [
+              97,
+              255,
+              190
+            ]
+          ],
+          "dark_blue": [
+            [
+              80,
+              150,
+              40
+            ],
+            [
+              105,
+              255,
+              150
+            ]
+          ],
+          "dark_green": [
+            [
+              45,
+              150,
+              25
+            ],
+            [
+              75,
+              255,
+              180
+            ]
+          ],
+          "reflections": [
+            [
+              0,
+              0,
+              140
+            ],
+            [
+              100,
+              200,
+              255
+            ]
+          ]
+        },
+"existence": {
         "points": []
     },
     "checkbead": {

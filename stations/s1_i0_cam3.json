@@ -2,7 +2,39 @@
     "ranges_file": "ranges_s1_i0_cam3.json",
     "pos_ranges_file": "pos_ranges_s1_i0_cam3.json",
     "bead_ranges_file": "bead_ranges_s1_i0_cam3.json",
-    "existence": {
+    "colorranges": {
+          "bead": [
+            [
+              50,
+              110,
+              80
+            ],
+            [
+              100,
+              255,
+              190
+            ]
+          ],
+          "darkgreen": [
+            [
+              50,
+              120,
+              25
+            ],
+            [
+              100,
+              255,
+              190
+            ]
+          ],
+          "reflections":
+          [[50, 40, 200], [100, 255, 255]]
+
+        
+          
+          
+        },
+"existence": {
         "points": []
     },
     "checkbead": {

@@ -135,6 +135,8 @@ services:
         volumes:
             - ../flows:/flows
             - ./images:/output
+            - ./images:/testbilder
+
             - ./backup:/backup
             - ./stations:/stations
             - ../:/app
