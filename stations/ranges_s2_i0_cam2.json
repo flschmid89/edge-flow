@@ -4,78 +4,339 @@
   "lines": [
     {
       "index": 2,
-      "target": 11.5697,
-      "min": 3.9275,
-      "max": 19.2118,
-      "target_offset": -9.264737,
-      "margin": 7.642149999999999,
-      "mean": 17.666667,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 17,
-      "value_max": 18
+      "target": 8.074,
+      "min": 6.5033,
+      "max": 15.7161,
+      "margin": 4.606404194245748,
+      "near_min": 2.39907,
+      "near_max": 20.74023,
+      "outer_min": -8.299940000000001,
+      "outer_max": 31.43924
     },
     {
-      "index": 63,
-      "target": 11.4119,
-      "min": 3.8177,
-      "max": 19.0061,
-      "target_offset": 1.735263,
-      "margin": 7.594200000000001,
-      "mean": 28.666667,
-      "stddev": 6.236096,
-      "sample_count": 3,
-      "value_min": 22,
-      "value_max": 37
+      "index": 14,
+      "target": 6.4443,
+      "min": 3.0817,
+      "max": 14.0385,
+      "margin": 5.47837716568643,
+      "near_min": 0.458936,
+      "near_max": 16.661264,
+      "outer_min": -8.33302,
+      "outer_max": 31.15682
     },
     {
-      "index": 81,
-      "target": 11.2813,
-      "min": 3.3165,
-      "max": 19.2461,
-      "target_offset": 17.401929,
-      "margin": 7.964795409609003,
-      "mean": 44.333333,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 44,
-      "value_max": 45
+      "index": 29,
+      "target": 9.0735,
+      "min": 4.4204,
+      "max": 16.1184,
+      "margin": 5.849000137127113,
+      "near_min": 1.907555,
+      "near_max": 18.631245,
+      "outer_min": -9.42718,
+      "outer_max": 31.989779999999996
     },
     {
-      "index": 103,
-      "target": 9.023,
-      "min": 2.9647,
-      "max": 19.7818,
-      "target_offset": 32.401929,
-      "margin": 8.408561714707835,
-      "mean": 59.333333,
-      "stddev": 1.699673,
-      "sample_count": 3,
-      "value_min": 57,
-      "value_max": 61
+      "index": 52,
+      "target": 8.839,
+      "min": 4.4781,
+      "max": 16.8796,
+      "margin": 6.200754057118635,
+      "near_min": 1.182082,
+      "near_max": 20.175618,
+      "outer_min": -10.48898,
+      "outer_max": 33.23548
+    },
+    {
+      "index": 127,
+      "target": 7.4703,
+      "min": 3.4525,
+      "max": 15.5357,
+      "margin": 6.041619462830498,
+      "near_min": 0.7728099999999998,
+      "near_max": 20.12989,
+      "outer_min": -10.518820000000002,
+      "outer_max": 31.42152
+    },
+    {
+      "index": 147,
+      "target": 8.0222,
+      "min": 4.1027,
+      "max": 15.9894,
+      "margin": 5.943369462830498
+    },
+    {
+      "index": 176,
+      "target": 8.2953,
+      "min": 4.9277,
+      "max": 14.2386,
+      "margin": 4.655457839983044
+    },
+    {
+      "index": 186,
+      "target": 8.2953,
+      "min": 4.0078,
+      "max": 14.2387,
+      "margin": 5.115469325703385
+    },
+    {
+      "index": 204,
+      "target": 7.3754,
+      "min": 3.2718,
+      "max": 13.3188,
+      "margin": 5.023477028559317
+    },
+    {
+      "index": 233,
+      "target": 7.0074,
+      "min": 3.4558,
+      "max": 12.9508,
+      "margin": 4.747500137127112
+    },
+    {
+      "index": 242,
+      "target": 6.2714,
+      "min": 3.0878,
+      "max": 12.2148,
+      "margin": 4.563515542838976
+    },
+    {
+      "index": 250,
+      "target": 8.1113,
+      "min": 5.2956,
+      "max": 14.0547,
+      "margin": 4.3795309485508405
+    },
+    {
+      "index": 257,
+      "target": 7.9273,
+      "min": 4.1917,
+      "max": 13.8707,
+      "margin": 4.839492434271181
+    },
+    {
+      "index": 264,
+      "target": 7.9273,
+      "min": 5.1116,
+      "max": 13.8707,
+      "margin": 4.37953094855084
     },
     {
       "index": 277,
-      "target": 10.782,
-      "min": 2.3859,
-      "max": 18.5168,
-      "target_offset": -2.931404,
-      "margin": 8.065466007001119,
-      "mean": 24,
-      "stddev": 7.788881,
-      "sample_count": 3,
-      "value_min": 13,
-      "value_max": 30
+      "target": 7.9273,
+      "min": 4.5597,
+      "max": 13.8707,
+      "margin": 4.655507839983044
     },
     {
-      "index": 314,
+      "index": 290,
+      "target": 7.5593,
+      "min": 3.4557,
+      "max": 13.5027,
+      "margin": 5.023477028559318
+    },
+    {
+      "index": 306,
+      "target": 7.3754,
+      "min": 3.0879,
+      "max": 13.3188,
+      "margin": 5.115469325703385
+    },
+    {
+      "index": 330,
+      "target": 7.3754,
+      "min": 2.9039,
+      "max": 13.3188,
+      "margin": 5.207461622847454
+    },
+    {
+      "index": 343,
+      "target": 8.1113,
+      "min": 3.8238,
+      "max": 14.0547,
+      "margin": 5.115469325703386
+    },
+    {
+      "index": 352,
+      "target": 9.3257,
+      "min": 5.5901,
+      "max": 15.2691,
+      "margin": 4.839492434271182
+    },
+    {
+      "index": 359,
+      "target": 8.2735,
+      "min": 5.0899,
+      "max": 14.2169,
+      "margin": 4.563515542838976
+    },
+    {
+      "index": 365,
+      "target": 7.9716,
+      "min": 3.868,
+      "max": 13.915,
+      "margin": 5.023477028559318
+    },
+    {
+      "index": 383,
+      "target": 9.797,
+      "min": 5.5095,
+      "max": 15.7404,
+      "margin": 5.115469325703386
+    },
+    {
+      "index": 392,
+      "target": 8.6632,
+      "min": 2.7198,
+      "max": 18.8867,
+      "margin": 8.083457918422233
+    },
+    {
+      "index": 398,
+      "target": 8.6632,
+      "min": 2.7198,
+      "max": 19.2758,
+      "margin": 8.278008638278799
+    },
+    {
+      "index": 408,
+      "target": 10.0326,
+      "min": 7.033,
+      "max": 19.3764,
+      "margin": 6.171723050923335
+    },
+    {
+      "index": 419,
+      "target": 10.5184,
+      "min": 5.8629,
+      "max": 21.5625,
+      "margin": 7.849784576385004
+    },
+    {
+      "index": 430,
+      "target": 11.0042,
+      "min": 7.6366,
+      "max": 16.9476,
+      "margin": 4.655507839983044
+    },
+    {
+      "index": 441,
+      "target": 11.6957,
+      "min": 7.0402,
+      "max": 17.6391,
+      "margin": 5.299453919991522
+    },
+    {
+      "index": 452,
+      "target": 9.3774,
+      "min": 5.0899,
+      "max": 15.3208,
+      "margin": 5.115469325703386
+    },
+    {
+      "index": 470,
+      "target": 10.9525,
+      "min": 5.929,
+      "max": 21.2386,
+      "margin": 7.654806098999472
+    },
+    {
+      "index": 480,
+      "target": 11.4383,
+      "min": 3.7835,
+      "max": 19.0931,
+      "margin": 7.6548
+    },
+    {
+      "index": 493,
+      "target": 12.167,
+      "min": 4.5122,
+      "max": 19.8218,
+      "margin": 7.6548
+    },
+    {
+      "index": 502,
+      "target": 11.1954,
+      "min": 3.5406,
+      "max": 18.8502,
+      "margin": 7.6548
+    },
+    {
+      "index": 511,
+      "target": 12.8956,
+      "min": 5.2408,
+      "max": 20.5504,
+      "margin": 7.6548
+    },
+    {
+      "index": 522,
+      "target": 12.4098,
+      "min": 4.755,
+      "max": 20.0646,
+      "margin": 7.6548
+    },
+    {
+      "index": 549,
+      "target": 8.2807,
+      "min": 2.8119,
+      "max": 20.1542,
+      "margin": 8.671164168916311
+    }
+  ],
+  "compact_lines": [
+    {
+      "index": 1,
+      "target": 11.5697,
+      "min": 3.9275,
+      "max": 19.2118,
+      "margin": 7.6422,
+      "near_min": 2.39907,
+      "near_max": 20.74023,
+      "outer_min": -8.299940000000001,
+      "outer_max": 31.43924
+    },
+    {
+      "index": 40,
+      "target": 11.2813,
+      "min": 3.3165,
+      "max": 19.2461,
+      "margin": 7.9648,
+      "near_min": 1.72354,
+      "near_max": 20.83906,
+      "outer_min": -9.42718,
+      "outer_max": 31.989779999999996
+    },
+    {
+      "index": 52,
+      "target": 9.023,
+      "min": 2.9647,
+      "max": 19.7818,
+      "margin": 10.7588,
+      "near_min": 1.28299,
+      "near_max": 21.46351,
+      "outer_min": -10.48898,
+      "outer_max": 33.23548
+    },
+    {
+      "index": 157,
       "target": 10.782,
       "min": 2.5824,
       "max": 18.5168,
-      "margin": 7.967180377242341
+      "margin": 8.1996,
+      "near_min": 0.9889599999999996,
+      "near_max": 20.11024,
+      "outer_min": -10.165120000000002,
+      "outer_max": 31.26432
     }
   ],
+  "merge_delta": 1,
   "sample_count": 3,
   "is_training": true,
-  "frozen": false
+  "frozen": false,
+  "near_limit_margin": 0,
+  "far_limit_margin": 0,
+  "percent_mode": true,
+  "near_percent": 0.1,
+  "far_percent": 0.5,
+  "near_percent_upper": -1,
+  "near_percent_lower": -1
 }

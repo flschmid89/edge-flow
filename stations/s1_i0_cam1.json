@@ -1,263 +1,87 @@
 {
-   "ranges_file": "ranges_s1_i0_cam1.json",
-    "pos_ranges_file": "pos_ranges_s1_i0_cam1.json",
-    "bead_ranges_file": "bead_ranges_s1_i0_cam1.json",
-    "colorranges": {
-          "bead": [
-            [
-              60,
-              110,
-              40
-            ],
-            [
-              97,
-              255,
-              190
-            ]
-          ],
-          "dark_blue": [
-            [
-              80,
-              150,
-              40
-            ],
-            [
-              105,
-              255,
-              150
-            ]
-          ],
-          "dark_green": [
-            [
-              45,
-              150,
-              25
-            ],
-            [
-              75,
-              255,
-              180
-            ]
-          ],
-          "reflections": [
-            [
-              0,
-              0,
-              140
-            ],
-            [
-              100,
-              200,
-              255
-            ]
-          ]
-        },
-"existence": {
-        "points": [
-            [
-                2032,
-                42
-            ],
-            [
-                2032,
-                224
-            ],
-            [
-                2032,
-                937
-            ],
-            [
-                2032,
-                1144
-            ],
-            [
-                2027,
-                1841
-            ],
-            [
-                2027,
-                2046
-            ],
-            [
-                1092,
-                2271
-            ],
-            [
-                2969,
-                2311
-            ]
+  "ranges_file": "ranges_s1_i0_cam1.json",
+  "pos_ranges_file": "pos_ranges_s1_i0_cam1.json",
+  "bead_ranges_file": "bead_ranges_s1_i0_cam1.json",
+  "background_sample": {
+    "center": [
+      3061,
+      1790
+    ],
+    "radius": 15,
+    "reference_h": 60
+  },
+  "colorranges": {
+    "bead": [
+      [
+        [
+          55,
+          110,
+          80
+        ],
+        [
+          100,
+          255,
+          255
         ]
-    },
-    "checkbead": {
-        "min_thickness": 35,
-        "path_segments": [
-    {
-      "start_point": [
-        3448,
-        1480
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            2966,
-            1482
-          ]
-        }
+      [
+        [
+          20,
+          20,
+          190
+        ],
+        [
+          255,
+          255,
+          255
+        ]
       ]
-    },
-    {
-      "start_point": [
-        3472,
-        1928
+    ]
+  },
+  "existence": {
+    "points": [
+      [
+        2032,
+        42
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            2916,
-            1932
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        624,
-        1472
+      [
+        2032,
+        224
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            1152,
-            1476
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        2920,
-        100
+      [
+        2032,
+        937
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            2920,
-            124
-          ]
-        },
-        {
-          "type": "line",
-          "to": [
-            3480,
-            124
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        631,
-        575
+      [
+        2032,
+        1144
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            1140,
-            572
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        1104,
-        1021
+      [
+        2027,
+        1841
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            630,
-            1022
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        2916,
-        1000
+      [
+        2027,
+        2046
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            2920,
-            1028
-          ]
-        },
-        {
-          "type": "line",
-          "to": [
-            3476,
-            1028
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        2940,
-        580
+      [
+        1092,
+        2271
       ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            3460,
-            572
-          ]
-        }
+      [
+        2969,
+        2311
       ]
-    },
-    {
-      "start_point": [
-        1116,
-        121
-      ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            609,
-            122
-          ]
-        }
-      ]
-    },
-    {
-      "start_point": [
-        1128,
-        1920
-      ],
-      "segments": [
-        {
-          "type": "line",
-          "to": [
-            624,
-            1920
-          ]
-        }
-      ]
-    }
-  ]
-    },
-    "fullbeadcheck": {
-        "path_segments": []
-    }
+    ],
+    "point_radius": 100
+  },
+  "checkbead": {
+    "max_searchwidth": 35
+  },
+  "fullbeadcheck": {
+    "path_segments": [],
+    "max_searchwidth": 60
+  },
+  "path_segments_file": "path_segments_s1_i0_cam1_standard.json",
+  "reference_image_filename": "ref_image_s1_i0_cam1.png"
 }

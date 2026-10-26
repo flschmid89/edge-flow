@@ -5,15 +5,9 @@
     {
       "index": 400,
       "target": 0.0,
-      "min": -4.0,
-      "max": 4.0,
-      "target_offset": 0,
-      "margin": 5.0,
-      "mean": 0.0,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": -4,
-      "value_max": 4
+      "min": -4.2,
+      "max": 4.2,
+      "margin": 5.0
     }
   ],
   "sample_count": 3,

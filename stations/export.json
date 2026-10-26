@@ -2,138 +2,193 @@
   "lines": [
     [
       {
-        "index": 20,
-        "target": 10.2587,
-        "min": 2.6952,
-        "max": 17.9008,
-        "target_offset": -9.264737,
-        "margin": 7.602784931533714,
-        "mean": 17.666667,
-        "stddev": 0.471405,
-        "sample_count": 3,
-        "value_min": 17,
-        "value_max": 18
+        "index": 7,
+        "target": 1.6548,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 32,
-        "target": 11.4119,
-        "min": 7.2031,
-        "max": 19.0061,
-        "margin": 5.9015020559497025
+        "index": 26,
+        "target": 2.8381,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 61,
-        "target": 11.4119,
-        "min": 7.1244,
-        "max": 19.0061,
-        "target_offset": 1.735263,
-        "margin": 5.9408671244159885,
-        "mean": 28.666667,
-        "stddev": 6.236096,
-        "sample_count": 3,
-        "value_min": 22,
-        "value_max": 37
+        "index": 42,
+        "target": 6.2179,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 65,
-        "target": 16.9402,
-        "min": 10.9252,
-        "max": 22.9552,
-        "target_offset": 17.401929,
-        "margin": 6.015022548079751,
-        "mean": 44.333333,
-        "stddev": 0.471405,
-        "sample_count": 3,
-        "value_min": 44,
-        "value_max": 45
+        "index": 50,
+        "target": 5.5621,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 98,
-        "target": 14.8754,
-        "min": 6.6746,
-        "max": 23.0763,
-        "margin": 8.200826790678894
+        "index": 64,
+        "target": 5.8479,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 115,
-        "target": 15.2411,
-        "min": 6.9523,
-        "max": 23.53,
-        "margin": 8.288832719963086
+        "index": 156,
+        "target": 7.3242,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 135,
-        "target": 10.6777,
-        "min": 2.2691,
-        "max": 19.0862,
-        "target_offset": 32.401929,
-        "margin": 8.40855,
-        "mean": 59.333333,
-        "stddev": 1.699673,
-        "sample_count": 3,
-        "value_min": 57,
-        "value_max": 61
+        "index": 245,
+        "target": 7.1784,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       }
     ],
     [
       {
-        "index": 30,
-        "target": 12.9738,
-        "min": 4.5653,
-        "max": 21.3824,
-        "margin": 8.4085
-      }
-    ],
-    [
-      {
-        "index": 0,
-        "target": 12.9738,
-        "min": 4.5653,
-        "max": 21.3824,
-        "margin": 8.4085
-      }
-    ],
-    [
-      {
-        "index": 0,
-        "target": 12.9738,
-        "min": 4.5653,
-        "max": 21.3824,
-        "margin": 8.4085
+        "index": 2,
+        "target": 6.9267,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       },
       {
-        "index": 36,
-        "target": 12.9738,
-        "min": 4.5653,
-        "max": 21.3824,
-        "margin": 8.4085
+        "index": 26,
+        "target": 1.1934,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
+      },
+      {
+        "index": 68,
+        "target": 5.1198,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
+      },
+      {
+        "index": 99,
+        "target": 6.9448,
+        "min": 2.9448,
+        "max": 12,
+        "margin": 5,
+        "near_max": 12.5,
+        "near_min": 2
+      },
+      {
+        "index": 133,
+        "target": 5.1198,
+        "min": 3,
+        "near_min": 2,
+        "max": 12,
+        "near_max": 12.5,
+        "margin": 5
       }
     ],
     [
       {
-        "index": 0,
-        "target": 12.9738,
-        "min": 4.5653,
-        "max": 21.3824,
-        "margin": 8.4085
+        "index": 2,
+        "target": 7.3693,
+        "min": 3.8978,
+        "max": 10.8408,
+        "near_max": 12.5,
+        "margin": 3.471475025070108
+      },
+      {
+        "index": 66,
+        "target": 7.3693,
+        "min": 3.9131,
+        "max": 10.8256,
+        "near_max": 12.5,
+        "margin": 3.4562709742116406
+      }
+    ],
+    [
+      {
+        "index": 22,
+        "target": 6.7385,
+        "min": 3.3706,
+        "max": 9.7385,
+        "near_max": 12.5,
+        "margin": 3.183966513008001
+      }
+    ],
+    [
+      {
+        "index": 14,
+        "target": 7.5269,
+        "min": 4.5269,
+        "max": 10.5269,
+        "near_max": 12.5,
+        "margin": 5
+      },
+      {
+        "index": 67,
+        "target": 7.6846,
+        "min": 4.6846,
+        "max": 10.6846,
+        "near_max": 12.5,
+        "margin": 5
+      },
+      {
+        "index": 104,
+        "target": 7.7372,
+        "min": 4.7372,
+        "max": 10.7372,
+        "near_max": 12.5,
+        "margin": 5
       }
     ]
   ],
   "base_target": [
-    12.973843,
-    12.9738,
-    12.9738,
-    12.9738,
-    12.9738
+    5.231914,
+    5.0609,
+    7.3693,
+    6.7385,
+    7.649567
   ],
   "base_margin": [
-    8.40855,
-    8.4085,
-    8.4085,
-    8.4085,
-    8.4085
+    5,
+    5,
+    3.471475,
+    3.183967,
+    5
   ],
   "sample_count": 3,
   "is_training": true,
-  "frozen": false
+  "frozen": false,
+  "near_limit_margin": 0,
+  "far_limit_margin": 0,
+  "percent_mode": true,
+  "near_percent": 0.1,
+  "near_percent_upper": -1,
+  "near_percent_lower": -1,
+  "far_percent": 0.5
 }

@@ -1,33 +1,43 @@
 services:
     camera1:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:4.0.0
             volumes:
                 - ./settings.json:/settings/settings.json
+                - ./dummy_images:/dummy_images
+                - /home/fls/genicamadapter/build-docker/bin/Opticus_ARCAM:/app/Opticus_ARCAM
+
             ipc: "service:redis"
 
 
             environment:
+                - CAMERA_PING_ON_CONNECT=ON
                 - CAMERA_CAMINDEX=1
                 - CAMERA_NAME=cam1
                 - CAMERA_STOREIMAGES=OFF
                 - CAMERA_STOREPATH=/images
-                - CAMERA_REDIS=tcp://redis:6379
+                - CAMERA_REDIS=tcp://0.0.0.0:6379
                 - CAMERA_SETTINGSFILE=/settings/settings.json
                 - CAMERA_IPCPORT=ipc:///dev/shm/camera1.input
+                - CAMERA_IPCPORTCONTROL=ipc:///dev/shm/camera1.control
                 - CAMERA_FLIP_RGB=ON
-                - CAMERA_IP=127.0.0.1
-            command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
-            # network_mode: host
+                - CAMERA_IP=192.168.1.234
+                - CAMERA_SIMULATION_MODE=false
+                - CAMERA_SIMULATION_IMAGE_DIR=/dummy_images
+                - CAMERA_SIMULATION_FPS=1
+            command: /app/Opticus_ARCAM
+            network_mode: host
             restart: unless-stopped
 
     camera2:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:4.0.0
             volumes:
                 - ./settings.json:/settings/settings.json
+                - ./dummy_images:/dummy_images
             ipc: "service:redis"
 
 
             environment:
+                - CAMERA_PING_ON_CONNECT=ON
                 - CAMERA_CAMINDEX=2
                 - CAMERA_NAME=cam2
                 - CAMERA_STOREIMAGES=OFF
@@ -35,20 +45,25 @@ services:
                 - CAMERA_REDIS=tcp://redis:6379
                 - CAMERA_SETTINGSFILE=/settings/settings.json
                 - CAMERA_IPCPORT=ipc:///dev/shm/camera2.input
+                - CAMERA_IPCPORTCONTROL=ipc:///dev/shm/camera2.control
                 - CAMERA_FLIP_RGB=ON
                 - CAMERA_IP=127.0.0.1
+                - CAMERA_SIMULATION_MODE=false
+                - CAMERA_SIMULATION_IMAGE_DIR=/dummy_images
+                - CAMERA_SIMULATION_FPS=5
             command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
             # network_mode: host
             restart: unless-stopped
 
     camera3:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:4.0.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
 
 
             environment:
+                - CAMERA_PING_ON_CONNECT=ON
                 - CAMERA_CAMINDEX=3
                 - CAMERA_NAME=cam3
                 - CAMERA_STOREIMAGES=OFF
@@ -56,19 +71,21 @@ services:
                 - CAMERA_REDIS=tcp://redis:6379
                 - CAMERA_SETTINGSFILE=/settings/settings.json
                 - CAMERA_IPCPORT=ipc:///dev/shm/camera3.input
+                - CAMERA_IPCPORTCONTROL=ipc:///dev/shm/camera3.control
                 - CAMERA_FLIP_RGB=ON
                 - CAMERA_IP=127.0.0.1
             command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
             # network_mode: host
             restart: unless-stopped
     camera4:
-            image: registry.fls-engineering.de/cam:3.2.0
+            image: registry.fls-engineering.de/cam:4.0.0
             volumes:
                 - ./settings.json:/settings/settings.json
             ipc: "service:redis"
 
 
             environment:
+                - CAMERA_PING_ON_CONNECT=ON
                 - CAMERA_CAMINDEX=4
                 - CAMERA_NAME=cam4
                 - CAMERA_STOREIMAGES=OFF
@@ -76,6 +93,7 @@ services:
                 - CAMERA_REDIS=tcp://redis:6379
                 - CAMERA_SETTINGSFILE=/settings/settings.json
                 - CAMERA_IPCPORT=ipc:///dev/shm/camera4.input
+                - CAMERA_IPCPORTCONTROL=ipc:///dev/shm/camera4.control
                 - CAMERA_FLIP_RGB=ON
                 - CAMERA_IP=127.0.0.1
             command: sh -c "/app/arv-fake-gv-camera-0.10 & /app/Opticus_ARCAM"
@@ -100,10 +118,10 @@ services:
                     - "opcua"
 
     mcp-server:
-        image: registry.fls-engineering.de/flow_engine_wo_ai:0.5.0
+        image: registry.fls-engineering.de/flow_engine_wo_ai:0.7.0
         command: >
-            sh -c "pip install 'mcp[cli]' -q &&
-                   python /app/mcp_flow_server.py --transport sse --host 0.0.0.0 --port 8002"
+            sh -c "pip install 'mcp[cli]<2' -q &&
+                   python /app/mcp_flow_server.py --transport http --host 0.0.0.0 --port 8002"
         ports:
             - "8002:8002"
         environment:
@@ -111,6 +129,12 @@ services:
             - FLOWS_DIR=/flows
             - FLOW_API_URL=http://flow:8000/api/flow/status
             - DASHBOARD_API_URL=http://flow:8000/api/ui
+            # Host headers accepted besides localhost (DNS-rebinding allow-list), comma-separated
+            - MCP_ALLOWED_HOSTS=${MCP_ALLOWED_HOSTS:-192.168.1.32:*}
+            # Credentials for the local backend when auth is enabled (needed for remote_* tools / instance=...)
+            - FLOW_API_TOKEN=${FLOW_API_TOKEN:-}
+            - FLOW_API_USER=${FLOW_API_USER:-}
+            - FLOW_API_PASSWORD=${FLOW_API_PASSWORD:-}
         volumes:
             - ../flows:/flows
             - ../:/app
@@ -121,27 +145,46 @@ services:
             default:
 
     flow:
-        image: registry.fls-engineering.de/flow_engine_wo_ai:0.5.0  
+        image: registry.fls-engineering.de/flow_engine_wo_ai:0.7.0  
         command: ["python", "-m", "watchfiles", "--filter", "python", "python /app/engine/flow.py", "/app/engine", "/app/flowruntime", "/app/packages"]
         ports:
             - "8000:8000"
             - "5000:5000"
             - "5555:5555"
         environment:
+            - FLOW_DUMP_PROCESS_ERROR_MSG=true
+            - FLOW_DUMP_PROCESS_ERROR_MSG_MAX_CHARS=0
             - PYTHONPATH=/app
             - FLOW_FILE=
+            - FLOW_WORKERS=8
             - STATIC_DIR=/flows/static
+            - DASHBOARD_PATH=/app/html
             - FLOW_GLOBAL__redis_unix_socket_path=/dev/shm/redis.sock
+            - OLLAMA_BASE_URL=http://aifls:11434/v1
+            - OLLAMA_MODEL=
+            - FLOW_LOG_LEVEL=INFO
+            - FLOW_MEMORY_BACKPRESSURE_THRESHOLD_MB=4096
+            # Kill switch: set to "true" to fully disable auth (backend role gate + frontend login guard).
+            - FLOW_AUTH_DISABLED=true
         volumes:
             - ../flows:/flows
             - ./images:/output
             - ./images:/testbilder
-
+            - /home/fls/python_node/flow-frontend/dist/flow-frontend:/app/html
             - ./backup:/backup
+            - /home/fls/bv_backup:/references:ro   # local copy of the box backup (/mnt/d/BVbackup)
+            - /home/fls/nok_samples/nok_export_2026-10-11/:/pseudos:ro   # local copy of the box backup (/mnt/d/BVbackup)
+            - /home/fls/nok_samples/nok_export_2026-10-11/:/reference:ro
             - ./stations:/stations
             - ../:/app
+            - ~/.ssh:/root/.ssh:ro
         devices:
             - /dev/dri:/dev/dri   # Intel GPU (OpenCL via DRI render node)
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
         group_add:
             - "993"                # render group GID (grants access to /dev/dri/renderD128)
         ipc: "service:redis"
@@ -149,6 +192,11 @@ services:
         depends_on:
             - redis
         restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '4.0'
+                    memory: 5g
 
         networks:
             default:
@@ -202,16 +250,26 @@ services:
     frontend:
         image: node:24-alpine
         working_dir: /app
-        command: sh -c "npm install && npx ng serve --host 0.0.0.0 --port 4200 --poll 1000"
+        command: sh -c "npm install && npx ng serve --host 0.0.0.0 --port 4200 --poll 1000 2>&1 | tee /tmp/ng-serve.log"
         ports:
             - "4200:4200"
         volumes:
             - ../flow-frontend:/app
+            - ./frontend-healthcheck.sh:/healthcheck.sh:ro
         environment:
             - NODE_OPTIONS=--max-old-space-size=4096
         restart: unless-stopped
+        healthcheck:
+            test: ["CMD", "sh", "/healthcheck.sh"]
+            interval: 10s
+            timeout: 5s
+            retries: 3
+            start_period: 90s
         networks:
             default:
+
+
+
     sftp:
         image: atmoz/sftp
         volumes:

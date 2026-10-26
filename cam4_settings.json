@@ -1,0 +1,200 @@
+{
+    "CameraType": 0,
+    "LumitraxImages": [
+        "LtrxShapeImage1",
+        "LtrxNormalImage"
+    ],
+    "exposureTime": 10000,
+    "exposureTimeTrigger": false,
+    "exposureAuto": false,
+    "mtu": 1496,
+    "gain": 10.0,
+    "gainAuto": false,
+    "triggerMode": true,
+    "triggerSource": "Software",
+    "binningHorizontal": 1,
+    "binningVertical": 1,
+    "acquisitionFrameRate": 2,
+    "reverseX": false,
+    "reverseY": false,
+    "sequencerMode": {
+        "enabled": false,
+        "steps": [
+            {
+                "setNr": 0,
+                "exposureTime_us": 10000,
+                "gain": 10.0,
+                "frameCount": 1
+            },
+            {
+                "setNr": 1,
+                "exposureTime_us": 20000,
+                "gain": 10.0,
+                "frameCount": 1
+            }
+        ]
+    },
+    "sequences": {
+        "enabled": true,
+        "steps": [
+            {
+                "name": "TriggerFrameCount",
+                "type": "integer",
+                "value": 2
+            },
+            {
+                "name": "SequencerFeatureSelector",
+                "type": "string",
+                "value": "ExposureTime"
+            },
+            {
+                "name": "SequencerMode",
+                "type": "string",
+                "value": "Off"
+            },
+            {
+                "name": "SequencerConfigurationMode",
+                "type": "string",
+                "value": "On"
+            },
+            {
+                "name": "SequencerSetCount",
+                "type": "integer",
+                "value": 2
+            },
+            {
+                "name": "SequencerSetSelector",
+                "type": "integer",
+                "value": 0
+            },
+            {
+                "name": "SequencerFeatureEnable",
+                "type": "boolean",
+                "value": true
+            },
+            {
+                "name": "ExposureTime",
+                "type": "double",
+                "value": 10000.0
+            },
+            {
+                "name": "SequencerSetSave",
+                "type": "command"
+            },
+            {
+                "name": "SequencerSetSelector",
+                "type": "integer",
+                "value": 1
+            },
+            {
+                "name": "ExposureTime",
+                "type": "double",
+                "value": 20000.0
+            },
+            {
+                "name": "SequencerSetSave",
+                "type": "command"
+            },
+            {
+                "name": "SequencerConfigurationMode",
+                "type": "string",
+                "value": "Off"
+            },
+            {
+                "name": "SequencerMode",
+                "type": "string",
+                "value": "On"
+            },
+            {
+                "name": "SequencerSetActive",
+                "type": "integer",
+                "value": 0
+            },
+            {
+                "name": "ColorCorrectionSetSelect",
+                "type": "string",
+                "value": "UserDefined"
+            },
+            {
+                "name": "ColorCorrectionEnable",
+                "type": "boolean",
+                "value": true
+            },
+            {
+                "name": "BalanceWhiteAuto",
+                "type": "string",
+                "value": "Continuous"
+            },
+            {
+                "name": "WhiteBalanceEnable",
+                "type": "boolean",
+                "value": true
+            }
+        ]
+    },
+    "chunks": {
+        "enabled": true,
+        "features": [
+            "Image",
+            "ExposureTime",
+            "Gain"
+        ],
+        "selector": "Image"
+    },
+    "colorCorrection": {
+        "redGain": 1.6458,
+        "greenGain": 1.0,
+        "blueGain": 2.022,
+        "ccm": [
+            1.1934,
+            0.6575,
+            0.4657,
+            0.1634,
+            1.5631,
+            0.3807,
+            0.0954,
+            0.3645,
+            1.3187
+        ],
+        "_ccm": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "enabled": true,
+        "hardwareEnable": true,
+        "autoWhiteBalance": {
+            "enabled": false,
+            "hardwareEnable": false,
+            "saturationThreshold": 95.0,
+            "hueLow": 45.0,
+            "hueHigh": 100.0,
+            "valueDark": 120.0,
+            "valueClip": 250.0,
+            "minBackgroundFraction": 0.05,
+            "maxGain": 3.0
+        }
+    },
+     "hdrMerge":
+    {
+        "enabled": true,
+        "algorithm": "mertens",
+        "contrastWeight": 1.0,
+        "saturationWeight": 1.0,
+        "exposureWeight": 0.0,
+        "tonemapGamma": 1.0,
+        "wbRGain": 1.0,
+        "wbGGain": 1.0,
+        "wbBGain": 1.0,
+        "specularSuppress": false,
+        "specularValThresh": 220.0,
+        "specularSatThresh": 30.0,
+        "specularInpaintRadius": 7
+    }
+}

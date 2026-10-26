@@ -3,63 +3,37 @@
   "pos_ranges_file": "pos_ranges_s2_i0_cam2.json",
   "bead_ranges_file": "bead_ranges_s2_i0_cam2.json",
   "ref_pos_image_filename": "ref_pos_image_s2_i0_cam2.png",
-  "template_box": {
-          "x": 2041,
-          "y": 1858,
-          "w": 175,
-          "h": 195
-        },
+  "template_box": [
+    {
+      "x": 2260,
+      "y": 2449,
+      "w": 175,
+      "h": 195
+    },
+    {
+      "x": 1603,
+      "y": 197,
+      "w": 175,
+      "h": 195
+    }
+  ],
   "colorranges": {
-          "bead": [
-            [
-              60,
-              110,
-              40
-            ],
-            [
-              97,
-              255,
-              190
-            ]
-          ],
-          "dark_blue": [
-            [
-              80,
-              150,
-              40
-            ],
-            [
-              105,
-              255,
-              150
-            ]
-          ],
-          "dark_green": [
-            [
-              45,
-              150,
-              25
-            ],
-            [
-              75,
-              255,
-              180
-            ]
-          ],
-          "reflections": [
-            [
-              0,
-              0,
-              140
-            ],
-            [
-              100,
-              200,
-              255
-            ]
-          ]
-        },
-"existence": {
+    "bead": [
+      [
+        [
+          55,
+          115,
+          80
+        ],
+        [
+          100,
+          255,
+          255
+        ]
+      ]
+    ]
+  },
+  "existence": {
     "points": [
       [
         389,
@@ -89,11 +63,11 @@
         2917,
         2916
       ]
-    ]
+    ],
+    "point_radius": 100
   },
   "checkbead": {
-    "min_thickness": 35,
-    "path_segments": []
+    "max_searchwidth": 35
   },
   "fullbeadcheck": {
     "path_segments": [
@@ -749,6 +723,17 @@
           }
         ]
       }
-    ]
+    ],
+    "max_searchwidth": 60
+  },
+  "path_segments_file": "path_segments_s2_i0_cam2_standard.json",
+  "reference_image_filename": "ref_image_s2_i0_cam2.png",
+  "zero_offset_dx": {
+    "input_type": "mm",
+    "value": 0.0
+  },
+  "zero_offset_dy": {
+    "input_type": "mm",
+    "value": 0.0
   }
 }

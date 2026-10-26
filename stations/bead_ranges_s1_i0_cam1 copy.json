@@ -1,0 +1,60 @@
+{
+  "base_target": 0,
+  "base_margin": 5,
+  "lines": [
+    {
+      "index": 5,
+      "target": 5,
+      "min": 3.9245,
+      "max": 6.0755,
+      "near_min": 2.409177,
+      "near_max": 7.590823,
+      "far_min": 3,
+      "far_max": 10,
+      "margin": 1.0755452243363561
+    },
+    {
+      "index": 24,
+      "target": 4.1798,
+      "min": 3.1798,
+      "max": 5.1798,
+      "far_min": 3,
+      "far_max": 10,
+      "near_min": 2.279645,
+      "near_max": 6.079955
+    },
+    {
+      "index": 11,
+      "target": 5,
+      "min": 3.4172,
+      "max": 6,
+      "near_min": 2.169422,
+      "near_max": 7.247778,
+      "far_min": 3,
+      "far_max": 10,
+      "margin": 1.2913887224402307
+    },
+    {
+      "index": 0,
+      "target": 5,
+      "min": 4,
+      "max": 6,
+      "near_min": 2.96733,
+      "near_max": 7.03267,
+      "far_min": 3,
+      "far_max": 10
+    }
+  ],
+  "sample_count": 3,
+  "is_training": true,
+  "frozen": false,
+  "enable_dual_limit_mode": false,
+  "near_limit_margin": 0,
+  "percent_dual_limit_mode": true,
+  "near_limit_percent": 0.1,
+  "far_limit_percent": 0.8,
+  "far_limit_margin": 0,
+  "percent_mode": true,
+  "near_percent": 0.18,
+  "far_percent": 0.5
+}

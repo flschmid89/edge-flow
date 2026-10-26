@@ -1,45 +1,82 @@
 {
     "CameraType": 0,
     "LumitraxImages":["LtrxShapeImage1", "LtrxNormalImage"],
-    "exposureTime": 2000,
+    "exposureTime": 1500000,
     "exposureTimeTrigger": false,
     "exposureAuto": false,
-    "mtu": 1500,
-    "gain": 5.0,
-    "gainAuto": false,
+    "mtu": 5000,
+    "gain": 24.0,
+    "gainAuto": true,
     "triggerMode": true,
     "triggerSource": "Software",
     "binningHorizontal": 1,
     "binningVertical": 1,
-    "acquisitionFrameRate": 2,
+    "acquisitionFrameRate": 10,
     "reverseX": false,
     "reverseY": false,
     "sequencer": false,
-    "binning": "4x",
-    "sequences" :[
+    "binning": "",
+    "sequencerMode":
+    {
+        "enabled": false,
+        "steps": 
+        [
+            {
+                "setNr":0,
+                "exposureTime_us": 100000,
+                "gain": 10.0,
+                "frameCount": 1
+
+            },
+            {
+                "setNr":1,
+                "exposureTime_us": 200006,
+                "gain": 5.0,
+                "frameCount": 1
+
+            }
+           
+        ]
+    },
+    "sequences":
+    {
+        "enabled": true,
+        "steps":
+        [
+            {"name": "ColorCorrectionSetSelect", "type": "string", "value": "UserDefined"},
+            {"name": "ColorCorrectionEnable", "type": "boolean", "value": true},
+                        {"name": "BalanceWhiteAuto", "type": "string", "value": "Continuous"},
+            {"name": "WhiteBalanceEnable", "type": "boolean", "value": true}
+           
+        ]
+    },
+    "chunks":
+    {
+        "enabled": true,
+        "features": ["Image", "ExposureTime", "Gain"],
+        "selector": "Image"
+    },
+    "colorCorrection":
+    {
+        "redGain": 1.0,
+        "greenGain": 1.0,
+        "blueGain": 1.0,
+        "ccm": [1.0,0,0,1.0,0,0,0,1.0],
+
+        "enabled": true,
+        "hardwareEnable": true,
+        
+        "autoWhiteBalance":
         {
-            "setNr":0,
-            "sequencerSetNext":1,
-            "exposureTime_us": 10000,
-            "frameCount": 10, 
-            "horizontalBinningOrDecimation": 1,  
-            "verticalBinningOrDecimation":1
-        },
-        {
-            "setNr":0,
-            "sequencerSetNext":2,
-            "exposureTime_us": 10000,
-            "frameCount": 10, 
-            "horizontalBinningOrDecimation": 1,  
-            "verticalBinningOrDecimation":1
-        },
-        {
-            "setNr":2,
-            "sequencerSetNext":0,
-            "exposureTime_us": 10000,
-            "frameCount": 10, 
-            "horizontalBinningOrDecimation": 1,  
-            "verticalBinningOrDecimation":1
+            "enabled": true,
+            "hardwareEnable": true,
+            "saturationThreshold": 95.0,
+            "hueLow": 45.0,
+            "hueHigh": 100.0,
+            "valueDark": 120.0,
+            "valueClip": 250.0,
+            "minBackgroundFraction": 0.05,
+            "maxGain": 3.0
         }
-    ]
+    }
 }

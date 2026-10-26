@@ -1,0 +1,152 @@
+[
+  {
+    "start_point": [
+      3448,
+      1480
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          2966,
+          1482
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      3472,
+      1928
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          2916,
+          1932
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      624,
+      1472
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          1152,
+          1476
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      2920,
+      124
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          3480,
+          124
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      631,
+      575
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          1140,
+          572
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      1104,
+      1021
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          630,
+          1022
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      2920,
+      1028
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          3476,
+          1028
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      2940,
+      580
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          3460,
+          572
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      1116,
+      121
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          609,
+          122
+        ]
+      }
+    ]
+  },
+  {
+    "start_point": [
+      1128,
+      1920
+    ],
+    "segments": [
+      {
+        "type": "line",
+        "to": [
+          624,
+          1920
+        ]
+      }
+    ]
+  }
+]

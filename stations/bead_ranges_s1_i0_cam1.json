@@ -3,59 +3,42 @@
   "base_margin": 5,
   "lines": [
     {
-      "index": 0,
-      "target": 7.8548,
-      "min": 2,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
+      "index": 1,
+      "target": 4.9899,
+      "min": 2.7971,
+      "max": 13.1351,
+      "margin": 5.168988257672426
     },
     {
-      "index": 12,
-      "target": 7.631,
-      "min": 2.5213,
-      "max": 12.7406,
-      "target_offset": 0,
-      "margin": 5.109639824037658,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
+      "index": 20,
+      "target": 5.3372,
+      "min": 3.1054,
+      "max": 13.4824,
+      "margin": 5.188507191176713
     },
     {
-      "index": 7,
-      "target": 7.3067,
-      "min": 2.0804,
-      "max": 12.5331,
-      "target_offset": 0,
-      "margin": 5.226361846440414,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
+      "index": 5,
+      "target": 5.029,
+      "min": 2.9204,
+      "max": 13.1742,
+      "margin": 5.126894991476544
     },
     {
-      "index": -1,
-      "target": 7.8548,
-      "min": 2,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
+      "index": 24,
+      "target": 4.9028,
+      "min": 2.8812,
+      "max": 13.048,
+      "margin": 5.083403257351367
     }
   ],
   "sample_count": 3,
   "is_training": true,
-  "frozen": false
+  "frozen": false,
+  "near_limit_margin": 0,
+  "far_limit_margin": 0,
+  "percent_mode": true,
+  "near_percent": 0.1,
+  "near_percent_upper": -1,
+  "near_percent_lower": -1,
+  "far_percent": 0.5
 }

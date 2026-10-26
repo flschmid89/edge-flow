@@ -1,61 +1,142 @@
 {
-  "base_target": 0,
-  "base_margin": 5,
+  "base_target": [
+    8.2111,
+    8.6511,
+    8.3577,
+    7.9179
+  ],
+  "base_margin": [
+    5.1776,
+    5.2216,
+    4.6938,
+    5.3096
+  ],
   "lines": [
+    [
       {
-      "index": 0,
-      "target": 7.8548,
-      "min": 2.0,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
-    },
-    {
-      "index": 8,
-      "target": 7.8548,
-      "min": 4.0,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
-    },
+        "index": 0,
+        "target": 8.2111,
+        "min": 5.9204,
+        "max": 16.2756
+      },
       {
-      "index": -5,
-      "target": 7.8548,
-      "min": 4.0,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
-    },
-     {
-      "index": -1,
-      "target": 7.8548,
-      "min": 2.0,
-      "max": 16,
-      "target_offset": 0,
-      "margin": 5.145249162585079,
-      "mean": 6,
-      "stddev": 0.471405,
-      "sample_count": 3,
-      "value_min": 5,
-      "value_max": 9
-    }
+        "index": 10,
+        "target": 8.2111,
+        "min": 5.9204,
+        "max": 16.2756
+      },
+      {
+        "index": 20,
+        "target": 8.2111,
+        "min": 6.4483,
+        "max": 16.2756
+      },
+      {
+        "index": 23,
+        "target": 8.2111,
+        "min": 6.7121,
+        "max": 16.2756
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "target": 9.0909,
+        "min": 7.24,
+        "max": 15.8358
+      },
+      {
+        "index": 10,
+        "target": 8.7977,
+        "min": 6.9761,
+        "max": 15.8358
+      },
+      {
+        "index": 20,
+        "target": 8.5044,
+        "min": 5.3926,
+        "max": 15.8358
+      },
+      {
+        "index": 24,
+        "target": 8.5044,
+        "min": 5.3926,
+        "max": 15.8358
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "target": 8.7977,
+        "min": 7.24,
+        "max": 15.8358
+      },
+      {
+        "index": 10,
+        "target": 8.5044,
+        "min": 6.4483,
+        "max": 15.8358
+      },
+      {
+        "index": 20,
+        "target": 8.2111,
+        "min": 5.9204,
+        "max": 14.9561
+      },
+      {
+        "index": 21,
+        "target": 8.2111,
+        "min": 5.9204,
+        "max": 14.9561
+      }
+    ],
+    [
+      {
+        "index": 0,
+        "target": 7.6246,
+        "min": 5.6564,
+        "max": 16.2756
+      },
+      {
+        "index": 10,
+        "target": 7.9179,
+        "min": 5.6564,
+        "max": 16.2756
+      },
+      {
+        "index": 20,
+        "target": 7.9179,
+        "min": 6.4483,
+        "max": 16.2756
+      },
+      {
+        "index": 22,
+        "target": 8.2111,
+        "min": 6.4483,
+        "max": 16.2756
+      }
+    ]
   ],
   "sample_count": 3,
   "is_training": true,
-  "frozen": false
+  "frozen": false,
+  "enable_dual_limit_mode": false,
+  "near_limit_margin": 0,
+  "percent_dual_limit_mode": true,
+  "near_limit_percent": 0.1,
+  "far_limit_percent": 0.8,
+  "far_limit_margin": 0,
+  "percent_mode": true,
+  "near_percent": 0.18,
+  "far_percent": 0.5,
+  "near_percent_upper": -1,
+  "near_percent_lower": -1,
+  "optimized": {
+    "at": "20260925_090934",
+    "parts": 7,
+    "step": 10,
+    "min_margin_pct": 0.1,
+    "min_margin_abs": 0.15,
+    "max_margin_pct": 0.5
+  }
 }

@@ -1,0 +1,1168 @@
+asyncapi: 3.0.0
+info:
+  title: Opticus_ARCAM Camera Control Interface
+  version: '1.0.0'
+  description: >
+    ZeroMQ message interface for Opticus_ARCAM, the GenICam/Aravis camera control
+    application. Three independent ZMQ sockets are exposed: a synchronous
+    request/reply control channel for commands and parameter writes, a
+    request/reply signal channel the app uses to push status/health updates
+    out, and a multipart image-output channel that streams acquired frames.
+
+    Payloads on the control and signal channels are transported as either
+    plain UTF-8 JSON text or MessagePack-encoded bytes on the wire, depending
+    on how the `ZMQHelper` instance on each end was constructed
+    (`sendMsgPack`); the logical JSON Schemas below describe the decoded
+    content in both cases. All control-channel replies are always
+    MessagePack-encoded (`nlohmann::json::to_msgpack`), regardless of how the
+    request was encoded.
+  license:
+    name: Proprietary
+
+defaultContentType: application/msgpack
+
+servers:
+  controlServer:
+    host: /tmp/feeds/camera.control
+    protocol: zeromq
+    description: >
+      Control socket. ZMQ_REP, bound by Opticus_ARCAM. Clients connect and
+      send exactly one request per REQ/REP cycle; the app always replies
+      (see the `control` channel's `reply`).
+    bindings:
+      zeromq:
+        socketType: REP
+        bind: true
+        address: 'ipc:///dev/shm/camera{index}.control'
+
+  signalServer:
+    host: /signals/camera.req
+    protocol: zeromq
+    description: >
+      Signal/status socket. ZMQ_REQ, connected (not bound) by Opticus_ARCAM —
+      the app is the client here and initiates every exchange when it has a
+      status/health update or a gain-related side-channel message to push;
+      the counterparty must bind ZMQ_REP and reply for the REQ socket to
+      remain usable on the next send.
+    bindings:
+      zeromq:
+        socketType: REQ
+        bind: false
+        address: 'ipc:///dev/shm/camera{index}.signal'
+
+  imageOutputServer:
+    host: /tmp/signals/camera.out
+    protocol: zeromq
+    description: >
+      Image output socket. Opticus_ARCAM connects out to this address; a
+      consumer (e.g. src/tests/testEndpoint.py) binds it. Each acquired/
+      processed frame is pushed as a two-frame multipart ZMQ message.
+    bindings:
+      zeromq:
+        socketType: PUSH
+        bind: false
+        address: 'ipc:///dev/shm/camera{index}.input'
+
+  redisServer:
+    host: '{cameraParameters.redisConnection}'
+    protocol: redis
+    description: >
+      Optional Redis connection, enabled by `connectRedis` in
+      settings.json (connection details from `cameraParameters.
+      redisConnection`). Used three ways: inbound fire-and-forget commands
+      via SUBSCRIBE on the configured camera name, outbound status/event
+      notifications via PUBLISH on "{camName}:status", and a set of plain
+      key-value status mirrors maintained with SET (not pub/sub) — see the
+      `redisCommand`, `redisStatusEvent`, and `redisKeyValueStore` channels
+      below. All Redis interaction is wrapped in a non-throwing try/catch
+      in CameraHelperAravis.
+
+channels:
+  control:
+    address: 'ipc:///dev/shm/camera{index}.control'
+    servers:
+      - $ref: '#/servers/controlServer'
+    description: >
+      Command and parameter-write channel. One JSON (or MessagePack) object
+      per request; the app replies with a MessagePack-encoded status object
+      on the same socket before the next request can be sent (REP
+      semantics).
+    messages:
+      exitCommand:
+        $ref: '#/components/messages/exitCommand'
+      setValueCommand:
+        $ref: '#/components/messages/setValueCommand'
+      stopCommand:
+        $ref: '#/components/messages/stopCommand'
+      startCommand:
+        $ref: '#/components/messages/startCommand'
+      hikFileCommand:
+        $ref: '#/components/messages/hikFileCommand'
+      connectCameraCommand:
+        $ref: '#/components/messages/connectCameraCommand'
+      infosCommand:
+        $ref: '#/components/messages/infosCommand'
+      triggerCommand:
+        $ref: '#/components/messages/triggerCommand'
+      userSetLoadCommand:
+        $ref: '#/components/messages/userSetLoadCommand'
+      userSetSaveCommand:
+        $ref: '#/components/messages/userSetSaveCommand'
+      configureSequencerCommand:
+        $ref: '#/components/messages/configureSequencerCommand'
+      setColorCorrectionCommand:
+        $ref: '#/components/messages/setColorCorrectionCommand'
+      integerParameter:
+        $ref: '#/components/messages/integerParameter'
+      doubleParameter:
+        $ref: '#/components/messages/doubleParameter'
+      stringParameter:
+        $ref: '#/components/messages/stringParameter'
+      boolParameter:
+        $ref: '#/components/messages/boolParameter'
+      floatParameter:
+        $ref: '#/components/messages/floatParameter'
+      commandParameter:
+        $ref: '#/components/messages/commandParameter'
+      controlReply:
+        $ref: '#/components/messages/controlReply'
+
+  signal:
+    address: 'ipc:///dev/shm/camera{index}.signal'
+    servers:
+      - $ref: '#/servers/signalServer'
+    description: >
+      Status/health push channel, initiated by the app as a ZMQ_REQ client.
+      Used for the full GenICam control-tree snapshot (sent on start/stop/
+      infos/etc. via `sendStatus()`) and for asynchronous camera error
+      notifications.
+    messages:
+      statusSnapshot:
+        $ref: '#/components/messages/statusSnapshot'
+      errorStatus:
+        $ref: '#/components/messages/errorStatus'
+      signalAck:
+        $ref: '#/components/messages/signalAck'
+
+  imageOutput:
+    address: 'ipc:///dev/shm/camera{index}.input'
+    servers:
+      - $ref: '#/servers/imageOutputServer'
+    description: >
+      Frame output channel. Each frame is one ZMQ multipart message: frame 0
+      is the `imageEnvelope` JSON (or MessagePack) object, frame 1 is the raw
+      pixel buffer described by `imageEnvelope.dataformat`. The two messages
+      below are always sent together, in this order, as a single multipart
+      send (see `ZMQHelper::zmqSendImage`).
+    messages:
+      imageEnvelope:
+        $ref: '#/components/messages/imageEnvelope'
+      imageBinary:
+        $ref: '#/components/messages/imageBinary'
+
+  redisCommand:
+    address: '{camName}'
+    parameters:
+      camName:
+        description: >
+          cameraParameters.camName — the literal Redis pub/sub channel name
+          Opticus_ARCAM subscribes to for inbound commands.
+    servers:
+      - $ref: '#/servers/redisServer'
+    description: >
+      Inbound fire-and-forget command channel (Redis SUBSCRIBE), handled by
+      CameraHelperAravis::callbackRedis. One message per publish; there is
+      no reply on this channel — outcomes surface asynchronously via
+      `redisStatusEvent`, the `signal` channel, or the `redisKeyValueStore`
+      keys below. The whole callback is wrapped in a non-throwing
+      try/catch, so a malformed payload is silently dropped.
+    messages:
+      redisTriggerCommand:
+        $ref: '#/components/messages/redisTriggerCommand'
+      redisAutofocusCommand:
+        $ref: '#/components/messages/redisAutofocusCommand'
+      redisRestartCommand:
+        $ref: '#/components/messages/redisRestartCommand'
+      redisRawRecordOnCommand:
+        $ref: '#/components/messages/redisRawRecordOnCommand'
+      redisRawRecordOffCommand:
+        $ref: '#/components/messages/redisRawRecordOffCommand'
+      redisIntegerParameterWrite:
+        $ref: '#/components/messages/redisIntegerParameterWrite'
+      redisDoubleParameterWrite:
+        $ref: '#/components/messages/redisDoubleParameterWrite'
+      redisStringParameterWrite:
+        $ref: '#/components/messages/redisStringParameterWrite'
+      redisBoolParameterWrite:
+        $ref: '#/components/messages/redisBoolParameterWrite'
+      redisFloatParameterWrite:
+        $ref: '#/components/messages/redisFloatParameterWrite'
+      redisCommandParameterWrite:
+        $ref: '#/components/messages/redisCommandParameterWrite'
+      redisMenuParameterWrite:
+        $ref: '#/components/messages/redisMenuParameterWrite'
+      redisExposureTimeShorthand:
+        $ref: '#/components/messages/redisExposureTimeShorthand'
+      redisSetColorCorrectionCommand:
+        $ref: '#/components/messages/redisSetColorCorrectionCommand'
+
+  redisStatusEvent:
+    address: '{camName}:status'
+    parameters:
+      camName:
+        description: cameraParameters.camName.
+    servers:
+      - $ref: '#/servers/redisServer'
+    description: >
+      Outbound status/event notification channel (Redis PUBLISH), fired
+      from within callbackRedis and publishAcquisitionEvent() as specific
+      state transitions occur.
+    messages:
+      redisTriggeredEvent:
+        $ref: '#/components/messages/redisTriggeredEvent'
+      redisRawRecordOnEvent:
+        $ref: '#/components/messages/redisRawRecordOnEvent'
+      redisRawRecordOffEvent:
+        $ref: '#/components/messages/redisRawRecordOffEvent'
+      redisAcquisitionStartedEvent:
+        $ref: '#/components/messages/redisAcquisitionStartedEvent'
+      redisAcquisitionStoppedEvent:
+        $ref: '#/components/messages/redisAcquisitionStoppedEvent'
+      redisColorCorrectionUpdatedEvent:
+        $ref: '#/components/messages/redisColorCorrectionUpdatedEvent'
+      redisColorCorrectionUpdateFailedEvent:
+        $ref: '#/components/messages/redisColorCorrectionUpdateFailedEvent'
+
+  redisKeyValueStore:
+    address: '{camName}.*'
+    parameters:
+      camName:
+        description: cameraParameters.camName.
+    servers:
+      - $ref: '#/servers/redisServer'
+    description: >
+      Outbound key-value status mirror, written with Redis SET (not
+      PUBLISH) whenever connectRedis is enabled. AsyncAPI's channel/message
+      model is pub/sub-oriented and has no native "key write" operation;
+      each message below documents one "{camName}.<suffix>" key that is
+      unconditionally overwritten at the described trigger point.
+      Consumers should read these with GET, not SUBSCRIBE — there is no
+      notification when a key changes.
+    messages:
+      redisStatusKey:
+        $ref: '#/components/messages/redisStatusKey'
+      redisControlsKey:
+        $ref: '#/components/messages/redisControlsKey'
+      redisImagesCountKey:
+        $ref: '#/components/messages/redisImagesCountKey'
+      redisTimeSinceLastImageKey:
+        $ref: '#/components/messages/redisTimeSinceLastImageKey'
+      redisAutofocusKey:
+        $ref: '#/components/messages/redisAutofocusKey'
+      redisSharpnessKey:
+        $ref: '#/components/messages/redisSharpnessKey'
+      redisFocusKey:
+        $ref: '#/components/messages/redisFocusKey'
+      redisMaxSharpnessKey:
+        $ref: '#/components/messages/redisMaxSharpnessKey'
+      redisExposureTimeKey:
+        $ref: '#/components/messages/redisExposureTimeKey'
+
+operations:
+  receiveControlRequest:
+    action: receive
+    channel:
+      $ref: '#/channels/control'
+    summary: Opticus_ARCAM receives a command or parameter write on the control socket.
+    messages:
+      - $ref: '#/channels/control/messages/exitCommand'
+      - $ref: '#/channels/control/messages/setValueCommand'
+      - $ref: '#/channels/control/messages/stopCommand'
+      - $ref: '#/channels/control/messages/startCommand'
+      - $ref: '#/channels/control/messages/hikFileCommand'
+      - $ref: '#/channels/control/messages/connectCameraCommand'
+      - $ref: '#/channels/control/messages/infosCommand'
+      - $ref: '#/channels/control/messages/triggerCommand'
+      - $ref: '#/channels/control/messages/userSetLoadCommand'
+      - $ref: '#/channels/control/messages/userSetSaveCommand'
+      - $ref: '#/channels/control/messages/configureSequencerCommand'
+      - $ref: '#/channels/control/messages/setColorCorrectionCommand'
+      - $ref: '#/channels/control/messages/integerParameter'
+      - $ref: '#/channels/control/messages/doubleParameter'
+      - $ref: '#/channels/control/messages/stringParameter'
+      - $ref: '#/channels/control/messages/boolParameter'
+      - $ref: '#/channels/control/messages/floatParameter'
+      - $ref: '#/channels/control/messages/commandParameter'
+    reply:
+      channel:
+        $ref: '#/channels/control'
+      messages:
+        - $ref: '#/channels/control/messages/controlReply'
+
+  sendSignalUpdate:
+    action: send
+    channel:
+      $ref: '#/channels/signal'
+    summary: Opticus_ARCAM pushes a status snapshot or error notification out as a REQ client.
+    messages:
+      - $ref: '#/channels/signal/messages/statusSnapshot'
+      - $ref: '#/channels/signal/messages/errorStatus'
+    reply:
+      channel:
+        $ref: '#/channels/signal'
+      messages:
+        - $ref: '#/channels/signal/messages/signalAck'
+
+  sendImage:
+    action: send
+    channel:
+      $ref: '#/channels/imageOutput'
+    summary: Opticus_ARCAM pushes one acquired/processed frame as a two-part multipart message.
+    messages:
+      - $ref: '#/channels/imageOutput/messages/imageEnvelope'
+      - $ref: '#/channels/imageOutput/messages/imageBinary'
+
+  receiveRedisCommand:
+    action: receive
+    channel:
+      $ref: '#/channels/redisCommand'
+    summary: Receive a fire-and-forget command published on the camera's Redis channel.
+    messages:
+      - $ref: '#/channels/redisCommand/messages/redisTriggerCommand'
+      - $ref: '#/channels/redisCommand/messages/redisAutofocusCommand'
+      - $ref: '#/channels/redisCommand/messages/redisRestartCommand'
+      - $ref: '#/channels/redisCommand/messages/redisRawRecordOnCommand'
+      - $ref: '#/channels/redisCommand/messages/redisRawRecordOffCommand'
+      - $ref: '#/channels/redisCommand/messages/redisIntegerParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisDoubleParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisStringParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisBoolParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisFloatParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisCommandParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisMenuParameterWrite'
+      - $ref: '#/channels/redisCommand/messages/redisExposureTimeShorthand'
+      - $ref: '#/channels/redisCommand/messages/redisSetColorCorrectionCommand'
+
+  sendRedisStatusEvent:
+    action: send
+    channel:
+      $ref: '#/channels/redisStatusEvent'
+    summary: Publish a status/event notification on "{camName}:status".
+    messages:
+      - $ref: '#/channels/redisStatusEvent/messages/redisTriggeredEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisRawRecordOnEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisRawRecordOffEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisAcquisitionStartedEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisAcquisitionStoppedEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisColorCorrectionUpdatedEvent'
+      - $ref: '#/channels/redisStatusEvent/messages/redisColorCorrectionUpdateFailedEvent'
+
+  writeRedisKeyValue:
+    action: send
+    channel:
+      $ref: '#/channels/redisKeyValueStore'
+    summary: >
+      Overwrite one of the "{camName}.<suffix>" status-mirror keys with
+      Redis SET. Not a pub/sub notification — see the channel description.
+    messages:
+      - $ref: '#/channels/redisKeyValueStore/messages/redisStatusKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisControlsKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisImagesCountKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisTimeSinceLastImageKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisAutofocusKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisSharpnessKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisFocusKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisMaxSharpnessKey'
+      - $ref: '#/channels/redisKeyValueStore/messages/redisExposureTimeKey'
+
+components:
+  messages:
+    exitCommand:
+      name: exitCommand
+      title: Exit
+      summary: Terminate the Opticus_ARCAM process immediately (std::quick_exit).
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/ExitCommand'
+
+    setValueCommand:
+      name: setValueCommand
+      title: Set Value (legacy)
+      summary: >
+        Legacy single-parameter write path. Always decoded as a float
+        regardless of the declared type field; well-known names (Gain,
+        ExposureTime, AcquisitionFrameRate) are piped directly to the
+        camera, any other name falls back to camera.addParameter().
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SetValueCommand'
+
+    stopCommand:
+      name: stopCommand
+      title: Stop Acquisition
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    startCommand:
+      name: startCommand
+      title: Start Acquisition
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    hikFileCommand:
+      name: hikFileCommand
+      title: Import HIK Settings File
+      summary: Import a HIK-format camera settings file, given inline as text.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/HikFileCommand'
+
+    connectCameraCommand:
+      name: connectCameraCommand
+      title: Connect Camera
+      summary: (Re)connect to the camera, read settings.json, init and start acquisition.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    infosCommand:
+      name: infosCommand
+      title: Request Status
+      summary: Triggers a statusSnapshot push on the signal channel; no direct payload beyond the ack.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    triggerCommand:
+      name: triggerCommand
+      title: Software Trigger
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    userSetLoadCommand:
+      name: userSetLoadCommand
+      title: Load User Set
+      summary: Rejected with an error reply if the camera is currently running.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    userSetSaveCommand:
+      name: userSetSaveCommand
+      title: Save User Set
+      summary: Rejected with an error reply if the camera is currently running.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SimpleCommand'
+
+    configureSequencerCommand:
+      name: configureSequencerCommand
+      title: Configure GenICam Sequencer
+      summary: Rejected with an error reply if the camera is currently running.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/ConfigureSequencerCommand'
+
+    integerParameter:
+      name: integerParameter
+      title: Integer Parameter Write
+      summary: Untagged (no "command" field) GenICam feature write, discriminated by type=0.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/IntegerParameter'
+
+    doubleParameter:
+      name: doubleParameter
+      title: Double Parameter Write
+      summary: Untagged GenICam feature write, discriminated by type=3.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/DoubleParameter'
+
+    stringParameter:
+      name: stringParameter
+      title: String Parameter Write
+      summary: Untagged GenICam feature write, discriminated by type=1.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/StringParameter'
+
+    boolParameter:
+      name: boolParameter
+      title: Bool Parameter Write
+      summary: Untagged GenICam feature write, discriminated by type=4.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/BoolParameter'
+
+    floatParameter:
+      name: floatParameter
+      title: Float Parameter Write
+      summary: Untagged GenICam feature write, discriminated by type=2.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/FloatParameter'
+
+    commandParameter:
+      name: commandParameter
+      title: GenICam Command Execute
+      summary: Untagged GenICam command execution (e.g. "FocusAuto"), discriminated by type=5.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/CommandParameter'
+
+    controlReply:
+      name: controlReply
+      title: Control Reply
+      summary: >
+        Always MessagePack-encoded (nlohmann::json::to_msgpack), regardless
+        of the request's encoding. {"status":"ok"} is the catch-all success
+        reply used for every command not called out otherwise below.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/ControlReply'
+
+    statusSnapshot:
+      name: statusSnapshot
+      title: Status Snapshot
+      summary: >
+        Full GenICam control-tree snapshot (CameraHelperAravis::sendStatus,
+        via getAllControls()), pushed after start/stop/infos/hik_file/
+        UserSetLoad/ConfigureSequencer and mirrored to Redis at
+        "{camName}.controls" when connectRedis is enabled.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/StatusSnapshot'
+
+    errorStatus:
+      name: errorStatus
+      title: Camera Error Status
+      summary: Pushed whenever the underlying camera/Aravis layer reports an error.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/ErrorStatus'
+
+    signalAck:
+      name: signalAck
+      title: Signal Reply
+      summary: >
+        Opaque REP-side reply required to keep the ZMQ_REQ signal socket in
+        a valid state for the next send; shape is defined by whatever
+        process binds ipc:///signals/camera.req and is not otherwise
+        constrained by Opticus_ARCAM.
+      contentType: application/msgpack
+      payload: {}
+
+    imageEnvelope:
+      name: imageEnvelope
+      title: Image Envelope (multipart frame 0)
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/ImageEnvelope'
+
+    imageBinary:
+      name: imageBinary
+      title: Image Buffer (multipart frame 1)
+      summary: Raw pixel buffer, row-major, as described by the preceding envelope's dataformat.
+      contentType: application/octet-stream
+      payload:
+        type: string
+        format: binary
+
+    setColorCorrectionCommand:
+      name: setColorCorrectionCommand
+      title: Set Color Correction
+      summary: >
+        Writes CCM/white-balance gains and the enable flags to the camera
+        (Q8 fixed-point conversion for hardware registers), and optionally
+        persists the result to "colorCorrection_{camName}.json" via the
+        "persist" flag. Rejected with an error reply if the camera is
+        currently running.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SetColorCorrectionCommand'
+
+    redisTriggerCommand:
+      title: Trigger (Redis)
+      summary: >
+        Software-trigger the camera, optionally naming the image(s) to be
+        produced. Matches `^TRIGGER(@name(,name)*)?` — e.g. plain
+        "TRIGGER", or "TRIGGER@shot1,shot2" for a multi-image burst.
+      contentType: text/plain
+
+    redisAutofocusCommand:
+      title: Autofocus (Redis)
+      summary: Run the autofocus sweep. Payload is the literal string "AUTOFOCUS".
+      contentType: text/plain
+
+    redisRestartCommand:
+      title: Restart (Redis)
+      summary: >
+        Restart the process immediately via std::quick_exit(0). Payload is
+        the literal string "RESTART".
+      contentType: text/plain
+
+    redisRawRecordOnCommand:
+      title: Raw record on (Redis)
+      summary: >
+        Enable raw-frame recording. Payload is the literal string
+        "RAWRECORD_ON".
+      contentType: text/plain
+
+    redisRawRecordOffCommand:
+      title: Raw record off (Redis)
+      summary: >
+        Disable raw-frame recording. Payload is the literal string
+        "RAWRECORD_OFF".
+      contentType: text/plain
+
+    redisExposureTimeShorthand:
+      title: Exposure time shorthand (Redis)
+      summary: >
+        Bare numeric string (parsed with std::stod), applied directly as
+        the camera's ExposureTime DoubleParameter. Shorthand for a full
+        redisParameterWrite targeting ExposureTime.
+      contentType: text/plain
+
+    redisIntegerParameterWrite:
+      title: Integer parameter write (Redis)
+      summary: >
+        JSON-object payload (starts with "{"), discriminated by type=0. An
+        optional top-level "trigger": true additionally fires
+        triggerWithRetry() after the value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisIntegerParameter'
+
+    redisDoubleParameterWrite:
+      title: Double parameter write (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=3. An optional
+        top-level "trigger": true additionally fires triggerWithRetry()
+        after the value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisDoubleParameter'
+
+    redisStringParameterWrite:
+      title: String parameter write (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=1. An optional
+        top-level "trigger": true additionally fires triggerWithRetry()
+        after the value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisStringParameter'
+
+    redisBoolParameterWrite:
+      title: Bool parameter write (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=4. An optional
+        top-level "trigger": true additionally fires triggerWithRetry()
+        after the value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisBoolParameter'
+
+    redisFloatParameterWrite:
+      title: Float parameter write (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=2. An optional
+        top-level "trigger": true additionally fires triggerWithRetry()
+        after the value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisFloatParameter'
+
+    redisCommandParameterWrite:
+      title: Command parameter execute (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=5. Executes a GenICam
+        command feature; an optional top-level "trigger": true
+        additionally fires triggerWithRetry() afterward.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisCommandParameter'
+
+    redisMenuParameterWrite:
+      title: Menu parameter write (Redis)
+      summary: >
+        JSON-object payload, discriminated by type=6. Special-cased when
+        name="TriggerMode": additionally toggles the connection's software
+        trigger handling to match the menu value. An optional top-level
+        "trigger": true additionally fires triggerWithRetry() after the
+        value is applied.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/RedisMenuParameter'
+
+    redisSetColorCorrectionCommand:
+      title: Set Color Correction (Redis)
+      summary: >
+        JSON-object payload (starts with "{"), discriminated by
+        command="SetColorCorrection" (checked ahead of the type-discriminated
+        parameter writes above). Same schema and behavior as the control
+        socket's setColorCorrectionCommand; no "trigger" field applies.
+        Publishes "ColorCorrectionUpdated" or "ColorCorrectionUpdateFailed"
+        on the "{camName}:status" channel afterward.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/SetColorCorrectionCommand'
+
+    redisTriggeredEvent:
+      title: Triggered (Redis event)
+      summary: Published after a trigger command completes. Literal string "Triggered".
+      contentType: text/plain
+
+    redisRawRecordOnEvent:
+      title: Raw record on (Redis event)
+      summary: >
+        Published after raw recording is enabled. Literal string
+        "RawRecordOn".
+      contentType: text/plain
+
+    redisRawRecordOffEvent:
+      title: Raw record off (Redis event)
+      summary: >
+        Published after raw recording is disabled. Literal string
+        "RawRecordOff".
+      contentType: text/plain
+
+    redisAcquisitionStartedEvent:
+      title: Acquisition started (Redis event)
+      summary: >
+        Published by publishAcquisitionEvent(true). Literal string
+        "AcquisitionStarted".
+      contentType: text/plain
+
+    redisAcquisitionStoppedEvent:
+      title: Acquisition stopped (Redis event)
+      summary: >
+        Published by publishAcquisitionEvent(false). Literal string
+        "AcquisitionStopped".
+      contentType: text/plain
+
+    redisColorCorrectionUpdatedEvent:
+      title: Color correction updated (Redis event)
+      summary: >
+        Published after a SetColorCorrection command (Redis or control
+        socket) succeeds. Literal string "ColorCorrectionUpdated".
+      contentType: text/plain
+
+    redisColorCorrectionUpdateFailedEvent:
+      title: Color correction update failed (Redis event)
+      summary: >
+        Published after a SetColorCorrection command received over Redis
+        fails (e.g. camera running, malformed ccm). Literal string
+        "ColorCorrectionUpdateFailed".
+      contentType: text/plain
+
+    redisStatusKey:
+      title: Status key (Redis SET)
+      summary: >
+        Key "{camName}.status" — open-vocabulary health/status string,
+        written by setHealthStatus(). Consume with GET.
+      contentType: text/plain
+
+    redisControlsKey:
+      title: Controls key (Redis SET)
+      summary: >
+        Key "{camName}.controls" — JSON dump of getAllControls(), the same
+        document shape as the `statusSnapshot` schema used on the control
+        channel. Consume with GET.
+      contentType: application/msgpack
+      payload:
+        $ref: '#/components/schemas/StatusSnapshot'
+
+    redisImagesCountKey:
+      title: Images count key (Redis SET)
+      summary: >
+        Key "{camName}.imagesCount" — running count of images produced.
+        Consume with GET.
+      contentType: text/plain
+
+    redisTimeSinceLastImageKey:
+      title: Time since last image key (Redis SET)
+      summary: >
+        Key "{camName}.timeSinceLastImage" — milliseconds (int64) since
+        the last image was received, refreshed roughly every 10s by the
+        connection-surveillance thread. Consume with GET.
+      contentType: text/plain
+
+    redisAutofocusKey:
+      title: Autofocus state key (Redis SET)
+      summary: >
+        Key "{camName}.autofocus" — "Started" when the sweep begins,
+        "finished" when it completes. The "finished" transition is also
+        mirrored as `{"event": {"autofocus": "finished"}}` on the
+        imageOutput channel when sendStatusOnImageOutput is enabled.
+        Consume with GET.
+      contentType: text/plain
+
+    redisSharpnessKey:
+      title: Sharpness key (Redis SET)
+      summary: >
+        Key "{camName}.sharpness" — sharpness score (double) at the
+        current step of the autofocus sweep. Consume with GET.
+      contentType: text/plain
+
+    redisFocusKey:
+      title: Focus key (Redis SET)
+      summary: >
+        Key "{camName}.focus" — current focus position (integer), written
+        during the autofocus sweep and periodically thereafter. Also
+        mirrored as `{"event": {"focus": <int>}}` on the imageOutput
+        channel when sendStatusOnImageOutput is enabled. Consume with GET.
+      contentType: text/plain
+
+    redisMaxSharpnessKey:
+      title: Max sharpness key (Redis SET)
+      summary: >
+        Key "{camName}.maxSharpness" — best sharpness score (double) found
+        once the autofocus sweep completes. Also mirrored as
+        `{"event": {"maxSharpness": <double>}}` on the imageOutput channel
+        when sendStatusOnImageOutput is enabled. Consume with GET.
+      contentType: text/plain
+
+    redisExposureTimeKey:
+      title: Exposure time key (Redis SET)
+      summary: >
+        Key "{camName}.exposureTime" — current ExposureTime (double),
+        refreshed periodically by startThreadSendingExposureTimeRedis.
+        Consume with GET.
+      contentType: text/plain
+
+  schemas:
+    ParameterType:
+      type: integer
+      description: >
+        opticus::ParameterType enum ordinal (aravis_lib.hpp) — not
+        transported as a string. 0=INTEGER, 1=STRING, 2=FLOAT, 3=DOUBLE,
+        4=BOOL, 5=COMMAND, 6=MENU, 7=CATEGORY, 8=REGISTER, 9=UNKNOWN.
+      enum: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    SimpleCommand:
+      type: object
+      additionalProperties: false
+      required: [command]
+      properties:
+        command:
+          type: string
+
+    ExitCommand:
+      type: object
+      additionalProperties: false
+      required: [command]
+      properties:
+        command:
+          const: exit
+
+    SetValueCommand:
+      type: object
+      additionalProperties: false
+      required: [command, name, value]
+      properties:
+        command:
+          const: set_value
+        name:
+          type: string
+          description: 'GenICam feature name, e.g. "Gain", "ExposureTime", "AcquisitionFrameRate".'
+        value:
+          type: number
+          description: Always coerced to float on the receiving end, regardless of the type field below.
+        type:
+          $ref: '#/components/schemas/ParameterType'
+
+    HikFileCommand:
+      type: object
+      additionalProperties: false
+      required: [command, file]
+      properties:
+        command:
+          const: hik_file
+        file:
+          type: string
+          description: Full contents of a HIK-format camera settings file.
+
+    ConfigureSequencerCommand:
+      type: object
+      additionalProperties: false
+      required: [command]
+      properties:
+        command:
+          const: ConfigureSequencer
+        sequences:
+          type: array
+          description: Optional explicit sequencer step list; camera's existing sequencer config is reused if omitted.
+          items:
+            type: object
+
+    BaseParameter:
+      type: object
+      required: [type, name]
+      properties:
+        type:
+          $ref: '#/components/schemas/ParameterType'
+        name:
+          type: string
+          description: GenICam feature name.
+
+    IntegerParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 0
+            value:
+              type: integer
+              description: Accepts a native integer or a numeric string (coerced via std::stod).
+
+    StringParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 1
+            value:
+              type: string
+
+    FloatParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 2
+            value:
+              type: number
+              description: Accepts a native number or a numeric string (coerced via std::stod).
+
+    DoubleParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 3
+            value:
+              type: number
+              description: Accepts a native number or a numeric string (coerced via std::stod).
+
+    BoolParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 4
+            value:
+              type: boolean
+              description: 'Accepts a native boolean or the strings "true"/"1" (both other strings decode false).'
+
+    CommandParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          properties:
+            type:
+              const: 5
+
+    ControlReply:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [ok, error]
+        message:
+          type: string
+          description: Present on error replies (e.g. "Camera must not be running, when user set is loaded/changed").
+
+    StatusSnapshot:
+      type: object
+      description: >
+        Shape is the live GenICam control tree as produced by
+        CameraHelperAravis::getAllControls() — a feature-name-keyed object
+        of current camera parameter values/metadata. Not independently
+        schema-constrained here; treat as an opaque, evolving document keyed
+        by GenICam feature name.
+      additionalProperties: true
+
+    ErrorStatus:
+      type: object
+      additionalProperties: false
+      required: [status]
+      properties:
+        status:
+          type: object
+          additionalProperties: false
+          required: [status, message, running, connected]
+          properties:
+            status:
+              const: nok
+            message:
+              type: string
+            running:
+              type: boolean
+            connected:
+              type: boolean
+
+    ImageEnvelope:
+      type: object
+      additionalProperties: false
+      required: [subject, json, dataformat]
+      properties:
+        subject:
+          type: string
+          description: ZMQ subject/topic string for this frame; may be empty.
+        json:
+          type: object
+          description: >
+            Caller-supplied metadata for this frame (e.g. imageName,
+            _pixelFormat set by the acquisition callback in
+            CameraHelperAravis::init).
+          additionalProperties: true
+        dataformat:
+          $ref: '#/components/schemas/DataFormat'
+
+    DataFormat:
+      type: object
+      description: Describes how to interpret the accompanying binary frame (ZMQHelper::parseMessage).
+      required: [cols, rows, channels, type, timestamp]
+      properties:
+        meta:
+          type: object
+          description: Copy of/merged from the caller-supplied metadata; the JSON envelope's own nested "meta" key is flattened in if present.
+          additionalProperties: true
+        cols:
+          type: integer
+        rows:
+          type: integer
+        channels:
+          type: integer
+        type:
+          const: raw
+        timestamp:
+          type: integer
+          description: Milliseconds, from a steady clock at send time.
+
+    SetColorCorrectionCommand:
+      type: object
+      additionalProperties: false
+      required: [command]
+      properties:
+        command:
+          const: SetColorCorrection
+        ccm:
+          type: array
+          description: Optional 3x3 color correction matrix, row-major, exactly 9 doubles.
+          minItems: 9
+          maxItems: 9
+          items:
+            type: number
+        colorCorrectionEnable:
+          type: boolean
+          description: Software color correction on/off. Falls back to the current setting if omitted.
+        colorCorrectionHardwareEnable:
+          type: boolean
+          description: >
+            Push CCM/white-balance gains to the camera's hardware registers
+            (ColorCorrectionEnable/WhiteBalanceEnable) instead of applying
+            them in software. Falls back to the current setting if omitted.
+        redGain:
+          type: number
+          description: White-balance red gain. Falls back to the current setting if omitted.
+        greenGain:
+          type: number
+          description: White-balance green gain. Falls back to the current setting if omitted.
+        blueGain:
+          type: number
+          description: White-balance blue gain. Falls back to the current setting if omitted.
+        persist:
+          type: boolean
+          default: false
+          description: >
+            If true, additionally writes the resulting color-correction state
+            to the sidecar "colorCorrection_{camName}.json" settings file.
+
+    RedisMenuParameter:
+      allOf:
+        - $ref: '#/components/schemas/BaseParameter'
+        - type: object
+          required: [value]
+          properties:
+            type:
+              const: 6
+            value:
+              type: string
+              description: >
+                Menu entry name to select. When name="TriggerMode", also
+                switches the connection's software-trigger handling to
+                match this value.
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisIntegerParameter:
+      allOf:
+        - $ref: '#/components/schemas/IntegerParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisStringParameter:
+      allOf:
+        - $ref: '#/components/schemas/StringParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisFloatParameter:
+      allOf:
+        - $ref: '#/components/schemas/FloatParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisDoubleParameter:
+      allOf:
+        - $ref: '#/components/schemas/DoubleParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisBoolParameter:
+      allOf:
+        - $ref: '#/components/schemas/BoolParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.
+
+    RedisCommandParameter:
+      allOf:
+        - $ref: '#/components/schemas/CommandParameter'
+        - type: object
+          properties:
+            trigger:
+              type: boolean
+              description: If true, additionally fires triggerWithRetry() after the value is applied.

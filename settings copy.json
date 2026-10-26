@@ -1,0 +1,128 @@
+{
+    "CameraType": 0,
+    "LumitraxImages":["LtrxShapeImage1", "LtrxNormalImage"],
+    "exposureTime": 900000,
+    "exposureTimeTrigger": false,
+    "exposureAuto": true,
+    "mtu": 1500,
+    "gain": 24.0,
+    "gainAuto": false,
+    "triggerMode": true,
+    "triggerSource": "Software",
+    "binningHorizontal": 1,
+    "binningVertical": 1,
+    "acquisitionFrameRate": 2,
+    "reverseX": false,
+    "reverseY": false,
+    "sequencer": false,
+    "binning": "",
+    "sequencerMode":
+    {
+        "enabled": false,
+        "steps": 
+        [
+            {
+                "setNr":0,
+                "exposureTime_us": 100000,
+                "gain": 10.0,
+                "frameCount": 1
+
+            },
+            {
+                "setNr":1,
+                "exposureTime_us": 200006,
+                "gain": 5.0,
+                "frameCount": 1
+
+            }
+           
+        ]
+    },
+    "sequences":
+    {
+        "enabled": true,
+        "steps":
+        [
+            {"name": "SequencerMode", "type": "string", "value": "Off"},
+            {"name": "BalanceWhiteAuto", "type": "string", "value": "Continuous"},
+            {"name": "WhiteBalanceEnable", "type": "boolean", "value": true},
+
+            {"name": "BlackLevelEnable", "type": "boolean", "value": true},
+            {"name": "BlackLevel", "type": "integer", "value": 0},
+
+            {"name": "ColorCorrectionSetSelect", "type": "string", "value": "Factory"},
+            {"name": "ColorCorrectionEnable", "type": "boolean", "value": false},
+            {"name": "ColorCorrectionRRGain", "type": "integer", "value": 256},
+            {"name": "ColorCorrectionRGGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionRBGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionGRGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionGGGain", "type": "integer", "value": 256},
+            {"name": "ColorCorrectionGBGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionBRGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionBGGain", "type": "integer", "value": 0},
+            {"name": "ColorCorrectionBBGain", "type": "integer", "value": 256},
+
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Red"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Yellow"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Green"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Cyan"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Blue"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "Magenta"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustSelector", "type": "string", "value": "GlobalColor"},
+            {"name": "ColorAdjustHue", "type": "float", "value": 0.0},
+            {"name": "ColorAdjustSaturation", "type": "float", "value": 1.0},
+            {"name": "ColorAdjustBrightness", "type": "float", "value": 0.0},
+
+            {"name": "Denoise", "type": "float", "value": 0.0},
+            {"name": "ColorTemperature", "type": "integer", "value": 6500},
+            {"name": "Contrast", "type": "integer", "value": 0},
+            {"name": "ContrastMode", "type": "string", "value": "Linear"},
+            {"name": "SharpnessEnable", "type": "boolean", "value": true},
+            {"name": "Sharpen", "type": "integer", "value": 0},
+
+            {"name": "GammaSelector", "type": "string", "value": "User"},
+            {"name": "GammaCorrectionEnable", "type": "boolean", "value": false},
+            {"name": "GammaCorrectionValue", "type": "float", "value": 1.0}
+        ]
+    },
+    "chunks":
+    {
+        "enabled": true,
+        "features": ["Image", "ExposureTime", "Gain"],
+        "selector": "Image"
+    },
+    "colorCorrection":
+    {
+        "redGain": 1.0,
+        "greenGain": 1.0,
+        "blueGain": 1.0,
+        "ccm": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0],
+
+        "enabled": true,
+        "hardwareEnable": true,
+        
+        "autoWhiteBalance":
+        {
+            "enabled": true,
+            "saturationThreshold": 95.0,
+            "hueLow": 45.0,
+            "hueHigh": 100.0,
+            "valueDark": 120.0,
+            "valueClip": 250.0,
+            "minBackgroundFraction": 0.05,
+            "maxGain": 3.0
+        }
+    }
+}
